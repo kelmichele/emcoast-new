@@ -1,0 +1,103 @@
+<footer>
+    <div class="bottom-footer">
+        <div class="block footer-info">
+            <div class="copyright-text">
+                <%= link_to '/fb', target: '_blank', class: 'ft-soc' do %>
+                  <i class="fa fa-facebook"></i>
+                <% end %>
+
+                <%= link_to '/twitter', target: '_blank', class: 'ft-soc' do %>
+                  <i class="fa fa-twitter"></i>
+                <% end %>
+
+                <%= link_to '/insta', target: '_blank', class: 'ft-soc' do %>
+                  <i class="fa fa-instagram"></i>
+                <% end %>
+
+                <%= link_to '/youtube', target: '_blank', class: 'ft-soc' do %>
+                  <i class="fa fa-youtube"></i>
+                <% end %>
+
+                <%= mail_to "ecfoundationfl@gmail.com", class: 'ft-soc' do %>
+                    <i class="fa fa-envelope" aria-hidden="true"></i></a>
+                <% end %>
+                <p>Copyright <%= Date.today.year %> © Emerald Coast Foundation.<br>
+                    501(c)(3) Charity: EIN 55-0796930<br>
+                    Design by <%= link_to 'https://hsdesignhouse.com', target: '_blank' do %> High Seas Design House. <% end %></p>
+            </div>
+        </div>
+
+        <div class="block facebook-feed">
+            <div class="fb-page" data-href="https://www.facebook.com/EmeraldCoastFoundation/" data-tabs="timeline" data-height="75px" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/EmeraldCoastFoundation/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/EmeraldCoastFoundation/">Emerald Coast Poker Run</a></blockquote></div>
+        </div>
+
+        <div class="block foot-logo">
+            <%= link_to(image_tag('new-logo1.png', alt: 'Emerald Coast Poker Run Logo', class: 'img-responsive logo'), root_path ) %>
+            <%= link_to(image_tag('ecfoundation1.png', alt: 'Emerald Coast  Foundation Logo', class: 'img-responsive logo2'), ec_foundation_path ) %>
+        </div>
+    </div>
+    <div class="uk-offcanvas" id="offcanvas-captn">
+        <div class="uk-offcanvas-bar">
+            <p class="sm text-center">Click outside this area to exit.</p>
+            <div class="captn">
+                <h3 class="red">Mandatory Captain's Safety Meeting times:</h3>
+                <div class="meeting">
+                    <h4>Friday August 11th:<br>
+                    <span>10 am</span><br> Ramada Plaza Beach Resort</h4>
+                </div>
+                <div class="meeting">
+                    <h4>Friday August 11th:<br>
+                    <span>11:30 am and 6 pm</span><br> Emerald Grande</h4>
+                </div>
+                <div class="meeting">
+                    <h4>Saturday August 12th:<br>
+                    <span>8 am</span><br> Emerald Grande</h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+<a href="#" class="scroll-up">Scroll</a>
+
+<!-- Off Canvas Menu -->
+<div class="offcanvas-menu">
+    <a class="close-offcanvas" href="#"><i class="fa fa-close"></i></a>
+    <div class="offcanvas-inner">
+        <div class="module">
+            <div class="module-content">
+                <h3 class="module-title">Main Menu</h3>
+                <ul>
+                    <li><%= link_to "Home", root_path, class: 'nav-link' %></li>
+                    <li><%= link_to "The Foundation", ec_foundation_path, class: 'nav-link' %></li>
+                    <li><%= link_to "Registration Information", registration_path, class: 'nav-link' %></li>
+                    <li><%= link_to "Registration Form", register_now_path, class: 'nav-link' %></li>
+                    <li><%= link_to "Stops", stops_path, class: 'nav-link' %></li>
+                    <li><%= link_to "Events", events_path, class: 'nav-link' %></li>
+                    <li><%= link_to "Our Sponsors", sponsors_path, class: 'nav-link' %></li>
+                    <li><%= link_to "Become a Sponsor", be_a_sponsor_path, class: 'nav-link' %></li>
+                    <li><%= link_to "Lodging", lodging_path, class: 'nav-link' %></li>
+                    <li><%= link_to "Safety Rules", safety_rules_path, class: 'nav-link' %></li>
+                    <li><%= link_to "Wet Slips + Boat/Trailer Parking", slips_parking_path, class: 'nav-link' %></li>
+                    <li><%= link_to "Gallery", gallery_path, class: 'nav-link' %></li>
+                    <li>
+                        <%= link_to "MissBoatWeekForm2018.pdf", target: '_blank' do %>
+                           Miss Boat Week Registration
+                        <% end %>
+                    </li>
+                    <li><%= link_to "Contact Us", volunteer_path, class: 'nav-link' %></li>
+
+                </ul>
+            </div>
+
+            <!-- <ul class="signup">
+                <li><%= link_to "Emerald Registration", flbc_path, target: '_blank' %></li>
+                <li>
+                    <%= link_to "MissBoatWeek2017.pdf", target: '_blank' do %>
+                       Miss Boat Week Registration
+                    <% end %>
+                </li>
+            </ul> -->
+        </div>
+    </div>
+</div>

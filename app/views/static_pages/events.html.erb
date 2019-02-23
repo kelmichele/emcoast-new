@@ -1,0 +1,160 @@
+<% content_for :title do %>Events<% end %>
+<% content_for :description do %>
+Boat Week is a week-long boating celebration along the Emerald Coast, that rounds out with The Emerald Coast Poker Run. There are a number of events throughout the whole week that you don't want to miss!
+<% end %>
+
+<section class="schedule-events">
+    <div class="container no-padding">
+        <div class="border-box">
+            <div class="left">
+                <h4>Emerald Coast Poker Run</h4>
+                <h1>Boat Week Events</h1>
+            </div>
+
+            <%=image_tag( 'ip.png', alt: 'Emerald Coast Foundation, IP Casino Sponsor', class: 'img-responsive ip') %>
+        </div>
+    </div>
+</section>
+
+<section class="events-schedule">
+    <div class="container-fluid">
+        <div class="tabs">
+            <h3 class="inst">Click on any event below, for more details.</h3>
+            <div id="accordeon">
+                <div class="cbp-item">
+
+                    <div class="cbp-caption new">
+                        <div class="cbp-caption-defaultWrap">
+                            <h5>Thursday &amp; Friday - August 9 &amp; 10</h5>
+                            <h4><b>Registration and Check in</b></h4>
+                        </div>
+
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-body">
+                                <p style="color: #000;">LOCATION: THE ISLAND BEACH RESORT<br> (FORMERLY THE RAMADA PLAZA BEACH RESORT)</h4>
+                                <h4><b>THURSDAY (8/9):</b> 10AM - 6PM</h4>
+                                <h4><b>FRIDAY (8/10):</b> 10AM - 6PM</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cbp-caption second">
+                        <div class="cbp-caption-defaultWrap">
+                            <h5>Wednesday - August 8</h5>
+                            <h4><b>Blues, Brews, and BBQ Party</b></h4>
+                        </div>
+
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-body">
+                                <h4 class="time">6pm</h4>
+                                <h4>The Official Kickoff Party, at AJ’s on the Bayou!</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cbp-caption third">
+                        <div class="cbp-caption-defaultWrap">
+                            <h5>Thursday - August 9</h5>
+                            <h4><b>Miss Boat Week Bikini Contest</b></h4>
+                        </div>
+
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-body">
+                                <h4>The Block Fort Walton Beach - 8pm</h4>
+                                <p>Want to enter this year's contest?</p>
+                                <%= link_to "MissBoatWeekForm2018.pdf", target: '_blank', class: 'btn btn-contest' do %>
+                                   Register Here
+                                <% end %>
+                                <div class="clearfix"></div><br>
+                                <%= image_tag('mbw.jpg', alt: 'Emerald Coast Poker Run, Bikini Contest 2018', class: 'img-responsive') %>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cbp-caption fourth">
+                        <div class="cbp-caption-defaultWrap">
+                            <h5>Thursday - August 9</h5>
+                            <h4><b>Sponsor Party</b></h4>
+                        </div>
+
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-body">
+                                <%= link_to "https://www.floydsshrimphouse.com/", class: "e1-link", target: "_blank" do %>
+                                    <h4>Located at <b>Floyd’s Shrimp House</b><br>5:30pm - 7pm </h4>
+                                <% end %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="solo" >
+                <div class="cbp-item">
+
+                    <div class="cbp-caption gulf">
+                        <div class="cbp-caption-defaultWrap">
+                            <h5>Friday - August 10</h5>
+                            <h4><b>Gulf to Gulf Poker Run</b></h4>
+                        </div>
+
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-body">
+                                <h4>10am - 4pm</h4>
+                                <a href="Friday Poker Run Map with stops.pdf" class="e2-link" target="_blank">
+                                    See Map
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cbp-caption fifth">
+                        <div class="cbp-caption-defaultWrap">
+                            <h5>Friday - August 10</h5>
+                            <h4><b>Rockin' the Docks Captains Party</b></h4>
+                        </div>
+
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-body">
+                                <h4> Located at AJ’s Destin<br> 7pm - 10pm</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cbp-caption sixth">
+                        <div class="cbp-caption-defaultWrap">
+                            <h5>Saturday - August 11</h5>
+                            <h4><b>“The Big One”<br>26th Annual Emerald Coast Poker Run</b></h4>
+                        </div>
+
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-body">
+                                <h4 class="time">9am - 4pm</h4>
+                                <h4>Stops are open from 10am - 4pm. </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cbp-caption seventh">
+                        <div class="cbp-caption-defaultWrap">
+                            <h5>Saturday - August 11</h5>
+                            <h4><b>Emerald Coast Poker Run Party</b></h4>
+                        </div>
+
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-body">
+                            <h4 class="time"> 6pm - 11pm</h4>
+                                <h4> Located at Emerald Coast Convention Center</h4>
+                                <h4> Poker, Black Jack, Silent Auction, All You Can Eat &amp; Open Bar</h4>
+                                <h4><b>Food served til 6:30om - 9:30pm ONLY<br>
+                                Open bar until 9:30pm (unless VIP)</b></h4>
+                                <!-- <%= link_to "Get your tickets here", party_tickets_path, class: 'e2-link' %>  -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="clearfix"></div>

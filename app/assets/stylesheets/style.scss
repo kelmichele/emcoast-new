@@ -1,0 +1,584 @@
+@import "variables";
+@import "mixins";
+
+.honey {
+    position: absolute;
+    left: -9999px;
+  }
+
+
+.overlay-lt {
+	@include sec-default ();
+	background: rgba($light, .8);
+}
+
+.overlay {
+	@include sec-default ();
+	background: rgba($dark, .7);
+}
+
+/*****************************
+	FOOTER
+******************************/
+
+// footer {
+// 	background-color: $white;
+// 	.top-footer {
+// 		@include sec-default ();
+// 		background-color: $dark;
+// 		padding: 8px 0;
+// 	}
+
+// 	.bottom-footer {
+// 		@include sec-default ();
+// 		background-color: $white;
+// 		padding: 10px 0;
+// 		padding-bottom: 0;
+
+// 		.ft-soc {
+// 			i { padding:5px; text-align: center; color: $teal;}
+// 		}
+// 		p { padding-top:10px; color: $dark; font-size: 14px; }
+// 		a {color: $teal;}
+// 	}
+// }
+
+footer {
+	background-color: $white;
+	border-top: 7px solid $dark;
+	.bottom-footer {
+		width:85%;
+		@include center-block();
+		padding: 15px 0px 0px;
+	}
+
+	.block {display: inline-block; width: 32%; text-align: center;
+		&.facebook-feed{  float: left; padding-right: 25px;}
+		&.footer-info { float: none; margin-left: 20px;}
+		&.foot-logo { float: right;
+			.logo {display:inline-block; width:20%; margin-right: 10px;}
+			.logo2 {display:inline-block; width:57%;}
+		}
+	}
+
+	.ft-soc {
+		i { padding:5px; text-align: center; color: $teal;}
+	}
+	p { padding-top:10px; color: $dark; font-size: 14px; }
+	a {color: $teal;}
+
+	@include bp(md) {
+		.bottom-footer {
+			width:75%;
+			padding: 5px 0px 0;
+		}
+
+		.block { margin:0;float:none; vertical-align: middle;
+			&.facebook-feed{display: none; }
+			&.footer-info { width:65%;margin:0;}
+			&.foot-logo { width: 18%;float:none; padding-bottom: 5px;
+				.logo {width: 100%;}
+				.logo2 {display: none;}
+			}
+		}
+	}
+
+	@include bp(sm) {
+		padding-top: 10px;
+		.bottom-footer {width:100%;}
+		.block {
+			&.footer-info {width:100%;}
+			&.foot-logo { width: 20%; @include center-block();}
+		}
+		p {padding-top:4px;}
+	}
+}
+
+/*****************************
+*= 21.  Bread Cumb styles
+******************************/
+
+.breadcrumb-area {
+    @include sec-default ();
+    @include sec-bgimage ();
+    background-image: url(image_path('pboat6.jpg'));
+    padding-bottom: 60px;
+    padding-top: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.breadcrumb-area::before {
+    background: $dark none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: .46;
+    z-index: -1;
+}
+
+.breadcrumb-area h1 {
+    color: $white;
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 5px;
+    text-transform: uppercase;
+    font-family: $raleway;
+}
+
+.breadcrumb-area h4 {
+    color: $white;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: $raleway;
+    line-height: 1.6em;
+}
+
+/*****************************
+*= 7.  UpComing event area  styles
+******************************/
+
+.upcoming-event-area {
+    padding: 85px 0px;
+}
+
+.single-upcoming-event-item {
+
+	.img-holder { position: relative;
+
+		.overlay {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    background: rgba(48, 201, 87, .75);
+		    transform: scale(0);
+		    transition: all .5s ease;
+
+
+		 	.box {
+			    display: table;
+			    width: 100%;
+			    height: 100%;
+			}
+
+		 	.content-box {
+			    display: table-cell;
+			    vertical-align: middle;
+			    text-align: center;
+
+				a {
+				    // width: 30px;
+				    // height: 30px;
+				    font-size: 16px;
+				    padding:20px;
+				    color: $white;
+				    // line-height: 30px;
+				    display: inline-block;
+				    background: #F56719;
+				    border-radius: 4px;
+				    transition: all .3s ease;
+				}
+
+		 		a:hover {
+				    background: $white;
+				    color: $red;
+				}
+			}
+		}
+
+
+		&:hover .overlay {
+		    transform: scale(1);
+		}
+	}
+
+	.content {
+	    background: $white;
+	    border: 1px solid $light;
+	    margin-top: -37px;
+	    padding: 10px 20px;
+	    position: relative;
+	    top: 37px;
+
+		h5 {
+		    color: $dark;
+		    font-size: 16px;
+		    line-height: 32px;
+		    margin: 10px 0 5px;
+		    // font-family: $varela;
+		    transition: all .3s ease;
+		}
+
+		h5:hover {
+		    color: $red;
+		}
+
+		p {
+		    margin: 0 0 8px;
+		    color: $gray;
+		    line-height: 2em;
+		}
+
+		ul {
+		    padding-bottom: 10px;
+		}
+
+		li {
+		    display: inline-block;
+		    margin-right: 20px;
+		    // font-family: $varela;
+		}
+
+		i {
+		    color: $teal;
+		    font-size: 12px;
+		    display: inline-block;
+		    padding-right: 10px;
+		}
+	}
+
+	.readmore {
+	    float: right;
+	    margin-right: 22px;
+
+	    a i {
+		    background: $teal none repeat scroll 0 0;
+		    border-radius: 50%;
+		    color: $white;
+		    display: block;
+		    font-size: 20px;
+		    height: 73px;
+		    padding-left: 26px;
+		    padding-right: 26px;
+		    padding-top: 41px;
+		    width: 73px;
+		    transition: all 0.3s ease 0s;
+		}
+
+		a i:hover {
+		    background: $red;
+		}
+	}
+}
+
+/*****************************
+*= 11.  Blog post area  styles
+******************************/
+
+.latest-blog-area {
+    padding-bottom: 70px;
+    padding-top: 107px;
+}
+
+.single-blog-post {
+	.img-holder {
+    	overflow: hidden;
+
+		img {
+		    transition: all 500ms ease 0s;
+		    width: 100%;
+		}
+		&:hover img {
+    		transform: scale(1.1, 1.1) rotate(-2deg);
+		    opacity: .9;
+		}
+	}
+
+	.content {
+		a:hover h5 { color: $red; }
+
+		h5 {
+		    color: $dark;
+		    font-family: $raleway;
+		    font-size: 15px;
+		    margin: 27px 0 6px;
+		    transition: all .3s ease;
+		}
+
+		.meta li { display: inline-block; }
+
+		.meta li::after {
+		    color: $teal;
+		    content: "/";
+		    display: inline-block;
+		    margin: 0 1px 0 5px;
+		}
+
+		.meta li:last-child::after { content: ""; }
+
+		.meta li a {
+		    color: $teal;
+		    font-size: 12px;
+		    // font-family: $varela;
+		}
+
+		p { margin: 0 0 5px; }
+	}
+
+	a.read-more {
+	    color: $red;
+	    float: right;
+	    font-size: 12px;
+	    // font-family: $varela;
+		i {
+		    display: inline-block;
+		    padding-right: 8px;
+		    font-size: 15px;
+		}
+	}
+}
+
+
+/*****************************
+*= 12.  Brand styles
+******************************/
+
+.brand-area {
+	@include sec-default ();
+	.brand-carousel {
+	    border-top: 1px solid $light;
+	    padding-bottom: 60px;
+	    padding-top: 60px;
+	}
+}
+
+/******************************/
+.event-grid-area {
+    padding-bottom: 60px;
+    padding-top: 75px;
+}
+
+/*****************************
+*= 26.  Service page styles
+******************************/
+
+.service-area {
+    padding-bottom: 37px;
+    padding-top: 80px;
+
+
+	.single-service-item {
+	    padding-bottom: 60px;
+
+		.icon-holder {
+		    float: left;
+		    position: relative;
+		    top: -5px;
+		}
+
+		.content {
+		    overflow: hidden;
+		    padding-left: 30px;
+
+			h4 { margin: 0 0 5px; }
+		}
+	}
+}
+
+/*****************************
+*= 20.  Event Gallries styles
+******************************/
+
+.event-galleries-area {
+    background: $light;
+    padding-top: 75px;
+    padding-bottom: 80px;
+
+	.bottom-galleries { padding-top: 30px; }
+
+	.img-holder {
+		position: relative;
+
+		img { width: 100%; }
+
+		.overlay {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    background: rgba(48, 201, 87, .75);
+		    transform: scale(0);
+		    transition: all .5s ease;
+		}
+
+		&:hover .overlay { transform: scale(1); }
+
+		.overlay .box {
+		    display: table;
+		    width: 100%;
+		    height: 100%;
+
+		    .content {
+			    display: table-cell;
+			    vertical-align: middle;
+			    text-align: center;
+
+			    h3 {
+				    margin: 0;
+				    font-size: 17px;
+				    text-transform: capitalize;
+				    color: #fff;
+				    margin-top: 10px;
+				    font-weight: 600;
+				}
+			}
+
+			ul.info-links li {
+			    display: inline-block;
+			    padding: 0 5px;
+			}
+
+			ul.info-links li a {
+			    display: block;
+			    width: 32px;
+			    height: 32px;
+			    border: 2px solid #fff;
+			    line-height: 28px;
+			    font-size: 15px;
+			    color: #27343E;
+			    background: #fff;
+			    text-align: center;
+			    border-radius: 4px;
+			    transition: all .3s ease;
+
+			    &:hover {
+			    	color: #30C957;
+				    background: #252525;
+			    }
+			}
+		}
+	}
+}
+
+/*****************************
+*= 30.  Contact Page styles
+******************************/
+
+.contact-info-area {
+    padding-bottom: 30px;
+    padding-top: 75px;
+}
+
+.contact-info ul li .icon-holder {
+    // background: #30c957 none repeat scroll 0 0;
+    border-radius: 50%;
+    border:2px solid #30c957;
+    height: 70px;
+    text-align: center;
+    width: 70px;
+    transition: all 700ms ease 0s;
+}
+
+.contact-info ul li:hover .icon-holder { background: $offwhite;}
+
+.contact-info ul li .icon-holder img {
+    padding: 10px;
+}
+
+.contact-info ul li .text {
+    padding-left: 20px;
+}
+
+.contact-info ul li .text h6 {
+    color: #252525;
+    font-size: 13px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 600;
+}
+
+.contact-info ul li .icon-holder,
+.contact-info ul li .text {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#contact-page-google-map {
+    height: 415px;
+    width: 100%;
+}
+
+.contact-form-area {
+    padding-bottom: 75px;
+    padding-top: 26px;
+}
+
+.contact-form .field-label {
+    color: #27343e;
+    display: block;
+    font-size: 11px;
+    line-height: 36px;
+    text-transform: uppercase;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.contact-form .field-label .req {
+    color: #ff000c;
+    font-size: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    border: 1px solid #e2ebf1;
+    border-radius: 3px;
+    color: #91a9bb;
+    font-size: 11px;
+    font-style: italic;
+    height: 40px;
+    padding: 0 20px;
+    width: 100%;
+    display: block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: all 500ms ease 0s;
+}
+
+.contact-form input[type="text"]:focus {
+    border: 1px solid #F56719;
+}
+
+.contact-form textarea:focus {
+    border: 1px solid #F56719;
+}
+
+.contact-form textarea {
+    height: 100px;
+    padding: 12px 20px;
+}
+
+.contact-form .send-message {
+    background: #30c957 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 20px;
+    color: #ffffff;
+    display: block;
+    float: right;
+    font-size: 11px;
+    height: 39px;
+    margin-top: 15px;
+    padding: 4px 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 168px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 500;
+    transition: all 500ms ease 0s;
+}
+
+.contact-form .send-message i {
+    display: inline-block;
+    padding-left: 15px;
+}
+
+.contact-form .send-message:hover {
+    background: #F56719;
+}

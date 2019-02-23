@@ -1,0 +1,62 @@
+<% content_for :title do %>Wet Slips + Boat/Trailer Parking<% end %>
+<% content_for :description do %>
+The Emerald Coast Poker Run staff wants to make everything run as smoothly as possible, so you can focus on having fun! Here are some options for wet slips, boat parking, launches, etc...
+<% end %>
+
+
+<div class="txt-style">
+    <div class="box-lay">
+      <%= link_to register_now_path, class: 'sign-up' do %>
+      Register<br> Now
+      <% end %>
+
+	    <div class="inside">
+        <h1>Wet Slips + <br><span>Boat/Trailer Parking</span></h1>
+        <!-- <h3 class="price">$295 per entry</h3> -->
+        <div class="two">
+					<div class="location">
+						<p class="name">AJ’s on the Destin Harbor</p>
+						<hr class="hlf less">
+						<p class="loc">has limited availability and is open to the larger offshore powerboats.<br>
+						<b>Cost is $450 for 3 days, $350 for 2 days.</b><br>
+						Please contact the Emerald Coast Foundation directly to reserve. <br>
+						<b style="color:#68b882"><%= mail_to "ecfoundationfl@gmail.com" %></b>
+					</div>
+					<div class="clearfix"></div>
+
+
+					<h4>Wet Slips:</h4>
+
+					<div class="location">
+						<p class="name">Legendary Marine</p>
+						<hr class="hlf less">
+						<p class="loc">Fort Walton Beach</p>
+					  <p class="number"><%= number_to_phone(8502441099, delimiter: '.', area_code: true,  class: "num")%></p>
+						<a href="https://www.legendarymarine.com/fort-walton-beach-location.htm" class="slip-link" target="_blank">Visit Site</a>
+					</div>
+					<div class="clearfix"></div>
+
+					<h4>Launching, Storage, Marina services:</h4>
+          <!-- <hr class="hlf"> -->
+
+					<div class="location">
+						<p class="name">Legendary Marina</p>
+						<hr class="hlf less">
+						<p class="loc">Destin</p>
+					  <p class="number"><%= number_to_phone(8503378200, delimiter: '.', area_code: true,  class: "num")%></p>
+						<p class="fuel">*93 Octane Fuel available</p>
+						<a href="http://www.legendarymarina.com/" class="slip-link" target="_blank">Visit Site</a>
+					</div>
+
+					<div class="location">
+						<p class="name">Two Georges Marina</p>
+						<hr class="hlf less">
+						<p class="loc">Shalimar, FL</p>
+					  <p class="number"><%= number_to_phone(8506510510, delimiter: '.', area_code: true,  class: "num")%></p>
+						<a href="http://twogeorgesmarina.com/" class="slip-link" target="_blank">Visit Site</a>
+					</div>
+        </div>
+	    </div>
+    </div>
+</div>
+<div class="clearfix"></div>

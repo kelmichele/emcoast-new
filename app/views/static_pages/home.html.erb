@@ -1,0 +1,219 @@
+<% content_for :title do %>Emerald Coast Poker Run<% end %>
+<% content_for :description do %>
+Boat Week is a week-long boating celebration along the Emerald Coast, that rounds out with The Emerald Coast Poker Run. These events are orchestrated by the Emerald Coast Foundation, an organization that supports children’s charities and youth organizations in Okaloosa County.
+<% end %>
+
+
+<section class="home-top">
+  <div class="open">
+    <div class="title-box">
+      <h2 class="top">The Original</h2>
+      <h1>Emerald Coast<br> Poker Run</h1>
+      <h2>"The Big One"</h2>
+      <br>
+      <h3 class="date">Saturday, August 10, 2019</h3>
+      <ul id="countdown" class="slider-countdown-two" data-countdown-time="2019/08/7">
+        <li><%= link_to "Register Now", register_now_path, class: 'now' %></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cst-ebox">
+  <div class="ebox">
+    <div class="top">
+      <h4>The Emerald Coast Foundation is proud to announce</h4>
+      <!-- <h3>The 26th Annual Emerald Coast<br> Boat Week &amp; Poker Run</h3> -->
+      <h3><span>2019 Boat Week</span> <br>on the Emerald Coast</h3>
+      <h5>August 7-10</h5>
+    </div>
+
+    <div class="mtext">
+      <div class="ltext">
+        <p>
+          <!-- <b>The Emerald Coast Foundation is proud to announce the 26th Annual Emerald Coast Boat Week and Poker Run!</b> -->
+          <b>Powerboats, fishing boats, pleasure boats,</b> and all in between, will fill the waterways for one of the largest and most popular charity poker runs in the USA!
+          Affectionately called <b>“The Big One,”</b> the Emerald Coast Poker Run has been held along the beautiful waters in and around Destin, Florida for over 25 years.
+        </p>
+
+        <p>Boat Week events start with a bang Wednesday night, and continue to “The Big One” Poker Run party Saturday night.
+        <b>It is truly a week of excitement, boating, fun, and helping kids.</b></p>
+      </div>
+
+      <div class="rtext">
+        <p>
+          <b>All proceeds from Emerald Coast Boat Week and Poker Run go to the recipient children’s charities of the Emerald Coast Foundation.</b>
+          This event was started 25 years ago to help the youth of our local area have a chance at a brighter future.
+          Without the ECF, these kids would go without, and that is not acceptable to us.
+        </p>
+
+        <p>
+          <b>As of Boat Week last year, the Emerald Coast Foundation has raised over $2.5 million dollars for our local kids in need.</b>
+          What an impact! This is a volunteer run event.
+          There are no paid employees. Every penny goes to the kids.
+          We do it out of love and dedication to our community and our kids.
+          <b>Please join us for the one and only ORIGINAL Emerald Coast Poker Run!</b> Help us help the kids who need it most.
+        </p>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="rls text-center">
+      <%= image_tag('ecfoundation2.png', alt: 'Emerald Coast Poker Run, 2017', class: 'img-responsive run-logo') %>
+      <%= image_tag('xs-logo.png', alt: 'Emerald Coast Poker Run, 2017', class: 'img-responsive run-logo') %>
+      <%= image_tag('ip.png', alt: 'Emerald Coast Poker Run, 2017', class: 'img-responsive run-logo') %>
+    </div>
+
+    <div class="mid">
+      <h3>2018 Grand Prize!</h3>
+      <h4>2018 Softail Deluxe in Black</h4>
+      <%= image_tag('2018prize.jpg', alt: 'Emerald Coast Poker Run, 2018 Grand Prize Motorcycle', class: 'img-responsive') %>
+    </div>
+
+    <div class="mid two">
+      <h3>2018 2nd Place Prize!</h3>
+      <h4>KM Motorsports, 2018 Can Am Spyder RSS SE5</h4>
+      <%= image_tag('spyder.jpg', alt: 'Emerald Coast Poker Run, 2018 Grand Prize Motorcycle', class: 'img-responsive') %>
+    </div>
+
+
+  </div>
+</section>
+
+
+<!-- <div class="inform-faq">
+    <h3 class="text-center"><b>Boat Week &amp; Poker Run Quick Links</b></h3>
+    <hr class="col-md-6 col-md-offset-3"><div class="clearfix"></div>
+
+    <div class="facebook-feed">
+        <div class="fb-page" data-href="https://www.facebook.com/EmeraldCoastFoundation/" data-tabs="timeline" data-height="415px" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/EmeraldCoastFoundation/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/EmeraldCoastFoundation/">Emerald Coast Foundation</a></blockquote></div>
+    </div>
+
+    <div class="links">
+        <%= link_to '/registration', class: 'faq' do %>
+            <h4>Poker Run Registration</h4>
+            <p>Take a look at the requirements for each level of the Poker Run.</p>
+        <% end %>
+
+        <%= link_to '/registration#checkin', class: 'faq' do %>
+            <h4>Poker Run Check-In</h4>
+            <p>See all the check-in locations and times for the 2017 Poker Run.</p>
+        <% end %>
+
+         <a class="faq" data-uk-offcanvas="{target:'#offcanvas-captn'}">
+            <h4>Captain's Meeting Schedule</h4>
+            <p>All captains must attend one of these mandatory safety meetings.</p>    </a>
+
+        <%= link_to '/events', class: 'faq' do %>
+            <h4>Boat Week Events</h4>
+            <p>See the calendar of fun activities coming up during 2017 Boat Week!</p>
+        <% end %>
+
+        <%= link_to '/sponsors', class: 'faq' do %>
+            <h4>Sponsors</h4>
+            <p>See all of the amazing Sponsors that make Boat Week possible.</p>
+        <% end %>
+
+        <%= link_to '/stops', class: 'faq' do %>
+            <h4>Stops</h4>
+            <p>Check out all the stops for both levels of the 2017 Poker Run.</p>
+        <% end %>
+
+        <%= link_to '/party-tickets', class: 'faq' do %>
+            <h4>Annual Poker Run Party</h4>
+            <p>A night of dancing, entertainment, and open bar! Purchase tickets here.</p>
+        <% end %>
+
+        <%= link_to '/lodging', class: 'faq' do %>
+            <h4>Lodging Information</h4>
+            <p>Book a room with one of our lodging partners for Boat Week 2017! </p>
+        <% end %>
+
+        <%= link_to "MissBoatWeek2017.pdf", target: '_blank', class: 'faq bw' do %>
+            <h4>Miss Boat Week</h4>
+            <p>Want to be Miss Boat Week 2017? Click here to register.</p>
+        <% end %>
+    </div>
+</div> -->
+<div class="home-layout">
+  <div class="inner">
+    <div class="full">
+      <div class="lhlf">
+        <!-- <h3>Last Year's Fun</h3> -->
+        <!-- <%= link_to 'View Gallery', gallery_path, class: 'hl-btn' %> -->
+        <div class="clearfix"></div>
+<%= image_tag('mbw.jpg', alt: 'Emerald Coast Poker Run, Bikini Contest 2018', class: 'img-responsive') %>
+        <!-- <iframe src="https://www.youtube.com/embed/b2t5POnOiUQ?list=PLW77djhJyj8GmNemJqkf_cyRej6rW2UsA&rel=0&modestbranding=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe> -->
+      </div>
+
+      <div class="rhlf alt">
+        <h3>Follow Us</h3>
+        <div class="clearfix"></div>
+        <div class="fb-page" data-href="https://www.facebook.com/EmeraldCoastFoundation/" data-tabs="timeline" data-height="350px" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/EmeraldCoastFoundation/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/EmeraldCoastFoundation/">Emerald Coast Foundation</a></blockquote></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="lodge-list">
+  <div class="lodge-inner">
+    <h3>Stay With Our Lodging Partners</h3>
+    <div class="plat">
+      <h4>Platinum Sponsor:</h4>
+      <%= link_to 'https://www.wyndhamvacationrentals.com/promotion/26th-annual-emerald-coast-boat-week-and-poker-run?utm_source=emeraldcoastpokerrun.com&utm_medium=referral&utm_campaign=pokerrun&utm_content=nwf-aug2018', target: '_blank', class: 'home-lodge one' do %>
+          <%=image_tag( 'lodging/home-rq.jpg', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive') %>
+      <% end %>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="gold">
+      <h4>Gold Sponsor:</h4>
+      <%= link_to 'http://www.ramadafwb.com/', target: '_blank', class: 'home-lodge' do %>
+        <%=image_tag( 'lodging/home-ramada.jpg', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive') %>
+      <% end %>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="bronze">
+      <h4>Bronze Sponsors:</h4>
+        <%= link_to 'http://www.sandestin.com/23U8P8.aspx', target: '_blank', class: 'home-lodge b1' do %>
+          <%=image_tag( 'lodging/home-sandestin.png', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive') %>
+        <% end %>
+
+        <%= link_to 'https://www.oceanreefresorts.com/', target: '_blank', class: 'home-lodge alt b2' do %>
+          <%=image_tag( 'lodging/home-ocean-reef.png', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive') %>
+        <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="foundation">
+    <div class="container no-padding-xs">
+        <div class="motto">
+            <%= image_tag('ecfoundation1.png', class:'img-responsive', alt: 'Emerald Coast Foundation Logo') %>
+            <h4>To provide support, resources, and funding to local children’s charities, in order that they may achieve all their goals.</h4>
+        </div>
+
+
+
+        <div class="col-lg-7 col-md-11 no-padding col-xs-12">
+            <div class="text-box">
+                <h3>A little about us...</h3>
+                <div class="col-md-12 col-xs-12">
+                    <p>  The strength of the Emerald Coast Foundation is its ability to achieve its mission: ECF is committed to “Investing in Youth” in Northwest Florida.
+                    This capacity is encapsulated in a number of fund raising activities that take place throughout the calendar year. The largest is the Emerald Coast Poker Run, held in August each year.
+                    <br>
+
+                    The Emerald Coast Foundation is the only not-for-profit organization that puts forth such effort, for the sole purpose of expanding its charitable reward and helping our most precious resource: the children of our community. To date, we have raised over 2 million dollars for our causes.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5 col-md-8 no-padding-xs col-xs-12 slider-mob">
+            <%= video_tag 'check-presentation.mp4', width: '100%', controls: true, muted: true, autoplay: true %>
+        </div>
+    </div>
+</section>
+
+<div class="clearfix"></div>

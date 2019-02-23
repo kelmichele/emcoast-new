@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content= "<%= yield :description %>">
+    <link rel="icon" href="/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,800" rel="stylesheet">
+
+    <%= render 'layouts/rails_default' %>
+    <%= render 'layouts/shim' %>
+    <%= render 'layouts/ga-code' %>
+  </head>
+
+    <body class=" <%= controller_name %> <%= action_name %>">
+      <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 857403727;
+      var google_custom_params = window.google_tag_params;
+      var google_remarketing_only = true;
+      /* ]]> */
+      </script>
+      <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+      </script>
+      <noscript>
+      <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/857403727/?guid=ON&amp;script=0"/>
+      </div>
+      </noscript>
+    <%= render 'layouts/facebook' %>
+
+    <%= render 'layouts/header' %>
+
+      <% flash.each do |message_type, message| %>
+          <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <% end %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+  </body>
+</html>
+
+
+
+
+

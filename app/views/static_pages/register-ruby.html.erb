@@ -1,0 +1,56 @@
+<% content_for :title do %>Ruby Level Registration<% end %>
+<% content_for :description do %>
+We want everyone to have the opportunity to enjoy The Emerald Coast Poker Run, so we have split the event into levels. Check the requirements, and find out if you are eligible for Ruby Level!
+<% end %>
+
+<section class="big-header">
+    <div class="overlay">
+        <div class="container">
+            <h1>Ruby Level Registration</h1>
+            <div class="clearfix custom"></div>
+
+            <div class="pay-link">
+                <%= link_to "/payment" do %>
+                    <h3>If you have already registered for the Ruby Level, but you still need to pay your fee:<br>
+                    <b>Click here to pay</b></h3>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ruby-level">
+    <div class="container">
+
+        <div class="form">
+            <h3 class="text-center">Ruby Registration Form</h3>
+            <h4>Registration Fee: $245 </h4>
+            <p class="disclaimer">**Payment is required for registration to be processed.</p>
+            <!-- <h4>Early registration price: $195<br>Early registration ends July 31st. Registration price starting August 1: $245</h4> -->
+            <hr>
+
+            <div id="wufoo-z1a8vu4y1b571zz">
+            Fill out my <a href="https://ecfoundation.wufoo.com/forms/z1a8vu4y1b571zz">online form</a>.
+            </div>
+            <script type="text/javascript">var z1a8vu4y1b571zz;(function(d, t) {
+            var s = d.createElement(t), options = {
+            'userName':'ecfoundation',
+            'formHash':'z1a8vu4y1b571zz',
+            'autoResize':true,
+            // 'height':'820',
+            'async':true,
+            'host':'wufoo.com',
+            'header':'hide',
+            'ssl':true};
+            s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+            s.onload = s.onreadystatechange = function() {
+            var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+            try { z1a8vu4y1b571zz = new WufooForm();z1a8vu4y1b571zz.initialize(options);z1a8vu4y1b571zz.display(); } catch (e) {}};
+            var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+            })(document, 'script');</script>
+            <!-- <p class="disclaimer b">*Submit form to proceed to payment screen.<br> Payment is required for registration to be processed.</p> -->
+        </div>
+    </div>
+</section>
+
+<div class="clearfix"></div>

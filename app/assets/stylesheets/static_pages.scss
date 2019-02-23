@@ -1,0 +1,1483 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "variables";
+@import "mixins";
+
+#offcanvas-captn {
+	.uk-offcanvas-bar { text-align: center; background-color: darken(red, 8%); width:300px;}
+	.captn { padding: 0px 10px; text-align: center;
+		h3 {color: $dark; font-weight: bold; font-size: 19px; margin: 10px 0 25px;}
+		h4 {color: $white;line-height: 1.4em; font-weight: bold;
+			span {color: $dark; font-weight: bold;}
+		}
+		.meeting{ @include sec-default(); background-color: darken(red, 8%); margin:auto; padding:15px 10px; margin-bottom: 15px; border-bottom: 1px solid $white;}
+		p.sm {font-size: 15px; text-align: center;}
+	}
+}
+
+.payment, .party-tickets {
+	.pay-header {@include sec-default(); padding: 35px 15px; text-align: center; background-color: $cream;}
+	h1 {font-size: 1.7em;}
+	h3.det {font-size: 1.2em; line-height: 1.4em; margin-top: 15px;}
+	h4 {line-height: 1.4em; margin: 20px 0;}
+	form {@include center-block();}
+	.page-content {@include sec-default(); padding:20px 0;}
+
+	@include bp(pl) {
+		.pay-header {padding: 20px 15px;}
+		h1 {font-size: 1.5em;}
+	}
+}
+
+.party-tickets {
+	.pay-header{background-color: $logo-blue;
+		h1, h3 {font-weight: bold; color: $white; }
+		h4 {color: $lt-blue; font-weight: bold; text-transform: uppercase; text-shadow: 0px 1px 1px rgba(black, .6);}
+	}
+	p{color: black; padding: 20px; }
+
+	.form, .image-right{display: inline-block; float: left; width:50%; margin-left: 7%;}
+	.image-right { width:30%;}
+
+	@include bp(md) {
+		.form, .image-right{ width:68%; margin-left: 0;}
+		.image-right { float: right;}
+	}
+
+	@include bp(pl) {
+		p{padding: 10px 0;}
+		.form {@include center-block(); width: 95%;}
+		.image-right{display: none;}
+	}
+}
+
+.title-line { content: ''; width: 8%; @include center-block (); height:1px; background-color: $dark; margin-bottom:20px;}
+
+br.xxs {display: none;}
+@include bp(xs) { br.xxs {display: block;} }
+
+
+.lodge {
+	@include sec-default(); text-align: center; padding-top: 20px; border-top: 1px solid $logo-blue;
+	.lodge-inner {@include sec-default(); background-color: $logo-blue; padding: 30px 0 50px;}
+	.bronze{@include sec-default(); margin-top: 35px; }
+	.home-lodge {
+		@include sec-default(); padding:20px 10px; @include sec-bgimage(); text-align: center;background-image: url(image_path('sea-under.jpg')); box-shadow: 10px 10px 10px rgba($dark, .4);
+		img{width:350px; float: none; margin:auto; background-color: $white; padding:5px 0; display:inline-block; box-shadow: 10px 12px 15px rgba($dark, .4); border:1px solid rgba($gray, .1)}
+		&.one {background-image: url(image_path('sea-over.jpg'));}
+		&.alt{
+			img{background-color: $black;}
+		}
+	}
+
+	.title-line{border-bottom: 1px solid rgba($logold, .7);}
+	.plat, .gold, .bronze {display: inline-block; padding: 20px ;width:40%; }
+	.plat {width:45%; @include center-block(); padding: 30px 20px;}
+	.bronze{width:85%; @include center-block();}
+
+	h2, h4 {font-weight: bold; color: $teal; margin-bottom: 15px;text-shadow: 0px 1px 1px rgba($dark, .2);}
+	h4{font-size: 22px; margin-bottom: 25px; color: $white; }
+	.bronze {
+		h4 {margin-bottom: 5px; }
+		p.print {font-weight: bold; color: $dark; margin-bottom: 25px;
+			span{color: $teal;}
+
+			&.home {color: $lt-blue;
+				span {color:$lt-teal}
+			}
+		}
+	}
+
+	@include bp(md) {
+		.bronze {margin-top:10px;
+			.brz {display: inline-block; width: 48%;}
+		}
+	}
+
+	@include bp(pl) {
+		.plat, .gold, .bronze {width:85%; @include center-block(); }
+		.home-lodge {margin-bottom: 30px;}
+		h4{margin-bottom: 10px;}
+		.bronze {
+			.brz {@include sec-default();}
+		}
+	}
+}
+
+.lodging {
+	h1, h3 {font-weight: bold;line-height: 1.3em; text-shadow: 0px 1px 1px $light;}
+	.head-1 {@include sec-default(); background-color: $dark; @include sec-bgimage(); background-repeat: repeat; background-image: url(image_path('pattern.jpg')); padding: 25px; text-align: center; }
+	.lodge{border-top: none; padding-top:0;
+		.lodge-inner {background-color: $cream;}
+		h4 {color: $logo-blue;}
+	}
+}
+
+.register-now {
+	.reg-info {@include sec-default();background-color: #f5f5f5; padding: 60px 0 0px;
+		span, p, h3, li, h4, h1, h2, a { font-family: $lato; line-height: 1.4em; text-transform: uppercase; letter-spacing: 2px;}
+		text-align: center;
+		h1{margin-bottom: 15px;}
+		p{color: $dark; letter-spacing: 1px; font-weight: bold; margin-bottom: 0;}
+		p span {color: red; font-weight: 800}
+	}
+	.inner {width: 90%; @include center-block();}
+
+	.viplink {@include sec-default();padding: 10px 0; }
+	.vip-btn {width: 200px; @include center-block(); background-color: rgba($logo-blue, 1); color: white; font-weight: bold; padding: 5px 15px;
+		&:hover {opacity: .8;}
+	}
+}
+
+.registration, .safety-rules, .slips-parking {
+	button {background-color: red; color: $white; font-weight: bold; padding: 10px; border: none; font-size: 14px}
+	.txt-style {span, p, h3, li, h4, h1, h2, a { font-family: $lato; line-height: 1.4em; text-transform: uppercase; letter-spacing: 2px;}}
+
+  .pb-parallax {
+      @include sec-default ();padding: 55px; text-align: center;
+      background-color: #f7f7f7;
+      // background-image: url(image_path('patt2.png')); position: relative; z-index: 0;&::before {@include before(); background-color: rgba(white, .3); height: 100%;}
+
+      .text-sec {
+          @include sec-default ();
+          background-color: $white;
+          border: 1px solid rgba($gray, .1);
+          position: relative;
+          z-index: 10;
+          padding: 25px;
+          margin-top: 25px;
+
+          p { margin-bottom: .5rem; color: $dark; letter-spacing: 1px; text-transform: none;}
+          hr { margin-top: .1rem;}
+          h4 {font-weight: bold;}
+      }
+
+      .mobile-hide {margin-left: -5%; position: relative; z-index: 0;}
+
+			@include bp(xl) { .mobile-hide{display: none;} }
+      @include bp(md) {
+          padding: 30px 25px;
+          .mob-bg {
+              @include sec-default();
+              background-position: top left;
+              background-size: 30%;
+              background-repeat: no-repeat;
+              background-image: url(image_path('boat-week8.jpg'));
+          }
+          .no-padding-r {padding-right: 15px;}
+          .text-sec {
+              width: 82%;
+              padding: 25px;
+              margin-left: 22%;
+          }
+      }
+
+      @include bp(mb) {
+          .text-sec {
+              width: 90%;
+              padding: 20px 25px;
+          }
+      }
+
+      @include bp(sm) {
+          padding: 10px 0 30px;
+          .mob-bg { background-image: none;
+              .container {padding:0;}
+          }
+          .text-sec {
+              width: 100%;
+              padding: 20px 15px;
+              margin-left: 0;
+
+              span {width: 100%; float:left; }
+          }
+      }
+      @include bp(xs) {
+          .text-sec {
+              padding: 15px;
+              margin-left: 0;
+          }
+      }
+  }
+
+  .sign-up {
+    width: 150px;
+    height: 80px;
+    padding-top: 15px;
+    position: fixed;
+    top: 25%;
+    right: 2%;
+    // display: none;
+    background-color: darken(red, 5%);
+    color: white; font-weight: bold;
+		@include tshadowl($black);
+		border: 1px solid rgba($black, .3);
+    font-size: 18px;
+    z-index: 100;
+
+    &:hover {opacity: .7;}
+
+    @media (max-width: 1024px) {
+			top: 30%;
+    }
+
+    @include bp(ix) {width: 110px; font-size: 15px; height:75px; right:1%;}
+
+    @include bp(mb) {
+			right:0;width: 100px; margin-top: 10px;
+    }
+  }
+
+	hr.hlf{width: 40%; @include center-block();
+		&.xtra {margin-bottom: 25px; }
+		&.less {width: 15%; margin-bottom:25px;}
+	}
+
+  .box-lay {@include sec-default(); padding: 40px 20px 60px; background-color: $blue; text-align:center;
+
+  	.meetings{ @include sec-default(); background-color: $logold; padding:20px 20px 20px 40px;
+  		h2,h3,h4,p, span{letter-spacing: 1px; text-align: left; color: $dark;}
+  		.title-line{float: left; opacity: .5;}
+  		h2{font-weight:bold; margin-bottom: 7px; font-size: 1.7rem;}
+  		span{font-weight: bold;}
+  	}
+
+  	.inside {width: 80%; @include center-block();}
+  	span, p, h3, li, h4, h1, h2 { color: white; }
+
+  	h1 {line-height: 1.1em; font-weight: bold; font-size: 1.8rem; letter-spacing: 2px; overflow: hidden;
+  		span {font-size: 2.5rem; letter-spacing: 5px; background-color: $blue; position: relative; z-index: 0; padding: 0 4px 0 7px;
+		  	&::before {@include before(); width:200%; left:-45%; z-index: -1; height:1px; top:55%; border-bottom: 2px solid white; }
+  		}
+  	}
+  	h2 {margin-top: 0; letter-spacing: 4px;}
+  	h3.price {font-size: 2.3rem; line-height: 1.5em; font-weight: 900; color: $white; letter-spacing: 2px; text-shadow: 0px 1px 1px rgba($dark, .6); background-color: $teal;
+			&.less {text-shadow: none; font-weight: bold;}
+  	}
+		h4.title {font-size: 1.4rem; font-weight: bold; color: $white;  margin: 10px 0 8px; letter-spacing: 2px;}
+  	h4.teal {color: darken(#1a9ac5, 5%); font-weight: 900; font-size: 1.3rem; margin-bottom: 15px; letter-spacing: 1.5px;}
+  	li {color: $blue; line-height: 1.4em; font-size: 18px; margin-bottom: 15px; font-weight: 900; letter-spacing: 1px;
+  		&:nth-child(2n+2) {color: $logo-blue}
+  	}
+  	ul {padding: 20px 0;}
+
+		.logos{
+			.run-logo {display: inline-block; float:none; }
+			.run-logo.ip{ width: 130px; height: auto; padding: 5px;}
+			.run-logo.ecf {width: 260px; height: auto; margin-right:15px; margin-top: 20px;}
+		}
+
+		.two {@include sec-default();
+			background-color: white;
+			padding:20px 5px;
+			margin-top: 5px;
+		}
+
+		.btns {@include sec-default(); text-align: center; }
+
+		.vip-btn, .add-info {display: inline-block;float: none; background-color: rgba($logo-blue, 1); color: white; text-align: center; font-size: 16px; padding: 10px 20px; margin: 0 7px 10px; font-weight: bold; border-radius: 5px;
+			&:hover {background-color: rgba($logo-blue, .8); color: white;}
+		}
+
+		.add-info { background-color: rgba($teal, 1);
+			&:hover {background-color: rgba($teal, .8); color: white;}
+		}
+  	p.fuel {@include sec-default(); margin: 0; padding: 15px 0 10px; background-color: $white; text-align: center; color: $black; font-weight: bold; font-size:19px; letter-spacing: .5px;}
+  }
+
+	.vip {@include sec-default(); padding: 50px 0px; text-align: center;
+		h3 {color: $white; font-weight: 900; margin-bottom: 10px;
+			span {color: $logold; text-shadow: 0px 1px 1px rgba($dark, .4)}
+		}
+
+		p {font-weight: bold; margin-bottom:5px; font-size: 17px; color: $dark;
+			span {font-size: 15px;}
+			b{color: $blue; font-weight: 700;}
+		}
+		h4 {font-weight: bold;}
+		h4.perk {color: $teal; font-weight: 900; font-size: 19px; }
+		i.fa-circle {color: $teal; font-size: 7px; margin-bottom: 15px; }
+
+
+		.left, .right {display:inline-block; float: left; width: 40%; }
+		.right {width: 55%; float: right;}
+		.left {background-color: $teal; padding: 25px; margin-top:10px;
+			.inner {@include sec-default(); padding: 40px 5px 20px; border: 1px solid white; }
+			p{font-size: 14px; letter-spacing: 0px; }
+		}
+	}
+
+	.tix {@include sec-default(); padding: 25px 0px; background-color: $blue; text-align:center;
+		.inner {width: 80%; @include center-block(); background-color: white; padding: 20px;}
+		h4 {font-weight: 900; color: $teal; margin-bottom:10px;}
+		p {color: $dark; font-weight: 700;}
+		p span {color: $blue;}
+
+		.tx-btn {width: 40%; padding: 10px 20px; @include center-block(); text-align: center; background-color: $teal; color: $white; font-weight: bold;
+			border-radius: 15px; box-shadow: 0px 5px 8px rgba(black, .3);text-shadow: 0px 1px 1px rgba(black, .3);
+
+			&:hover {background-color: rgba($teal, .6);}
+		}
+	}
+
+	#addt-tix.uk-modal{
+		.uk-modal-dialog.uk-modal-dialog-large{padding:0; width:90%; @include center-block();}
+		.content{@include sec-default(); text-align: center; background-color: white; padding: 20px;}
+		.uk-close {font-size: 30px; top:12px; right:15px;}
+		.side{display: inline-block;float: left; width: 30%;}
+		.wide {display: inline-block; float: right; width: 68%;}
+		h3 {font-size: 1.5rem; margin-bottom:10px;}
+		h4 {margin-bottom: 20px; letter-spacing:1px;}
+		h4 b {color: $teal; }
+		h4 span {color: red; font-size: 15px;}
+		h4 b span {color: black; }
+		p{font-size: 14px;}
+	}
+
+	@media (min-width: 1366px) {
+		.box-lay {
+			.inside {width: 65%; }
+		}
+	}
+
+	@media (max-width: 1366px) {
+		.box-lay { padding: 40px 0;
+			.inside {width: 65%; }
+		}
+	}
+
+	@include bp(xl) {
+		.box-lay {
+			.inside {width: 90%; }
+		}
+
+		.vip{
+			.container {padding:0;}
+			p {font-size: 16px;}
+		}
+	}
+
+	@media (max-width: 992px) {
+		.box-lay {
+			.inside {width: 95%; }
+			h1 { font-size: 1.5rem;
+	  		span {font-size: 2.2rem;
+			  	&::before {width:200%; left:-50%;}
+	  		}
+	  	}
+	  	h3.price {font-size: 2rem; }
+	  	h4.title {font-size: 1.2rem;}
+	  	ul {padding-bottom:10px;}
+	  	hr.hlf {margin: 10px auto;}
+		}
+
+		.vip{padding:20px 10px;
+			hr.hlf.less {margin-bottom: 15px; margin-top: 10px;}
+			.left {width:80%; float: none; margin:auto; padding: 10px;
+				.inner {padding: 15px;}
+				h3 {margin-bottom: 0;}
+			}
+			.right {@include sec-default(); margin-top: 20px;}
+		}
+
+		.tix .tx-btn {width: 60%;}
+		#addt-tix.uk-modal{
+			.side, .wide{ width: 98%; @include center-block();}
+
+			h3 {font-size: 1.2rem; margin-bottom:10px;}
+			h4.last {margin-bottom: 0;}
+			iframe{margin-top: -20px;}
+		}
+	}
+
+	@include bp(md) {
+		.box-lay {
+			li {font-size: 1em;}
+			ul {padding:10px 0 5px;}
+	  	h4.title, h4.teal {font-size: 1rem;}
+		}
+		.vip .left {width: 95%;}
+
+		#addt-tix.uk-modal iframe{margin-top: -5px;}
+	}
+
+	@include bp(mb) {
+		.box-lay {
+			h1 span::before { width:180%; left:-40%;}
+		}
+		.tix .tx-btn {width: 100%;}
+	}
+
+	@include bp(pt) {
+		.box-lay {
+			h1 span::before { width:118%; left:-10%;}
+			h3.price {font-size: 1.7rem;
+				&.less {font-size: 1.4rem;}
+			}
+		}
+	}
+}
+
+
+
+.slips-parking {
+	.box-lay {
+  	h1 { font-size: 2rem;
+  		span {font-size: 2rem; }
+  	}
+  	h4 {margin-top:20px; color: white;background-color:$teal;font-weight: 900;font-size: 1.3rem; margin-bottom: 15px; letter-spacing: 1.5px; padding:10px}
+  	p{color:$dark;margin-bottom:7px;}
+
+  	p.name{font-weight: 900; color: $logo-blue; letter-spacing: 2px; font-size: 1.2em; margin-top:15px;}
+
+  	.location {@include sec-default(); margin-bottom:30px;
+			p.fuel {color: $teal;margin-bottom:10px; font-weight:bold;}
+  	}
+
+  	hr.hlf.less{margin-top:0; margin-bottom: 15px;}
+		p.number{margin-bottom: 20px;}
+  	.slip-link {width: auto; background-color: $blue; color: white; padding: 5px 15px;
+			&:hover {opacity: .7;}
+  	}
+  }
+}
+
+
+
+.safety-rules {
+	.box-lay { padding: 40px 0px;
+		.meetings{ @include sec-default(); background-color: $logold; padding:20px 20px 20px 40px;
+			h2,h3,h4,p, span{letter-spacing: 1px; text-align: left; color: $dark;}
+			.title-line{float: left; opacity: .5;}
+			h2{font-weight:bold; margin-bottom: 7px; font-size: 1.7rem;}
+			span{font-weight: bold;}
+		}
+
+
+		.inside {@include sec-default(); background-color: white; }
+		.two { width: 90%; @include center-block();text-align: left; padding:20px 0;}
+  	li { font-size: 16px; font-weight: normal; text-transform: none; letter-spacing: 1px}
+  	h4 {color: $dark}
+	}
+
+	.numbers {@include sec-default(); background-color: $teal; padding:15px;
+		h4 {margin: 5px 0 7px; text-transform: none; letter-spacing: 1px}
+	}
+}
+
+.register-ruby {
+		.big-header {
+			@include sec-default();
+			@include sec-bgimage();
+			background-image: url(image_path('header-scene.jpg'));
+			background-position: bottom center;
+
+			h1 { text-transform: uppercase; float: left;display: inline-block; color: $white;font-family: $franc; text-shadow: 1px 1px $black; }
+			.overlay {
+				padding:45px 0 35px;
+				background: rgba($dark, .4);
+			}
+			.clearfix.custom {display: none;}
+
+			.pay-link {width:40%; float: right; background-color: red; display: inline-block; padding:15px; text-align: center;
+				h3 {color: $white; font-size: 18px; line-height: 1.4em;}
+			}
+
+			@include bp(md) {
+				background-position: top center;background-image: url(image_path('header-scenexs.jpg'));
+				.overlay {padding: 25px 0;}
+				h1 {@include sec-default(); text-align: center; margin-bottom: 20px; position: relative;}
+				.clearfix.custom {display: block;}
+				.pay-link {width:90%; @include center-block(); padding: 10px;
+					h3{font-size: 15px;}
+				}
+			}
+			@include bp(sm) {
+				h1 {font-size: 28px;}
+				h1 span {font-size: .6em; @include center-block(); }
+				h4 { font-size: 1em;}
+				.overlay {padding: 20px 0;}
+			}
+
+
+			@include bp(pt) {
+				background-color: $dark; background-image: none;
+				h1 {font-size: 25px;}
+				h1 span {display: none; }
+				.overlay {padding: 10px 0 15px; background-color: transparent;}
+			}
+		}
+
+		.ruby-level {@include sec-default(); padding:40px 0; background-color: $offwhite;}
+
+		.form {
+			background-color: lighten($logo-blue, 50%);
+			@include center-block();
+			border:1px solid $logo-blue;
+			padding: 20px 30px;
+
+			h3 {font-weight: bold; color: $white; @include tshadow($logo-blue); margin-bottom:5px;}
+			p.disclaimer {font-weight: bold; text-align: center; color: $black;margin-bottom:20px; text-transform: uppercase;
+				&.b {text-align: left; font-size:14px;}
+			}
+			h4 {text-align: center; font-weight: bold; line-height: 1.4em; color: red;}
+		}
+}
+
+.events {
+	.uk-modal#friday .mapimg{ position:relative; z-index: 30;}
+	.btn-contest{background-color: $teal; color: $white; font-weight: bold;}
+
+	.schedule-events {
+		@include sec-default ();
+		padding: 15px 0;
+		background-color: $offwhite;
+
+		@include sec-bgimage ();
+		background-image: url(image_path('cove.png'));
+		position: relative;
+		z-index: 1;
+
+		&::before {
+		    background: $offwhite none repeat scroll 0 0;
+		    content: "";
+		    height: 100%;
+		    left: 0;
+		    position: absolute;
+		    top: 0;
+		    width: 100%;
+		    opacity: .93;
+		    z-index: -1;
+		}
+
+		.ip {width:120px; float:right}
+		.border-box {
+			width: 55%; @include center-block();
+			text-align:center;
+			h4 {padding-top:30px; color: $dark; font-weight: 600; }
+			h1 {color: $dark; font-weight: 800;}
+			p { padding-top:15px; font-style: italic; color: $dark;}
+
+			.left, .ip {display: inline-block;}
+		}
+
+		@include bp(md) {
+			.border-box {width:95%;}
+		}
+
+		@include bp(pl) {
+			.ip{width:80px;}
+			.border-box {
+				h1 {font-size: 30px;}
+				h4 {padding-top: 10px;}
+			}
+		}
+
+		@include bp(pt) {
+			.border-box .left, .ip{@include center-block();}
+		}
+	}
+
+	.e2-link { width: auto; float:none; background-color: $teal; padding:5px 15px; border-radius:5px; color: $white; font-size: 15px;
+  	&:hover {transition: all 500ms ease 0s;background-color: $dark; }
+	}
+
+	.others{
+		@include sec-default (); text-align: center; padding: 40px; background-color: $cream;
+		h3 {font-size: 22px; font-weight: bold; margin-bottom: 15px; font-family: $franc; color: $black;}
+		h4 {margin-bottom:10px; font-size: 16px;
+			span {font-style: italic; font-size: 15px; }
+		}
+
+		@include bp(md) {
+			padding:20px;
+			h3 {font-size: 20px;}
+		}
+	}
+
+	.events-schedule {
+		@include sec-default();
+		h3.inst{font-size: 18px; font-weight: bold; text-align: center; padding: 20px 0 15px;}
+
+		.tabs {
+			#accordeon, #solo {display: inline-block; width: 40%; float: left; padding: 0 5px;}
+			#accordeon { margin-left: 7%;}
+			.cbp .cbp-item {@include sec-default(); text-align: center;}
+			.cbp-item-wrapper {@include sec-default();}
+			.cbp-caption {padding-top:25px;}
+			.cbp-caption-expand-open .cbp-caption-activeWrap {padding-top:10px; background-color: rgba($gray, .1);}
+			h4.time {color: black; font-weight: bold;}
+
+			h5 {color: $black; font-weight: bold; margin-bottom: 5px;}
+			h4 {margin-bottom:10px; line-height: 1.3em;}
+			h4 b {color: $teal;}
+
+			// @include bp(xl) {
+			// 	#accordeon, #solo {width: 45%; }
+			// 	#accordeon{margin-left: 3%;}
+			// }
+			@include bp(xl) {
+				#accordeon, #solo {width: 95%; @include center-block(); margin-bottom: 15px; }
+			}
+		}
+	}
+}
+
+.newsponsor{
+	.breadcrumb-area {
+		background-color: $navy;
+		h1 {color:white;}
+		h4 {margin-top:20px;}
+		p { color: $white;  font-size: 16px;}
+	}
+
+	.sponsors-grid {
+		@include sec-default ();
+		background-image: url(image_path('patt2.png'));
+		padding:30px 0 0px;
+		.sponsor-sq{}
+		.sponsor-img {display: inline-block; margin-bottom:20px;
+				border-radius: 10px;
+				border: 1px solid rgba($gray,.2);
+				box-shadow: 1px 1px 1px rgba($gray,.4);
+			}
+
+
+		.top-spons{@include sec-default(); text-align: center;}
+		.tier1 .sponsor-img{width: 35%; @include center-block(); background-color:white; padding: 5px;}
+		.tier2 .sponsor-img{width: 28%; margin: 0 1.5% 20px;}
+		.tier3 .sponsor-img{width: 24%; margin-left: .5%;}
+		.tier4 .sponsor-img{width: 18%; margin-left: 1%;}
+	}
+
+	@include bp(ix) {
+		.breadcrumb-area{padding:20px 0 15px;
+			h1{font-size: 28px;}
+			h4{margin-top: 0;}
+			p {font-size: 14px;}
+		}
+	}
+
+	@include bp(ph) {
+		.sponsors-grid {
+			.tier1 .sponsor-img{width: 40%;}
+			.tier2 .sponsor-img{width: 30%; margin: 0 1% 20px;}
+			.tier3 .sponsor-img{width: 28%;}
+			.tier4 .sponsor-img{width: 23%;}
+		}
+	}
+}
+
+.gallery {
+
+	.big-header {
+		@include sec-default();
+		@include sec-bgimage();
+		background-position: center center;
+		background-image: url(image_path('party.jpg'));
+
+		p, h3, h4, h5 {color: $white;font-family: $franc; }
+
+		.overlay {
+			padding:50px;
+			background: rgba($teal, .9);
+		}
+
+		h1 { text-align:center; padding-bottom:20px; color: $white;  text-transform: uppercase; font-family: $franc;}
+	}
+
+	.image-gallery {
+		@include sec-default ();
+		padding: 30px 0;
+	}
+
+	.nanoGalleryThumbnailContainer {
+		// custom.js has commented out sizes also -- check config > app.rb if errors
+		margin-right: 10px;
+	}
+
+	.nanoGalleryBreadcrumb {
+		@include sec-default ();
+		padding: 10px;
+		.folder:hover, .folderHome:hover, .separator:hover { color: $black; }
+	}
+
+	.nanoGalleryContainer .nanoGalleryThumbnailContainer {
+		.labelFolderTitle, .labelImageTitle {}
+
+		.labelDescription { text-transform: capitalize;}
+
+		.labelFolderTitle > span ,
+		.labelDescription > span {
+		 	color:rgba(34, 34, 34, 0.75);
+		  	border-radius: 2px;
+		  	padding:0px 4px;
+			font-shadow: none;
+			vertical-align: middle;
+			display: inline;
+		}
+
+		.labelFolderTitle:before, .labelImageTitle:before{
+			display: none;
+		}
+	}
+		.nanoGalleryPagination {
+			.paginationPrev:hover, .paginationNext:hover, .paginationItem:hover {color: $black}
+
+			.currentPage {font-weight: bold;}
+		}
+}
+
+.custom-contact-section {
+	overflow: hidden;
+	@include sec-default ();
+	@include sec-bgimage ();
+	background-color: $offwhite;
+	padding: 50px 30px;
+	background-image: url(image_path('destin1.jpg'));
+	background-position: top right;
+	background-size: 65%;
+
+	.fullsection{@include sec-default ();}
+
+	.left {display: inline-block; width: 35%; float: left;
+		.inner {width: 70%; @include center-block();}
+	}
+
+	.right{display: inline-block; width: 60%; float: right; padding:25px;
+		.hlf1, .hlf2 {display: inline-block; width: 46%; float: left;}
+		.hlf2 {float: right;}
+
+		.fa {margin-right:15px;}
+	}
+
+	a {color: $teal;}
+	h1 { font-weight: 700; margin-bottom: 30px;}
+	h4 {padding-top:15px; margin-bottom: 10px;}
+
+	.color-box {
+		@include sec-default ();
+		background-image: url(image_path('patt2.png'));
+		padding: 20px 20px 15px 0;
+		background-color: $offwhite;
+
+		.contact-info { @include sec-default ();text-align: center; border-right: 1px solid #dfdfdf;}
+	}
+
+	.form-col {
+		margin-bottom: 5px;
+	}
+
+	.form-group {
+		@include sec-default ();
+		padding: 1px 5px;
+
+		input, textarea {
+			@include sec-default ();
+			line-height: 2em;
+			padding-left: 10px;
+			border:1px solid #dfdfdf;
+		}
+		.send-message { width: 50%; @include center-block (); }
+	}
+	.text {@include sec-default ();}
+
+	@media (max-width: 1025px) { padding: 30px 15px 0; p.xs-sm a {font-size: 14px;} .right{padding:0px 20px 20px;} .color-box {padding-bottom:0}}
+
+	@include bp(md) {
+		padding-top:25px;
+		@include sec-bgimage ();
+		background-image: url(image_path('destin-mobile.jpg'));
+
+		.left, .right {@include sec-default(); }
+		.left .inner {@include sec-default(); padding: 0 10px; }
+		.text{padding: 25px 10px 0 5px;}
+
+	}
+
+	@include bp(mb) {
+		@include sec-bgimage ();
+		background-image: url(image_path('destin-mobile.jpg'));
+		padding: 20px 15px 0;
+
+		.right{ @include sec-default(); padding:0px 25px;
+			.hlf1, .hlf2 {display: inline-block; width: 46%; float: left;}
+			.hlf2 {float: right;}
+			.fa {margin-right:15px;}
+		}
+
+	}
+
+	@include bp(sm) {
+		padding-top: 0px;
+		background-image: none;
+		.left .inner {padding: 0; position: relative; z-index: 4; padding-top: 20px;}
+		.text{padding: 5px;}
+		.left::before {
+			content: '';
+			background-color: rgba($teal, .7);
+			width:100%;
+			height: 90px;
+			position: absolute;
+			z-index: 1;
+			left:0;
+		}
+		h1, h5 {text-align: center;}
+		h5 {font-size: 1rem}
+		h1 {font-size: 2.25rem}
+
+		.right{padding: 0;
+			.hlf1, .hlf2 {@include sec-default ();}
+			.contact-info{border:none;}
+		}
+	}
+}
+
+.ec-foundation {
+	h4.creed {font-style: italic; line-height: 1.5em; margin-top: 25px; color: #119ac5; font-weight: bold;}
+	p {margin-bottom: 10px;}
+	.banner {@include sec-default(); background-color: $offwhite; padding-top:20px; border-top: 1px solid rgba($gray, .3);
+		padding-left:60px;
+		.ecf-logo {display: inline-block; float: left; width: 40%; padding-left: 15px;}
+		.ecf-creed {display: inline-block; width:40%; margin-left: 8%;}
+
+		@include bp(md) { padding: 20px;
+			.ecf-logo {width: 45%; padding-left: 0; @include center-block();}
+			.ecf-creed {width:80%; @include center-block(); text-align: center;}
+			h4.creed { margin-top: 10px;}
+		}
+
+		@include bp(sm) {
+			.ecf-logo {width: 80%; }
+			.ecf-creed {width:100%;}
+		}
+	}
+
+	.foundation-sec{
+		@include sec-default();
+		padding:60px 0px 40px;
+
+		.foundation {@include sec-default(); padding-bottom: 20px;}
+
+		.modal-links{@include sec-default(); text-align: center; margin-top:25px;}
+		.board-modal {width:30%; display: inline-block; margin:0 3%; background-color: $teal; border: 1px solid $teal;
+				h4 {  color: $white; font-weight: bold; padding: 10px;text-align: center; margin:0;}
+				&:hover {@include ease(); background-color: $offwhite; h4{color: $teal;}}
+		}
+		#modal-board {
+			.uk-modal-dialog.uk-modal-dialog-large  { height:100%; background-color: $white; }
+		}
+		.admin {width:80%; @include center-block(); text-align: center;
+			h3 {margin-bottom: 20px;}
+			.top, .bottom{padding-top:20px;}
+			.bottom{margin-bottom: 40px;}
+		}
+		h4{ margin-bottom: 30px;
+			span {font-weight: bold; color: $teal;}
+		}
+		p{color: $dark}
+	}
+
+	.charities {@include sec-default(); padding: 30px 10px 0;
+		h3 {text-align: center; font-weight: bold;}
+		.org-box{ width:19%; margin-left: 5%; display: inline-block;
+			&:first-child {margin-left: 0;}
+		}
+		.uk-modal-dialog.uk-modal-dialog-large {padding: 40px; padding-bottom:15px;
+			h3{margin-bottom: 25px;}
+			.charity-logo {width: 30%; @include center-block();}
+		}
+	}
+
+	@include bp(md) {
+		.foundation-sec{padding:40px 0 25px;
+			.board-modal {width:45%; margin:0 15px;}
+			.foundation {padding-bottom: 0px;}
+			#modal-board .image-row {@include center-block(); text-align:center;}
+		}
+		.charities {padding-top: 20px;}
+	}
+
+	@include bp(mb) {
+		.foundation-sec{padding:25px 0;
+			.board-modal {margin:0 5px;
+				h4{font-size: 16px;}
+			}
+
+			#modal-board {
+				.uk-modal-dialog.uk-modal-dialog-large  { height:auto; background-color: $white; }
+				.image-row .foundation-logo { width:50%; @include center-block();}
+			}
+			.admin {
+				h3 {margin-bottom: 10px;}
+				.top, .bottom{padding-top:0px;}
+				.bottom{margin-bottom: 10px;}
+			}
+		}
+
+		.charities {padding: 0px;
+			.org-box{ width:21%; margin-left: 3%; display: inline-block;}
+			.uk-modal-dialog.uk-modal-dialog-large {padding: 20px 30px 10px;}
+		}
+	}
+
+	@include bp(sm) {
+		.foundation-sec {
+			.modal-links{margin-top:0px;}
+			.board-modal {width: 80%; @include center-block(); margin-top:20px; margin-bottom: 5px;}
+		}
+		.charities {
+			.org-box{ width:45%; padding: 10px;}
+			.uk-modal-dialog.uk-modal-dialog-large {padding: 20px 10px 0;
+				h3{font-size: 1.4rem; padding-top:5px; margin-bottom:15px;}
+				.desc {@include sec-default(); height: 400px; overflow-y: scroll; }
+				.charity-logo {width: 50%;}
+			}
+		}
+	}
+
+	@include bp(xs) {
+		.foundation-sec {
+			.board-modal {width: 95%; }
+		}
+
+		.charities {
+			.org-box{ width:60%; @include center-block(); padding: 0px;}
+		}
+	}
+}
+
+.stops {
+	.big-header {
+		@include sec-default();
+		padding:45px 20px;
+		text-align: center;
+		@include sec-bgimage();
+		background-image: url(image_path('boat-week6.jpg'));
+		position: relative;
+
+		h1 {font-size: 40px; color: $white; font-weight: 700; margin-bottom:2px;}
+		h4 {font-weight: bold; color: $white; margin-bottom: 20px; font-size: 22px;}
+    p { font-size: 15px; line-height: 1.4em; color: $white; padding-top: 10px; font-weight: bold; }
+    .left {float: left; display: inline-block; width: 70%;}
+    .ip {float: right; width: 150px; margin-right: 10%; display: inline-block;}
+
+	    .bh-link {
+	    	// @include sec-default ();
+	    	width: 25%; display: inline-block;
+	    	border: 1px solid $teal;
+	    	border-radius: 5px;
+	    	background-color: $white;
+	    	padding: 10px;
+	    	text-align: center;
+	    	color: $dark; font-size: 15px; font-weight: bold;
+
+	    	&:hover h4{ color: $teal; @include ease (); }
+	    }
+	}
+	.big-header::before {
+	    background: $dark none repeat scroll 0 0;
+	    content: "";
+	    height: 100%;
+	    left: 0;
+	    position: absolute;
+	    top: 0;
+	    width: 100%;
+	    z-index: 0;
+	    opacity: .65;
+	}
+
+	.friday, .saturday {display: inline-block; width:30%; float:left; padding: 0 10px;
+		h2{font-size: 19px; font-weight: bold; margin-bottom: 6px;color: $logo-blue}
+		p{color: $dark;}
+		li {color: $dark; margin-bottom:10px; font-size: 17px;
+			a {color: $teal; font-weight: bold;}
+			span{font-size: 14px; color: #999; font-style: italic; font-weight: normal;}
+		}
+	}
+	.map-run {display:inline-block; float:right; height: 300px; width: 40%;}
+
+	@include bp(xl) {
+		.section{padding:30px;}
+		.friday, .saturday {width:45%; padding:20px 10px 0;
+			h2{font-size: 17px; }
+			li {font-size: 15px;
+				span{font-size: 13px;}
+			}
+		}
+		.saturday{float:right;}
+		.map-run { width: 90%; height:200px; @include center-block(); margin-bottom: 20px; }
+	}
+
+	@include bp(md) {
+    .big-header {
+    	padding:30px 0;
+    	h1 {font-size: 30px;}
+    	h4 {font-size: 19px;}
+    	.left {width: 75%}
+    	.ip {margin-right: 3%; width: 120px}
+	    .bh-link { width:45%}
+    }
+
+    .section{padding:20px;}
+		.friday, .saturday {width:85%; @include center-block(); padding: 15px 0;}
+  }
+
+  @include bp(ph) {
+    .big-header {
+    	padding:15px 0;
+    	.left {@include sec-default();}
+    	.ip {width: 65px; margin-top: 10px}
+	    .bh-link {font-size: 14px}
+    }
+  }
+
+	.section {padding: 60px 30px; text-align: center;}
+}
+
+.home, .home-alt, .page {
+	.cst-ebox {@include sec-default(); padding:50px 0; background-color: $white; background-image: url(image_path('noisy.jpg'));
+		.ebox {width:80%; @include center-block();}
+		.text {@include center-block(); width:75%;}
+		p{color: $dark;  margin: 15px 0 20px; font-size: 16px; }
+		.top {@include sec-default(); margin-bottom: 20px; text-align: center;}
+		.rls {margin-top: 20px;}
+		.run-logo{ height: 120px; display: inline-block;
+			// margin: 5px 10px;
+			padding: 5px 10px;
+			height: 110px;
+			&:first-child{height: 100px;}
+		}
+		.mtext{@include sec-default();margin-bottom: 30px;}
+
+		h3 {margin-bottom:5px; text-align: center; line-height: 1.2em; color: $dark; font-size: 32px; font-family: $lato; font-weight: bold;}
+		h4 {font-size: 18px; margin-bottom: 5px;}
+		h5 {font-size: 25px; font-weight: bold; text-align: center; color: $teal;}
+
+		.ltext, .rtext {display: inline-block; float: left; width: 36%;
+			p{margin-bottom: 15px;}
+		}
+		.rtext {float: right; width: 60%;}
+
+		.rls { width: 40%; @include center-block(); margin-bottom: 30px;}
+		// .mid {display: inline-block; float: right; width: 40%;}
+		.mid {display: inline-block;float: left; width: 45%; text-align:center; float: left;
+			h3, h4{color: $teal; font-weight: bold; font-family: $lato; text-transform: uppercase; font-size: 28px;}
+			h4{color: $black; font-size: 21px;font-style: italic;}
+
+			&.two {float: right;}
+		}
+
+	}
+
+	.inform-faq { @include sec-default();padding: 40px;
+		background-color: $lt-blue;
+		background-color: $logo-blue;
+		.facebook-feed, .links {float: left; display: inline-block; width: 25%;}
+		.links {width: 74%; float: right;}
+		.faq {display: inline-block; width: 30%; margin:10px 0 10px 2.2%; padding: 15px; text-align: center; background-color: $white; @include ease(); border: 1px solid transparent;
+			&:hover {border: 1px solid $teal;}
+		}
+		h4{font-weight: bold; margin-bottom: 5px; color: $blue; font-family: $lato;}
+		p {color: $dark;}
+
+		.fb-blk, .video-blk {float: left; display: inline-block; width: 55%;}
+		.fb-blk { width: 40%;float: right;}
+		iframe {height: 350px; width:100%;}
+	}
+
+	.full-media {@include sec-default(); padding: 30px;
+		.video {float: left; display: inline-block; width: 40%; }
+
+    .prizes{display: inline-block; width: 59%; float: right; text-align: center; padding:25px;
+    	position: relative; z-index: 0;background-image: url(image_path('sprinkles.jpg')); background-size: 30%;
+    	&::before {@include before(); background-color: rgba($logold, .5); z-index: -1; height:100%;}
+			.grand {@include sec-default(); border:2px solid $white; padding:25px 5px;}
+
+			hr {margin-bottom: 10px; margin-top:10px;}
+    	h3 {font-weight: 800; line-height: 1.2em; font-size: 26px; text-shadow: 0px 1px 1px rgba($black, .5);}
+    	h4 { font-weight: 800; font-size: 24px; color: $navy; line-height: 1.6em;  text-shadow: 0px 1px 1px rgba($black, .5);
+    		span{font-size: 18px; color: $white; line-height: 1em; text-shadow: 0px 1px 1px rgba($black, .8);}
+    	}
+    	p{color:$black; font-weight: bold;}
+    	.win {display: inline-block; float: left; padding: 20px; width: 50%;}
+    }
+	}
+
+	@include bp(xl) {
+		.cst-ebox {padding: 35px 0;
+			.ebox {width:92%;}
+			.ltext {width: 38%; padding-right:5px;}
+			.rtext{padding-left: 5px;}
+
+			.rls{margin-top: 0; }
+
+			.mid, .rls {width:80%; @include center-block();}
+			.mid {width: 70%; padding-top:20px;
+				&.two {float: none;}
+				h3, h4{ font-size: 28px;}
+				h4{color: $black; font-size: 21px;font-style: italic;}
+			}
+		}
+
+		.inform-faq {padding: 20px 10px;
+			.facebook-feed {width: 35%;}
+			.links{width:64%;}
+			.faq {width: 48%; padding: 10px; margin: 10px 0 5px 5px;
+				&:last-child{display: none;}
+			}
+		}
+	}
+
+	@media (max-width: 992px){
+		.cst-ebox {padding: 20px 0;
+			.ebox {width:95%;}
+			.top {margin-bottom: 10px;}
+
+			h3 {font-size: 26px;}
+			h4 {font-size: 16px;}
+			.ltext, .rtext {@include sec-default(); padding:0;}
+			.mtext {width: 97%; @include center-block(); max-height: 250px; overflow-y: scroll; margin-bottom: 15px; }
+		}
+	}
+
+	@include bp(md) {
+		.cst-ebox {padding: 25px 0 10px;
+			.run-logo{ height: 100px; margin: 5px;
+				&:first-child{height: 80px;}
+			}
+			.rls{width: 99%;}
+			.mid {
+				h3{ font-size: 23px;}
+				h4{ font-size: 18px;}
+			}
+		}
+
+		.inform-faq {
+			.facebook-feed {display: none;}
+			hr{width:85%; @include center-block();}
+			.links{@include sec-default();}
+			.faq {width: 48%; padding: 10px; margin: 10px 0;
+				&:nth-child(2n+2) {float: right;}
+			}
+
+			.fb-blk {max-height:300px; overflow: hidden;}
+			iframe {height: 250px; }
+		}
+	}
+
+	@include bp(pl) {
+		.cst-ebox {
+			h3{font-size: 19px;
+				span{font-size: 25px;}
+			}
+			h4 {font-size: 17px;}
+			p {font-size: 15px; margin-bottom: 5px;}
+			.run-logos {width: 85px;}
+		}
+
+		.inform-faq {
+			.container{padding:0;}
+			.fb-blk {max-height:230px; width:44%;}
+			iframe {height: 230px; width:auto;}
+		}
+
+		.full-media .prizes {
+			.win {padding: 10px 0 0;}
+		}
+	}
+
+	@include bp(ph) {
+		.cst-ebox .mid {width:95%;
+			h3{ font-size: 20px;}
+			h4{ font-size: 16px;}
+			img{width: 90%; @include center-block();}
+		}
+
+		.inform-faq {
+			.faq {width: 95%; @include center-block();
+				&:nth-child(2n+2) {float: none;}
+			}
+
+			.video-blk, .fb-blk {width:90%; margin-bottom: 20px; @include center-block(); text-align: center;}
+			iframe {height:190px;}
+		}
+
+		.full-media .prizes {
+			.win {@include sec-default();}
+		}
+	}
+
+	@include bp(pt) {
+		.cst-ebox {
+			h4{font-size: 15px; }
+			h5 {font-size: 20px;}
+		}
+	}
+
+	.custom-box-2 {
+		padding-left: 50px;
+		padding-bottom: 70px;
+
+		.header-box {
+			margin-top: 14%;
+			padding-top:35px;
+			padding-bottom:25px;
+
+			h3 {margin-bottom:10px;}
+
+			&:after { width: 99%; height:2px; }
+		}
+
+		.rules {
+			h4 {margin-top: 20px;}
+			p{ text-align:center; font-weight: bold;}
+			span { font-weight: normal;}
+		}
+	}
+
+	.foundation {
+		@include sec-default ();
+		padding: 50px 0 60px;
+
+		.motto {width: 60%; @include center-block(); text-align: center; padding-bottom: 30px;
+			h4 {font-size: 15px; font-style: italic; line-height: 1.3em; padding:10px 20px; font-weight: bold;}
+			img {width: 50%; @include center-block();}
+		}
+		.text-box {
+			@include sec-default ();
+			padding: 40px 30px 20px;
+			background-color: $cream;
+			h3 { font-family: $franc; margin-bottom:20px;}
+
+			p { color: $dark;}
+		}
+
+		@include bp(md) {
+			padding: 25px 0;
+
+			.motto {width: 80%;}
+			.text-box {padding: 20px; margin: 30px; }
+			.slider-mob {@include center-block(); padding-top:20px;}
+		}
+
+		@include bp(mb) {
+			.motto {width: 85%; padding-bottom:0;
+				h4 { padding:10px 0;}
+			}
+			.text-box {margin: 20px 0px; }
+			.slider-mob {width:70%;}
+		}
+
+		@include bp(sm) {
+			padding-left:15px;padding-right:15px;
+			.motto {width: 100%;}
+			.donation { overflow: hidden;}
+			.text-box {padding: 10px; h3{margin-left:10px;}}
+		}
+	}
+}
+
+.home, .home-alt {
+	.home-top {
+		@include sec-default ();@include sec-bgimage (); background-position: bottom left;
+		background-color: $logo-blue;
+		background-image: url(image_path('boat-week7-mid.jpg'));
+		background-size: 65%;
+		padding: 70px 10px;
+		height:auto;
+	}
+
+	.open {
+		text-align: center;
+		h2 { color: lighten($blue, 35%);font-family: $courg; font-weight: bold; font-size: 2.3rem;}
+		h1 {line-height: 1.2em; margin-top: 0px; font-size:2.6rem;font-family: $lato; font-weight: 800; color:$teal; margin-bottom:5px; text-transform: uppercase; text-shadow:0px 1px 1px rgba(black, .5) }
+
+		h3 {margin-bottom: 20px; font-weight: 600;}
+		.spacer {@include sec-default(); margin-bottom: 15px;}
+		h3.date {color: white; margin-bottom: 50px;}
+	}
+	.title-box {display: inline-block; width: 35%; float: right;}
+
+	#countdown{
+		background: none;
+		@include center-block();
+		text-align: center;
+		padding-top: 0px;
+
+    li { display: inline-block;
+    	span{ color: $white; @include tshadow ($black); padding: 15px 0; font-size: 50px; font-weight: 700;}
+    	span:after { content: ':'; display: inline-block; color: $white; @include tshadow ($black); vertical-align: middle; position: relative; bottom: 5px; margin-left: 3px;}
+    	p {text-indent: -15px; color: $white; text-transform: uppercase; font-weight: 800; margin-top: 5px; font-size: 14px; @include tshadow ($black);}
+	    &:last-child span:after {display: none;}
+	    &:last-child p {text-indent: 0;}
+    }
+	}
+
+	@media screen and (max-width: 1120px) {
+		.open {
+			h1 {font-size: 2rem;}
+			h2 {font-size: 1.8rem;}
+			h3 {font-size: 1.35rem;}
+		}
+
+		#countdown li {
+			span{font-size: 40px;}
+			p {font-weight: 600; font-size: 13px;}
+		}
+	}
+
+	@include bp(xl) {
+		.home-top {padding: 35px 10px;}
+	}
+
+	@include bp(ix) {
+		// .home-top {padding: 35px 10px;}
+		.home-top {position: relative; z-index: 0; background-size: 100%;
+			&::before {@include before();background-color: rgba($black, .65);z-index: -1; height:100%;}
+		}
+		.title-box{width: 95%; @include center-block();}
+		.open {
+			h3.date{margin-bottom: 25px;}
+		}
+	}
+
+	@include bp(sm) {
+		.home-top{background-size: cover;}
+	}
+
+
+	.contest-img{@include sec-default();}
+	.home-layout {
+		@include sec-default(); background-color: $logo-blue; padding: 50px 0;
+  	span, p, h3, li, h4, h1, h2, a { font-family: $lato; line-height: 1.4em; text-transform: uppercase; letter-spacing: 2px;}
+  	h3 {color: white; font-weight: 900; margin-bottom: 10px;}
+  	h3, .hl-btn {display: inline-block;}
+  	.hl-btn {float: right; padding: 5px 10px; background-color: $teal; color: white; font-weight: bold; font-size: 15px;}
+
+		.inner {@include center-block(); width: 85%;}
+		.full {@include sec-default(); }
+		.lhlf, .rhlf {display: inline-block; float: left; width: 45%; }
+		.rhlf {float: right;}
+		iframe {height: 350px; width:100%;}
+		.rhlf.alt {width: 40%; }
+		.lhlf.alt {width: 40%;}
+	}
+
+	.lodge-list {@include sec-default(); text-align: center; background-color: #f7f7f7; padding:30px 0;
+		.lodge-inner{width: 60%; @include center-block();}
+		h4, h3, p { font-family: $lato; text-transform: uppercase; letter-spacing: 2px; font-weight: bold;}
+		p {color: $dark; font-weight: normal; letter-spacing: 1px;}
+		h3 {color: $teal; font-weight: 900;}
+		h4{font-size: 19px; margin-bottom: 10px; margin-top: 15px;}
+
+		.plat, .gold, .bronze { padding: 15px 20px; @include sec-default(); }
+
+		.home-lodge { padding:12px 10px; width:310px; @include center-block();
+			@include sec-bgimage(); text-align: center;background-image: url(image_path('sea-under.jpg')); box-shadow: 10px 10px 10px rgba($dark, .2);
+			img{height:80px; @include center-block(); background-color: $white; padding:5px 0; box-shadow: 10px 12px 15px rgba($dark, .4); border:1px solid rgba($gray, .1);}
+			&.one {background-image: url(image_path('sea-over.jpg'));}
+			&.alt{
+				img{background-color: $black;}
+			}
+		}
+		.bronze {
+			.home-lodge {display: inline-block; margin: 0 15px;}
+		}
+
+		&.alt {width: 57%; float: right; padding:0;
+			background-color: transparent;
+			.lodge-inner{width: 100%;}
+			h3 {color: white;}
+			p {color: white; font-size: 14px;}
+			h4 {color: white; margin: 5px 0; font-size: 17px;}
+			.home-lodge {padding: 10px; width:100%; img{height: auto;}}
+			.plat, .gold {display: inline-block; float: left; }
+			.plat {width: 55%;}
+			.gold {width: 45%;}
+
+			.bronze {margin-top: 20px;
+				.home-lodge {display: inline-block; width: 40%; }
+			}
+		}
+	}
+
+	@include bp(xl) {
+		.home-layout {
+			.lhlf {width: 50%;}
+		}
+
+		.lodge-list {
+			.lodge-inner{width: 80%;}
+		}
+	}
+
+	@media (max-width: 992px) {
+		.home-layout {padding:30px 0;
+			.lhlf, .rhlf.alt {@include sec-default();}
+			h3 {font-size: 20px;}
+			iframe {height:275px; margin-bottom:20px;}
+			.rhlf {max-height: 200px; overflow: hidden;}
+		}
+
+		.lodge-list { padding: 15px 0;
+			.lodge-inner{width: 100%;}
+			h3 {font-size: 1.5rem;}
+			.plat, .gold, .bronze { padding: 10px 15px;}
+
+			.home-lodge {width: 285px;
+				img {height: 70px;}
+			}
+		}
+	}
+
+	@include bp(mb) {
+		.lodge-list {padding-bottom: 0;
+			.bronze .home-lodge {@include center-block(); margin-bottom: 25px;}
+		}
+	}
+
+	@include bp(pt) {
+		.home-layout {
+			.hl-btn{display: block; float: left; margin-bottom: 10px;}
+			h3 {width:100%;}
+		}
+	}
+}
+
+.now {background-color: red; color: white; font-weight: bold; text-align: center; font-size: 18px; padding: 10px 20px;
+	text-shadow: 0px 1px 1px rgba(black, .3); margin-top: 20px; border-radius: 15px; box-shadow: 0 8px 10px rgba(black, .5);
+	&:hover { background-color: lighten(red, 20%);color: white;}
+}
+b.ruby {color: #8c2034;}
+b.emrld {color: #138776;}
+
+
+.be-a-sponsor {
+	.full-sponsor {@include sec-default(); background-color: #f1f2f4; padding: 30px 0;}
+	.inner {width: 90%; @include center-block();}
+	.letter, .btns {display: inline-block; float: left;}
+	.letter{width: 77%; background-color: white; padding: 20px 30px;
+		p {color: $dark;}
+		h4 {font-weight: bold; color: $blue; margin-bottom: 15px; font-size: 20px;}
+	}
+
+	.btns {margin-top:15%;padding:0; width: 20%; float: right;
+		.pdf-link {@include sec-default(); text-align:center; background-color: $logo-blue; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; padding: 8px 15px; margin-bottom: 20px;}
+	}
+
+	@include bp(md) {
+		.letter, .btns {@include sec-default();}
+		.btns {margin-top: 20px; text-align: center;
+			.pdf-link {display: inline-block; float: left; width: 45%; margin-left: 4%;}
+		}
+	}
+
+	@include bp(ph) {
+		.btns {margin-top: 10px;
+			.pdf-link {width: 90%;@include center-block();}
+		}
+	}
+}
