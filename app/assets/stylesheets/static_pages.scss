@@ -956,7 +956,7 @@ br.xxs {display: none;}
 		text-align: center;
 		@include sec-bgimage();
 		background-image: url(image_path('boat-week6.jpg'));
-		position: relative;
+		position: relative; z-index: 0;
 
 		h1 {font-size: 40px; color: $white; font-weight: 700; margin-bottom:2px;}
 		h4 {font-weight: bold; color: $white; margin-bottom: 20px; font-size: 22px;}
@@ -985,7 +985,7 @@ br.xxs {display: none;}
 	    position: absolute;
 	    top: 0;
 	    width: 100%;
-	    z-index: 0;
+	    z-index: -1;
 	    opacity: .65;
 	}
 
@@ -1351,7 +1351,7 @@ br.xxs {display: none;}
 
 	.contest-img{@include sec-default();}
 	.home-layout {
-		@include sec-default(); background-color: $logo-blue; padding: 50px 0;
+		@include sec-default(); background-color: rgba($logo-blue, .3); padding: 50px 0;
   	span, p, h3, li, h4, h1, h2, a { font-family: $lato; line-height: 1.4em; text-transform: uppercase; letter-spacing: 2px;}
   	h3 {color: white; font-weight: 900; margin-bottom: 10px;}
   	h3, .hl-btn {display: inline-block;}
@@ -1364,6 +1364,12 @@ br.xxs {display: none;}
 		iframe {height: 350px; width:100%;}
 		.rhlf.alt {width: 40%; }
 		.lhlf.alt {width: 40%;}
+
+		.comingsoon {box-shadow: 0px 5px 8px rgba($dark, .4);margin-top: 35px;padding:50px 10px; background-color:$logo-blue;text-align: center;
+			h4{color: $white; font-weight: 900; font-size:30px; line-height: 1.6rem;
+				span{letter-spacing: 4px;}
+			}
+		}
 	}
 
 	.lodge-list {@include sec-default(); text-align: center; background-color: #f7f7f7; padding:30px 0;
@@ -1420,6 +1426,10 @@ br.xxs {display: none;}
 			h3 {font-size: 20px;}
 			iframe {height:275px; margin-bottom:20px;}
 			.rhlf {max-height: 200px; overflow: hidden;}
+
+			.comingsoon {margin:0 0 35px;padding:30px 10px; 
+				h4{font-size:25px; }
+			}
 		}
 
 		.lodge-list { padding: 15px 0;
@@ -1443,6 +1453,10 @@ br.xxs {display: none;}
 		.home-layout {
 			.hl-btn{display: block; float: left; margin-bottom: 10px;}
 			h3 {width:100%;}
+		}
+
+		.comingsoon {margin:0 0 35px;padding:20px 10px; 
+			h4{font-size:20px; }
 		}
 	}
 }
