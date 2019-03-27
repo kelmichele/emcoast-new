@@ -4,36 +4,43 @@ Boat Week is a week-long boating celebration along the Emerald Coast, that round
 <% end %>
 
 
-<section class="home-top">
-    <!-- <div class="container-fluid"> -->
-        <div class="open">
-          <div class="img-bx">
-            <!-- <%= image_tag('adobe.png', class: 'img-responsive hero-vec') %>  -->
-          </div>
+<!-- <section class="home-top">
+  <div class="open">
+    <div class="title-box">
+      <h2 class="top">The Original</h2>
+      <h1>Emerald Coast<br> Poker Run</h1>
+      <h2>"The Big One"</h2>
+      <br>
+      <h3 class="date">Saturday, August 10, 2019</h3>
+      <ul id="countdown" class="slider-countdown-two" data-countdown-time="2019/08/7">
+        <li><%= link_to "Register Now", register_now_path, class: 'now' %></li>
+      </ul>
+    </div>
+  </div>
+</section> -->
 
-
-          <div class="title-box">
-            <h1 class="top">The Original</h1>
-            <h1>Emerald Coast<br> Boat Week &amp; Poker Run</h1>
-            <h2>"The Big One"</h2>
-            <br>
-            <ul id="countdown" class="slider-countdown-two" data-countdown-time="2018/08/9"></ul>
-          </div>
-        </div>
+<div class="video-holder">
+  <!-- <div class="video-frame"> -->
+    <!-- <div class="video mute loop bg-video"> -->
+      <!-- <= video_tag "ec-video.mp4", width: "100%", height: "100%", autoplay: true, loop: "loop" %> -->
+      <!-- <= video_tag "ec-video.mp4", autoplay: true, loop: "loop" %> -->
     <!-- </div> -->
-</section>
+  <!-- </div> -->
+</div>
 
 <section class="cst-ebox">
   <div class="ebox">
     <div class="top">
       <h4>The Emerald Coast Foundation is proud to announce</h4>
-      <h3>The 26th Annual Emerald Coast<br> Boat Week &amp; Poker Run</h3>
-      <h5>August 8-12</h5>
+      <!-- <h3>The 26th Annual Emerald Coast<br> Boat Week &amp; Poker Run</h3> -->
+      <h3><span>2019 Boat Week</span> <br>on the Emerald Coast</h3>
+      <h5>August 7-10</h5>
     </div>
 
     <div class="mtext">
       <div class="ltext">
         <p>
+          <!-- <b>The Emerald Coast Foundation is proud to announce the 26th Annual Emerald Coast Boat Week and Poker Run!</b> -->
           <b>Powerboats, fishing boats, pleasure boats,</b> and all in between, will fill the waterways for one of the largest and most popular charity poker runs in the USA!
           Affectionately called <b>“The Big One,”</b> the Emerald Coast Poker Run has been held along the beautiful waters in and around Destin, Florida for over 25 years.
         </p>
@@ -65,88 +72,53 @@ Boat Week is a week-long boating celebration along the Emerald Coast, that round
       <%= image_tag('xs-logo.png', alt: 'Emerald Coast Poker Run, 2017', class: 'img-responsive run-logo') %>
       <%= image_tag('ip.png', alt: 'Emerald Coast Poker Run, 2017', class: 'img-responsive run-logo') %>
     </div>
+
+    <!-- <div class="mid">
+      <h3>2018 Grand Prize!</h3>
+      <h4>2018 Softail Deluxe in Black</h4>
+      <%= image_tag('2018prize.jpg', alt: 'Emerald Coast Poker Run, 2018 Grand Prize Motorcycle', class: 'img-responsive') %>
+    </div>
+
+    <div class="mid two">
+      <h3>2018 2nd Place Prize!</h3>
+      <h4>KM Motorsports, 2018 Can Am Spyder RSS SE5</h4>
+      <%= image_tag('spyder.jpg', alt: 'Emerald Coast Poker Run, 2018 Grand Prize Motorcycle', class: 'img-responsive') %>
+    </div> -->
+
+
   </div>
 </section>
-
-
-
 
 <div class="home-layout">
   <div class="inner">
     <div class="full">
-      <div class="lhlf alt">
-        <h3>Last Year's Fun</h3>
-        <%= link_to 'See Gallery', gallery_path, class: 'hl-btn' %>
-        <div class="clearfix"></div>
-        <iframe src="https://www.youtube.com/embed/b2t5POnOiUQ?list=PLW77djhJyj8GmNemJqkf_cyRej6rW2UsA&rel=0&modestbranding=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
-      </div>
-
-      <div class="rhlf">
-        <h3>Follow Us</h3>
-        <%= link_to 'Visit Page', fb_path, class: 'hl-btn' %>
-        <div class="clearfix"></div>
-        <div class="fb-page" data-href="https://www.facebook.com/EmeraldCoastFoundation/" data-tabs="timeline" data-height="350px" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/EmeraldCoastFoundation/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/EmeraldCoastFoundation/">Emerald Coast Foundation</a></blockquote></div>
-      </div>
-
-      <!-- <div class="lodge-list alt">
-        <h3>Our Lodging Partners</h3>
-        <div class="lodge-inner">
-          <div class="plat">
-            <h4>Platinum Sponsor:</h4>
-            <%= link_to 'https://www.wyndhamvacationrentals.com/promotion/emerald-coast-boat-week-and-poker-run?utm_source=emeraldcoastpokerrun.com&utm_medium=referral&utm_campaign=boat-week&utm_content=promo-navarre-oki-destin', target: '_blank', class: 'home-lodge one' do %>
-                <%=image_tag( 'lodging/home-rq.jpg', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive') %>
-            <% end %>
-          </div>
-
-          <div class="gold">
-            <h4>Gold Sponsor:</h4>
-            <%= link_to 'http://www.ramadafwb.com/', target: '_blank', class: 'home-lodge' do %>
-              <%=image_tag( 'lodging/home-ramada.jpg', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive') %>
-            <% end %>
-          </div>
-
-          <div class="bronze">
-            <h4>Bronze Sponsors:</h4>
-            <p class="print home">If you are booking with Sandestin, you must use <span>Group Code: #23U8P8</span></p>
-
-              <%= link_to 'http://www.sandestin.com/23U8P8.aspx', target: '_blank', class: 'home-lodge b1' do %>
-                <%=image_tag( 'lodging/home-sandestin.png', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive') %>
-              <% end %>
-
-              <%= link_to 'https://www.oceanreefresorts.com/', target: '_blank', class: 'home-lodge alt b2' do %>
-                <%=image_tag( 'lodging/home-ocean-reef.png', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive') %>
-              <% end %>
+      <div class="lhlf">
+        <div class="comingsoon">
+          <div class="cs-inside">
+            <h4><span class="sty1">—  2019 — </span><br>
+              <span class="sty2">Details &amp; Prizes</span><br>
+              <span class="sty3">coming soon!</span>
+            </h4>
           </div>
         </div>
-      </div> -->
-    </div>
+        <!-- <= image_tag('mbw.jpg', alt: 'Emerald Coast Poker Run, Bikini Contest 2018', class: 'img-responsive') %> -->
+      </div>
 
-    <div class="full">
-      <div class="lhlf"></div>
-      <div class="rhlf"></div>
+      <div class="rhlf alt">
+        <!-- <h3>Follow Us</h3> -->
+        <div class="clearfix"></div>
+        <div class="fb-page" data-href="https://www.facebook.com/EmeraldCoastFoundation/" data-tabs="timeline" data-height="300px" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/EmeraldCoastFoundation/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/EmeraldCoastFoundation/">Emerald Coast Foundation</a></blockquote></div>
+      </div>
     </div>
   </div>
 </div>
 
-
-<!-- <div class="inform-faq">
-    <div class="container">
-        <div class="video-blk">
-            <iframe src="https://www.youtube.com/embed/b2t5POnOiUQ?list=PLW77djhJyj8GmNemJqkf_cyRej6rW2UsA&rel=0&modestbranding=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
-        </div>
-
-        <div class="fb-blk">
-            <div class="fb-page" data-href="https://www.facebook.com/EmeraldCoastFoundation/" data-tabs="timeline" data-height="415px" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/EmeraldCoastFoundation/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/EmeraldCoastFoundation/">Emerald Coast Foundation</a></blockquote></div>
-        </div>
-    </div>
-</div>
- -->
 <section class="lodge-list">
   <div class="lodge-inner">
     <h3>Stay With Our Lodging Partners</h3>
     <div class="plat">
       <h4>Platinum Sponsor:</h4>
-      <%= link_to 'https://www.wyndhamvacationrentals.com/promotion/emerald-coast-boat-week-and-poker-run?utm_source=emeraldcoastpokerrun.com&utm_medium=referral&utm_campaign=boat-week&utm_content=promo-navarre-oki-destin', target: '_blank', class: 'home-lodge one' do %>
+      <%= link_to 'https://www.wyndhamvacationrentals.com/promotion/26th-annual-emerald-coast-boat-week-and-poker-run?utm_source=emeraldcoastpokerrun.com&utm_medium=referral&utm_campaign=pokerrun&utm_content=nwf-aug2018', target: '_blank', class: 'home-lodge one' do %>
           <%=image_tag( 'lodging/home-rq.jpg', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive') %>
       <% end %>
     </div>
@@ -162,9 +134,9 @@ Boat Week is a week-long boating celebration along the Emerald Coast, that round
 
     <div class="bronze">
       <h4>Bronze Sponsors:</h4>
-        <%= link_to 'http://www.sandestin.com/23U8P8.aspx', target: '_blank', class: 'home-lodge b1' do %>
+        <!-- <= link_to 'http://www.sandestin.com/23U8P8.aspx', target: '_blank', class: 'home-lodge b1' do %>
           <%=image_tag( 'lodging/home-sandestin.png', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive') %>
-        <% end %>
+        < end %> -->
 
         <%= link_to 'https://www.oceanreefresorts.com/', target: '_blank', class: 'home-lodge alt b2' do %>
           <%=image_tag( 'lodging/home-ocean-reef.png', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive') %>

@@ -1,0 +1,72 @@
+<% content_for :title do %>Contact Us<% end %>
+<% content_for :description do %>
+Boat week and the Emerald Coast Poker Run would not be possible without some amazing individuals, volunteers, and businesses. Contact the Emerald Coast Foundation if you are interested in being a part of the event!
+<% end %>
+
+<section class="custom-contact-section">
+    <div class="fullsection">
+        <div class="left">
+            <div class="inner">
+                <h5>Emerald Coast Boat Week</h5>
+                <h1>Get in Touch</h1>
+                <div class="text">
+                    <p>
+                        The Emerald Coast Poker Run could not be possible without the help of hundreds of volunteers that work tirelessly throughout the year, and all during Boat Week, organizing our events. We could use your help to ensure a successful event to benefit The Emerald Coast Foundation.
+                    </p>
+
+                    <p>If you would like more information on how you can volunteer with our organization, please contact us.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="color-box">
+                <div class="hlf1">
+                    <div class="contact-info">
+                        <h4>Contact Information</h4>
+                        <div class="col-md-8 col-md-offset-2 col-xs-12 no-padding-xs"><hr class="tmargin-0"></div>
+                        <div class="clearfix"></div>
+                        <p> 850-243-3800</p>
+                        <p>PO Box 1208<br> Fort Walton Beach, Fl 32549 </p>
+
+                        <p class="xs-sm"><%= mail_to "ecfoundationfl@gmail.com" %></p>
+
+                        <p class="xs-bmargin0">
+                            <%= link_to '/fb', target: '_blank' do %>
+                                <i class="fa fa-facebook"></i>
+                            <% end %>
+
+                            <%= link_to '/twitter', target: '_blank' do %>
+                                <i class="fa fa-twitter"></i>
+                            <% end %>
+
+                            <%= link_to '/insta', target: '_blank' do %>
+                                <i class="fa fa-instagram"></i>
+                            <% end %>
+                        </p>
+
+                        <div class="col-md-8 col-md-offset-2 col-xs-12 no-padding-xs"><hr class="tmargin-0"></div>
+                        <h4><b>Donate to the Cause:</b></h4>
+                        <%= render 'shared/donation' %>
+                    </div>
+                </div>
+
+                <div class="hlf2">
+                    <div class="form-col">
+                        <form action="https://formspree.io/ecfoundationfl@gmail.com"
+                              method="POST">
+                            <div class="form-group"><input type="hidden" name="_subject" value="Website Form Submission" /></div>
+                            <div class="form-group"><input type="text" name="name" placeholder="Full Name" /></div>
+                            <div class="form-group"><input type="phone" name="phone" placeholder="Phone Number" /></div>
+                            <div class="form-group"><input type="email" name="_replyto" placeholder="Email" /></div>
+                            <div class="form-group"><textarea name="message" placeholder="Additional Message"></textarea></div>
+                            <input type="submit" value="Send">
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="clearfix"></div>
