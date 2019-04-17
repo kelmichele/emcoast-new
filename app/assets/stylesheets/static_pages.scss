@@ -1351,7 +1351,8 @@ br.xxs {display: none;}
 
 	.contest-img{@include sec-default();}
 	.home-layout {
-		@include sec-default(); background-color: rgba($logo-blue, .3); padding: 50px 0;
+		@include sec-default(); background-color: rgba($logo-blue, .3); 
+		padding:0 0 50px;
   	span, p, h3, li, h4, h1, h2, a { font-family: $lato; line-height: 1.4em; text-transform: uppercase; letter-spacing: 2px;}
   	h3 {color: white; font-weight: 900; margin-bottom: 10px;}
   	h3, .hl-btn {display: inline-block;}
@@ -1364,8 +1365,11 @@ br.xxs {display: none;}
 		iframe {height: 350px; width:100%;}
 		.rhlf.alt {width: 40%; }
 		.lhlf.alt {width: 40%;}
+		.lhlf{margin-left: 3%;}
 
-		.comingsoon {box-shadow: 0px 5px 8px rgba($dark, .4);margin-top: 35px;padding:50px 10px; background-color:$logo-blue;text-align: center;
+		.comingsoon {box-shadow: 0px 5px 8px rgba($dark, .4);background-color:$logo-blue;text-align: center;
+			// margin-top: 35px;padding:50px 10px; 
+			margin-bottom: 50px; padding:30px 10px;
 			h4{color: $white; font-weight: 900; font-size:30px; line-height: 1.6rem;
 				span{letter-spacing: 4px;}
 			}
