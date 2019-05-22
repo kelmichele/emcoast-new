@@ -44,7 +44,7 @@ We want everyone to have the opportunity to enjoy The Emerald Coast Poker Run, s
                 <hr class="hlf">
 
                 <ul>
-                    <li>Weekend getaway for 2 at IP Casino Resort in Biloxi</li>
+                    <li><span class="red">**</span> Weekend getaway for 2 at IP Casino Resort in Biloxi</li>
                     <li>Entry for 2 into all Boat Week parties</li>
                     <!-- plus all you can eat/drink, -->
                     <li>2 event t-shirts</li>
@@ -56,8 +56,12 @@ We want everyone to have the opportunity to enjoy The Emerald Coast Poker Run, s
                     <a class="vip-btn" href="#vip">Upgrade to VIP</a>
                     <a class="add-info" href="#tix">Additional Tickets</a>
                 </div>
+                
                 <div class="clearfix"></div>
                 <hr class="hlf">
+                <%= render 'shared/getaway' %>
+                <hr class="hlf">
+
 
                 <div class="logos">
                     <%=image_tag( 'ecfoundation1.png', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive run-logo ecf') %>
