@@ -67,8 +67,13 @@ br.xxs {display: none;}
 		@include sec-default(); padding:20px 10px; @include sec-bgimage(); text-align: center;background-image: url(image_path('sea-under.jpg')); box-shadow: 10px 10px 10px rgba($dark, .4);
 		img{width:350px; float: none; margin:auto; background-color: $white; padding:5px 0; display:inline-block; box-shadow: 10px 12px 15px rgba($dark, .4); border:1px solid rgba($gray, .1)}
 		&.one {background-image: url(image_path('sea-over.jpg'));}
-		&.alt{
+		&.alt{width:50%; @include center-block(); margin-top:20px;
 			img{background-color: $black;}
+		}
+
+		&.sq {background-image: url(image_path('sea-over-sq.jpg')); 
+			width:80%; @include center-block();
+			img{height:auto; width:90%;}
 		}
 	}
 
@@ -90,14 +95,38 @@ br.xxs {display: none;}
 		}
 	}
 
+	@include bp(xl) {
+		.lodge-inner{padding: 5px 0 25px;}
+		.bronze{margin-top: 20px; }
+		.home-lodge{
+			&.alt{width:55%;}
+
+			&.sq {width:85%; }
+		}
+	}
+
+	@include bp(ix) {
+		.bronze{margin-top: 20px; }
+		.home-lodge{
+			&.alt{width:65%;}
+
+			&.sq {width:95%; }
+		}
+	}
+
 	@include bp(md) {
 		.bronze {margin-top:10px;
 			.brz {display: inline-block; width: 48%;}
 		}
+		.plat, .gold, .bronze {width:85%; @include center-block(); }
+		.home-lodge{
+			&.alt{@include sec-default();}
+
+			&.sq {width:80%; }
+		}
 	}
 
 	@include bp(pl) {
-		.plat, .gold, .bronze {width:85%; @include center-block(); }
 		.home-lodge {margin-bottom: 30px;}
 		h4{margin-bottom: 10px;}
 		.bronze {
@@ -112,6 +141,10 @@ br.xxs {display: none;}
 	.lodge{border-top: none; padding-top:0;
 		.lodge-inner {background-color: $cream;}
 		h4 {color: $logo-blue;}
+	}
+	@include bp(xl) {
+		h1{font-size: 2.1rem;}
+		h3{font-size:1.5rem;}
 	}
 }
 
@@ -1447,6 +1480,12 @@ br.xxs {display: none;}
 			&.alt{
 				img{background-color: $black;}
 			}
+
+			&.sq {background-image: url(image_path('sea-over-sq.jpg')); 
+				width:35%;
+				img{height:auto; width:90%;}
+			}
+
 		}
 		.bronze {
 			.home-lodge {display: inline-block; margin: 0 15px;}
