@@ -1038,6 +1038,8 @@ br.xxs {display: none;}
 }
 
 .stops {
+	.medDef {width:1000px; @include center-block();}
+
 	.big-header {
 		@include sec-default();
 		padding:45px 20px;
@@ -1077,26 +1079,29 @@ br.xxs {display: none;}
 	    opacity: .65;
 	}
 
-	.friday, .saturday {display: inline-block; width:30%; float:left; padding: 0 10px;
+
+	.stop-list {@include sec-default(); padding: 50px 0 30px; text-align: center;}
+	.saturday, .map-run {display: inline-block; width:40%; float:left;
 		h2{font-size: 19px; font-weight: bold; margin-bottom: 6px;color: $logo-blue}
 		p{color: $dark;}
+
 		li {color: $dark; margin-bottom:10px; font-size: 17px;
 			a {color: $teal; font-weight: bold;}
 			span{font-size: 14px; color: #999; font-style: italic; font-weight: normal;}
 		}
 	}
-	.map-run {display:inline-block; float:right; height: 300px; width: 40%;}
+	.map-run {display:inline-block; float:right; width:58%; height:500px; margin-top: 7%;}
 
 	@include bp(xl) {
-		.section{padding:30px;}
-		.friday, .saturday {width:45%; padding:20px 10px 0;
-			h2{font-size: 17px; }
-			li {font-size: 15px;
-				span{font-size: 13px;}
+		.medDef {width:90%;}
+		.saturday, .map-run {@include sec-default();}
+		.saturday{
+			li {color: $dark; margin-bottom:10px; font-size: 17px;
+				a {color: $teal; font-weight: bold;}
+				span{font-size: 14px; color: #999; font-style: italic; font-weight: normal;}
 			}
 		}
-		.saturday{float:right;}
-		.map-run { width: 90%; height:200px; @include center-block(); margin-bottom: 20px; }
+		.map-run { height:200px; margin-top: 0; margin-bottom:30px;}
 	}
 
 	@include bp(md) {
@@ -1109,8 +1114,7 @@ br.xxs {display: none;}
 	    .bh-link { width:45%}
     }
 
-    .section{padding:20px;}
-		.friday, .saturday {width:85%; @include center-block(); padding: 15px 0;}
+		// .friday, .saturday {width:85%; @include center-block(); padding: 15px 0;}
   }
 
   @include bp(ph) {
@@ -1121,8 +1125,6 @@ br.xxs {display: none;}
 	    .bh-link {font-size: 14px}
     }
   }
-
-	.section {padding: 60px 30px; text-align: center;}
 }
 
 .home, .home-alt, .page {
