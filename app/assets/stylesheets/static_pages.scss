@@ -1090,7 +1090,7 @@ br.xxs {display: none;}
 			span{font-size: 14px; color: #999; font-style: italic; font-weight: normal;}
 		}
 	}
-	.map-run {display:inline-block; float:right; width:58%; height:500px; margin-top: 7%;}
+	.map-run {display:inline-block; float:right; width:58%; height:500px;}
 
 	@include bp(xl) {
 		.medDef {width:90%;}
@@ -1101,7 +1101,7 @@ br.xxs {display: none;}
 				span{font-size: 14px; color: #999; font-style: italic; font-weight: normal;}
 			}
 		}
-		.map-run { height:200px; margin-top: 0; margin-bottom:30px;}
+		.map-run { height:200px; margin-bottom:30px;}
 	}
 
 	@include bp(md) {
@@ -1458,10 +1458,25 @@ br.xxs {display: none;}
 		.lhlf{margin-left: 3%;}
 
 		.comingsoon {box-shadow: 0px 5px 8px rgba($dark, .4);background-color:$logo-blue;text-align: center;
-			// margin-top: 35px;padding:50px 10px; 
 			margin-bottom: 50px; padding:30px 10px;
 			h4{color: $white; font-weight: 900; font-size:30px; line-height: 1.6rem;
 				span{letter-spacing: 4px;}
+			}
+
+			.inside{width:80%; @include center-block();}
+			.text, .prizeimg {display: inline-block; float: none; width:50%;}
+			.prizeimg{width:45%;}
+
+			@include bp(xl) {
+				h4{font-size:24px;}
+				.text{width:54%;}
+				.prizeimg {width:40%;}
+			}
+
+			@include bp(ix) {
+				h4{font-size:24px;}
+				.text {@include sec-default(); margin-bottom: 25px;}
+				.prizeimg{width:60%; @include center-block();}
 			}
 		}
 	}
