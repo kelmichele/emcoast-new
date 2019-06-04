@@ -123,23 +123,35 @@ Boat Week is a week-long boating celebration along the Emerald Coast, that round
     <h3>Stay With Our Lodging Partners</h3>
     <div class="plat">
       <h4>Emerald Sponsor:</h4>
-      <!-- <= link_to 'https://www.wyndhamvacationrentals.com/promotion/26th-annual-emerald-coast-boat-week-and-poker-run?utm_source=emeraldcoastpokerrun.com&utm_medium=referral&utm_campaign=pokerrun&utm_content=nwf-aug2018', target: '_blank', class: 'home-lodge one' do %>
-          <=image_tag( 'lodging/home-rq.jpg', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive') %>
-      < end %> -->
-
+      
       <div class="clearfix"></div><br>
-
-      <%= link_to 'http://www.ramadafwb.com/', target: '_blank', class: 'home-lodge sq' do %>
-        <%=image_tag( 'sponsors/sponsors40.jpg', alt:'Poker Run Lodging Partner The Island', class: 'img-responsive') %>
+      <!-- http://www.ramadafwb.com/ -->
+      <%= link_to 'https://reservations.redlion.com/ibe/details.aspx?propertyid=15358&nights=1&checkin=08/05/2019&group=EMER0805', target: '_blank', class: 'home-lodge sq withp' do %>
+        <%=image_tag('sponsors/sponsors40.jpg', alt:'Poker Run Lodging Partner The Island', class: 'img-responsive') %>
+        <p>Click to Book Now</p>
       <% end %>
+      <div class="clearfix"></div>
+
+      <!-- <= link_to 'https://www.destinwest.com/', target: '_blank', class: 'home-lodge sq withp' do %> -->
+      <div class="home-lodge sq withp inline">
+        <%=image_tag('sponsors/dwv-vacay.jpg', alt:'Poker Run Lodging Partner The Island', class: 'img-responsive') %>
+        <p><a href="tel: +18008470701">Call to Book:<br> 800-847-0701</a></p>
+      </div>
+
+      <!-- <= link_to 'https://www.destinwestrvresort.com/', target: '_blank', class: 'home-lodge sq withp' do %> -->
+      <div class="home-lodge sq withp inline il2">
+        <%=image_tag('sponsors/dwv-rv.jpg', alt:'Poker Run Lodging Partner The Island', class: 'img-responsive') %>
+        <p><a href="tel: +18502004533">Call to Book:<br> 850-200-4533</a></p>
+      </div>
     </div>
     <div class="clearfix"></div>
 
     <div class="bronze">
       <h4>Bronze Sponsor:</h4>
-        <%= link_to 'https://www.oceanreefresorts.com/', target: '_blank', class: 'home-lodge alt b2' do %>
-          <%=image_tag( 'lodging/home-ocean-reef.png', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive') %>
-        <% end %>
+      <!-- <= link_to 'https://www.oceanreefresorts.com/', target: '_blank', class: 'home-lodge alt b2' do %> -->
+      <%= link_to 'https://www.oceanreefresorts.com/', target: '_blank', class: 'home-lodge sq' do %>
+        <%=image_tag( 'lodging/home-oreef.png', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive dk') %>
+      <% end %>
     </div>
   </div>
 </section>

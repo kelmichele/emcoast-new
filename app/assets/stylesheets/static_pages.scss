@@ -61,77 +61,45 @@ br.xxs {display: none;}
 
 .lodge {
 	@include sec-default(); text-align: center; padding-top: 20px; border-top: 1px solid $logo-blue;
-	.lodge-inner {@include sec-default(); background-color: $logo-blue; padding: 30px 0 50px;}
+	.lodge-inner {@include sec-default();padding: 30px 0 50px;}
 	.bronze{@include sec-default(); margin-top: 35px; }
 	.home-lodge {
 		@include sec-default(); padding:20px 10px; @include sec-bgimage(); text-align: center;background-image: url(image_path('sea-under.jpg')); box-shadow: 10px 10px 10px rgba($dark, .4);
-		img{width:350px; float: none; margin:auto; background-color: $white; padding:5px 0; display:inline-block; box-shadow: 10px 12px 15px rgba($dark, .4); border:1px solid rgba($gray, .1)}
-		&.one {background-image: url(image_path('sea-over.jpg'));}
-		&.alt{width:50%; @include center-block(); margin-top:20px;
-			img{background-color: $black;}
-		}
+		img{@include center-block(); background-color: $white; padding:5px 0; display:inline-block; box-shadow: 10px 12px 15px rgba($dark, .4); border:1px solid rgba($gray, .1)}
+		img.dk {background-color: $black;}
 
 		&.sq {background-image: url(image_path('sea-over-sq.jpg')); 
-			width:80%; @include center-block();
+			width:304px; @include center-block();
 			img{height:auto; width:90%;}
 		}
-	}
 
-	.title-line{border-bottom: 1px solid rgba($logold, .7);}
-	.plat, .gold, .bronze {display: inline-block; padding: 20px ;width:40%; }
-	.plat {width:45%; @include center-block(); padding: 30px 20px;}
-	.bronze{width:85%; @include center-block();}
+		&.sq.withp {width:304px; padding:12px 0 0;
+			img{width:88%;}
+			p{background-color: $logo-blue; color:$white; padding:10px 15px; margin:15px 0 0;
+				font-size:19px; line-height: 1.6em; font-weight:bold; @include tshadowl($black);}
+			a{color: $white;}
+		}
+
+		&.inline {display: inline-block; margin: 40px 2% 15px;}
+	}
 
 	h2, h4 {font-weight: bold; color: $teal; margin-bottom: 15px;text-shadow: 0px 1px 1px rgba($dark, .2);}
 	h4{font-size: 22px; margin-bottom: 25px; color: $white; }
-	.bronze {
-		h4 {margin-bottom: 5px; }
-		p.print {font-weight: bold; color: $dark; margin-bottom: 25px;
-			span{color: $teal;}
-
-			&.home {color: $lt-blue;
-				span {color:$lt-teal}
-			}
-		}
-	}
-
-	@include bp(xl) {
-		.lodge-inner{padding: 5px 0 25px;}
-		.bronze{margin-top: 20px; }
-		.home-lodge{
-			&.alt{width:55%;}
-
-			&.sq {width:85%; }
-		}
-	}
+	
 
 	@include bp(ix) {
-		.bronze{margin-top: 20px; }
 		.home-lodge{
-			&.alt{width:65%;}
-
-			&.sq {width:95%; }
+			&.sq, &.sq.withp, &.inline {@include center-block(); width:280px;}
+			&.sq.withp p{font-size: 17px;}
 		}
 	}
 
 	@include bp(md) {
-		.bronze {margin-top:10px;
-			.brz {display: inline-block; width: 48%;}
-		}
-		.plat, .gold, .bronze {width:85%; @include center-block(); }
-		.home-lodge{
-			&.alt{@include sec-default();}
-
-			&.sq {width:80%; }
-		}
 	}
 
 	@include bp(pl) {
 		.home-lodge {margin-bottom: 30px;}
 		h4{margin-bottom: 10px;}
-		.bronze {
-			.brz {@include sec-default();}
-		}
 	}
 }
 
@@ -1482,7 +1450,7 @@ br.xxs {display: none;}
 	}
 
 	.lodge-list {@include sec-default(); text-align: center; background-color: #f7f7f7; padding:30px 0;
-		.lodge-inner{width: 60%; @include center-block();}
+		.lodge-inner{width: 75%; @include center-block();}
 		h4, h3, p { font-family: $lato; text-transform: uppercase; letter-spacing: 2px; font-weight: bold;}
 		p {color: $dark; font-weight: normal; letter-spacing: 1px;}
 		h3 {color: $teal; font-weight: 900;}
@@ -1491,21 +1459,28 @@ br.xxs {display: none;}
 		.plat, .gold, .bronze { padding: 15px 20px; @include sec-default(); }
 
 		.home-lodge { padding:12px 10px; width:310px; @include center-block();
-			@include sec-bgimage(); text-align: center;background-image: url(image_path('sea-under.jpg')); box-shadow: 10px 10px 10px rgba($dark, .2);
+			@include sec-bgimage(); background-size: cover; text-align: center;background-image: url(image_path('sea-under.jpg')); box-shadow: 10px 10px 10px rgba($dark, .2);
 			img{height:80px; @include center-block(); background-color: $white; padding:5px 0; box-shadow: 10px 12px 15px rgba($dark, .4); border:1px solid rgba($gray, .1);}
+			img.dk {background-color: $black;}
 			&.one {background-image: url(image_path('sea-over.jpg'));}
 			&.alt{
 				img{background-color: $black;}
 			}
 
-			&.sq {background-image: url(image_path('sea-over-sq.jpg')); 
-				width:35%;
+			&.sq {background-image: url(image_path('sea-over-sq.jpg')); width:35%;
 				img{height:auto; width:90%;}
 			}
 
-		}
-		.bronze {
-			.home-lodge {display: inline-block; margin: 0 15px;}
+			&.sq.withp {width:304px; padding:12px 0 0;
+				img{width:88%;}
+				p{background-color: $logo-blue; color:$white; padding:10px 15px; margin:15px 0 0;
+					font-size:19px; line-height: 1.6em; font-weight:bold; @include tshadowl($black);}
+				a{color: $white;}
+			}
+
+			&.inline {display: inline-block; margin: 40px 2% 15px;}
+			// &.inline.il2 {float: right;}
+
 		}
 
 		&.alt {width: 57%; float: right; padding:0;
@@ -1531,7 +1506,7 @@ br.xxs {display: none;}
 		}
 
 		.lodge-list {
-			.lodge-inner{width: 80%;}
+			.lodge-inner{width: 90%;}
 		}
 	}
 
@@ -1549,18 +1524,26 @@ br.xxs {display: none;}
 
 		.lodge-list { padding: 15px 0;
 			.lodge-inner{width: 100%;}
-			h3 {font-size: 1.5rem;}
+			h3 {font-size: 1.35rem;}
 			.plat, .gold, .bronze { padding: 10px 15px;}
 
 			.home-lodge {width: 285px;
 				img {height: 70px;}
+
+				&.sq.withp, &.sq {width:275px;
+					img{width:88%;}
+				}
+				&.sq.withp {
+					p{padding:10px 15px; margin:15px 0 0; font-size:17px; }
+				}
+				&.inline{@include center-block();}
 			}
 		}
 	}
 
 	@include bp(mb) {
 		.lodge-list {padding-bottom: 0;
-			.bronze .home-lodge {@include center-block(); margin-bottom: 25px;}
+			// .bronze .home-lodge {@include center-block(); margin-bottom: 25px;}
 		}
 	}
 
