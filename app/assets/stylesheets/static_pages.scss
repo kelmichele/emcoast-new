@@ -32,24 +32,42 @@
 }
 
 .party-tickets {
+	// .jotform-form, form, .simple_spc, #JotFormIFrame-81655404741153, .supernova {background:$logo-blue !important;background-color:$lt-blue !important;}
+	iframe {box-shadow: 0px 5px 8px rgba(black, .15);}
+	
+	// #81655404741153
+	// .jotform-form, .supernova .form-all, .form-all{background-color:transparent !important;}
 	.pay-header{background-color: $logo-blue;
 		h1, h3 {font-weight: bold; color: $white; }
-		h4 {color: $lt-blue; font-weight: bold; text-transform: uppercase; text-shadow: 0px 1px 1px rgba(black, .6);}
+		h4 {color: $cream; font-weight: bold; text-shadow: 0px 1px 1px rgba(black, .6);
+			width:75%; @include center-block(); letter-spacing: .5px;
+		}
 	}
 	p{color: black; padding: 20px; }
 
-	.form, .image-right{display: inline-block; float: left; width:50%; margin-left: 7%;}
-	.image-right { width:30%;}
+	// .form, .image-right{display: inline-block; float: left; width:50%; margin-left: 7%;}
+	// .image-right { width:30%;}
+
+	.page-content{background-color:$cream;}
+	.tix-info{@include sec-default(); text-align: center; border-bottom:1px solid rgba($dark,.1);
+		h4 {font-weight: 900; color: $teal; margin-bottom:10px;}
+		p {color: $dark; font-weight: 700; letter-spacing: .5px; font-size:17px;}
+		p span {color: $blue;}
+	}
+
+	@include bp(ix) {
+		.pay-header h4{width:90%;}
+	}
 
 	@include bp(md) {
-		.form, .image-right{ width:68%; margin-left: 0;}
-		.image-right { float: right;}
+		// .form, .image-right{ width:68%; margin-left: 0;}
+		// .image-right { float: right;}
 	}
 
 	@include bp(pl) {
 		p{padding: 10px 0;}
-		.form {@include center-block(); width: 95%;}
-		.image-right{display: none;}
+		// .form {@include center-block(); width: 95%;}
+		// .image-right{display: none;}
 	}
 }
 
@@ -284,7 +302,6 @@ br.xxs {display: none;}
 	}
 
   .box-lay {@include sec-default(); padding: 40px 20px 60px; background-color: $blue; text-align:center;
-
   	.meetings{ @include sec-default(); background-color: $logold; padding:20px 20px 20px 40px;
   		h2,h3,h4,p, span{letter-spacing: 1px; text-align: left; color: $dark;}
   		.title-line{float: left; opacity: .5;}
@@ -381,8 +398,8 @@ br.xxs {display: none;}
 		.uk-modal-dialog.uk-modal-dialog-large{padding:0; width:90%; @include center-block();}
 		.content{@include sec-default(); text-align: center; background-color: white; padding: 20px;}
 		.uk-close {font-size: 30px; top:12px; right:15px;}
-		.side{display: inline-block;float: left; width: 30%;}
-		.wide {display: inline-block; float: right; width: 68%;}
+		// .side{display: inline-block;float: left; width: 30%;}
+		// .wide {display: inline-block; float: right; width: 68%;}
 		h3 {font-size: 1.5rem; margin-bottom:10px;}
 		h4 {margin-bottom: 20px; letter-spacing:1px;}
 		h4 b {color: $teal; }
@@ -487,7 +504,7 @@ br.xxs {display: none;}
   	p{color:$dark;margin-bottom:7px;}
 
   	p.name{font-weight: 900; color: $logo-blue; letter-spacing: 2px; font-size: 1.2em; margin-top:15px;}
-a.phoneBook{font-weight:bold;}
+		a.phoneBook{font-weight:bold;}
   	.location {@include sec-default(); margin-bottom:30px;
 			p.fuel {color: $teal;margin-bottom:10px; font-weight:bold;}
   	}
