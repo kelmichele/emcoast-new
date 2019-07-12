@@ -98,6 +98,13 @@ br.xxs {display: none;}
 			a{color: $white;}
 		}
 
+		&.sq.mid {width:290px; padding:15px 0;
+			img{width:88%;}
+			p{background-color: $logo-blue; color:$white; padding:10px 15px; margin:15px 0 0;
+				font-size:19px; line-height: 1.6em; font-weight:bold; @include tshadowl($black);}
+			a{color: $white;}
+		}
+
 		&.inline {display: inline-block; margin: 40px 2% 15px;}
 	}
 
@@ -1489,6 +1496,13 @@ br.xxs {display: none;}
 			}
 
 			&.sq.withp {width:304px; padding:12px 0 0;
+				img{width:88%;}
+				p{background-color: $logo-blue; color:$white; padding:10px 15px; margin:15px 0 0;
+					font-size:19px; line-height: 1.6em; font-weight:bold; @include tshadowl($black);}
+				a{color: $white;}
+			}
+
+			&.sq.mid {width:290px; padding:15px 0;
 				img{width:88%;}
 				p{background-color: $logo-blue; color:$white; padding:10px 15px; margin:15px 0 0;
 					font-size:19px; line-height: 1.6em; font-weight:bold; @include tshadowl($black);}
