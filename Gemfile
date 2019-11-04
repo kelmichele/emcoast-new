@@ -21,7 +21,7 @@ gem 'metamagic'
 
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 gem 'animate-rails'
-gem 'ionicons-rails'
+# gem 'ionicons-rails'
 gem 'rails-assets-tether', '~> 1.1', '>= 1.1.1'
 gem 'rack-rewrite'
 

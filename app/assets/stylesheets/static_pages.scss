@@ -1322,43 +1322,48 @@ br.xxs {display: none;}
 	}
 
 	.foundation {
-		@include sec-default ();
-		padding: 50px 0 60px;
+		@include sec-default ();padding: 50px 0 60px;
 
 		.motto {width: 60%; @include center-block(); text-align: center; padding-bottom: 30px;
 			h4 {font-size: 15px; font-style: italic; line-height: 1.3em; padding:10px 20px; font-weight: bold;}
 			img {width: 50%; @include center-block();}
 		}
+
+		.tb-half, .slider-mob{display: inline-block; float: left; width:58%;}
+		.slider-mob{width:39%; float: right;}
+
 		.text-box {
-			@include sec-default ();
-			padding: 40px 30px 20px;
+			@include sec-default();
+			padding: 40px 40px 20px;
 			background-color: $cream;
 			h3 { font-family: $franc; margin-bottom:20px;}
-
 			p { color: $dark;}
+		}
+
+
+		@media (max-width: 992px){
+			.motto {width: 80%;}
+			.tb-half{ @include sec-default(); margin-bottom: 30px;}
+			.text-box {padding: 30px 30px 20px; }
+			.slider-mob {@include sec-default();}
+
 		}
 
 		@include bp(md) {
 			padding: 25px 0;
-
-			.motto {width: 80%;}
-			.text-box {padding: 20px; margin: 30px; }
-			.slider-mob {@include center-block(); padding-top:20px;}
 		}
 
 		@include bp(mb) {
 			.motto {width: 85%; padding-bottom:0;
 				h4 { padding:10px 0;}
 			}
-			.text-box {margin: 20px 0px; }
-			.slider-mob {width:70%;}
 		}
 
 		@include bp(sm) {
 			padding-left:15px;padding-right:15px;
 			.motto {width: 100%;}
 			.donation { overflow: hidden;}
-			.text-box {padding: 10px; h3{margin-left:10px;}}
+			// .text-box {padding: 10px; h3{margin-left:10px;}}
 		}
 	}
 }
@@ -1434,8 +1439,7 @@ br.xxs {display: none;}
 
 	.contest-img{@include sec-default();}
 	.home-layout {
-		@include sec-default(); background-color: rgba($logo-blue, .3); 
-		padding:0 0 50px;
+		@include sec-default(); background-color: rgba($logo-blue, .3); padding:0 0 50px;
   	span, p, h3, li, h4, h1, h2, a { font-family: $lato; line-height: 1.4em; text-transform: uppercase; letter-spacing: 2px;}
   	h3 {color: white; font-weight: 900; margin-bottom: 10px;}
   	h3, .hl-btn {display: inline-block;}
@@ -1448,7 +1452,9 @@ br.xxs {display: none;}
 		iframe {height: 350px; width:100%;}
 		.rhlf.alt {width: 40%; }
 		.lhlf.alt {width: 40%;}
-		.lhlf{margin-left: 3%;}
+		.lhlf{margin-left: 3%;
+			img{max-width: 100%;}
+		}
 
 		.comingsoon {box-shadow: 0px 5px 8px rgba($dark, .4);background-color:$logo-blue;text-align: center;
 			margin-bottom: 50px; padding:30px 10px;
@@ -1548,6 +1554,7 @@ br.xxs {display: none;}
 			h3 {font-size: 20px;}
 			iframe {height:275px; margin-bottom:20px;}
 			.rhlf {max-height: 200px; overflow: hidden;}
+			.lhlf img{margin-bottom: 30px;}
 
 			.comingsoon {margin:0 0 35px;padding:30px 10px; 
 				h4{font-size:25px; }
