@@ -5,38 +5,36 @@ We want everyone to have the opportunity to enjoy The Emerald Coast Poker Run, s
 
 <div class="txt-style">
     <div class="box-lay">
-       <!-- 
             <%= link_to register_now_path, class: 'sign-up' do %>
             Register<br> Now
-            <% end %> -->
+            <% end %>
 
         <div class="inside">
-            <h1>2019 Poker Run<br> <span>Registration</span></h1>
+            <h1>2020 Poker Run<br> <span>Registration</span></h1>
             <h3 class="price">$295 per entry</h3>
 
             <div class="meetings">
-                <h2>2019 Registration Times:</h2>
+                <h2>2020 Registration Times:</h2>
                 <div class="title-line left"></div>
                 <div class="clearfix"></div>
                 <p><span>Location:</span> The Island Beach Resort (formerly the Ramada Plaza beach Resort)</p>
                 <!-- <p><span>Thursday (8/9):</span> 10am - 6pm</p> -->
                 <!-- <p><span>Friday (8/10):</span> 10am - 6pm</p> -->
 
-                <p><span>Thursday (8/8/19)</span> 10am – 6pm</p> 
-                <p><span>Friday (8/9/19):</span> 10am – 6pm</p>
+                <p><span>Thursday (8/6/20)</span> 10am – 6pm</p> 
+                <p><span>Friday (8/7/20):</span> 10am – 6pm</p>
             </div>
 
             <h4 class="title">Every participant gets a chance to win, but that's not all...</h4>
             <div class="two">
-                <h4 class="teal">Each Registrant will also receive:</h4>
+                <h4 class="teal">Each Standard Level Registrant will also receive:</h4>
                 <hr class="hlf">
 
                 <ul>
-                    <li><span class="red">**</span> Weekend getaway for 2 at IP Casino Resort in Biloxi</li>
-                    <li>Entry for 2 into all Boat Week parties</li>
-                    <!-- plus all you can eat/drink, -->
-                    <li>2 event t-shirts</li>
-                    <li>The famous Emerald Coast Foundation Poker Run Cooler Bag</li>
+                    <li>1 Entry into poker run with 1 hand to play</li>
+                    <li>Captain's Bag and 2 Event T-shirts</li>
+                    <li><span class="red">**</span> Weekend at the IP Casino</li>
+                    <li>Complementary food and open bar (beer and wine)<br> at the famous Poker Run Party</li>
                     <li>A chance to have the winning hand,<br> &amp; win the best prizes of any poker run around!</li>
                 </ul>
 
@@ -44,12 +42,6 @@ We want everyone to have the opportunity to enjoy The Emerald Coast Poker Run, s
                     <a class="vip-btn" href="#vip">Upgrade to VIP</a>
                     <a class="add-info" href="#tix">Additional Tickets</a>
                 </div>
-                
-                <div class="clearfix"></div>
-                <hr class="hlf">
-                <%= render 'shared/getaway' %>
-                <hr class="hlf">
-
 
                 <div class="logos">
                     <%=image_tag( 'ecfoundation1.png', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive run-logo ecf') %>
@@ -68,19 +60,23 @@ We want everyone to have the opportunity to enjoy The Emerald Coast Poker Run, s
                 <div class="inner">
                     <h4>Get the royal treatment </h4>
                     <hr class="hlf less">
-                    <h3>upgrade to VIP:<br> <span>$200</span></h3>
-                    <p>*Each VIP Package includes event access for 2.</p>
+                    <h3>upgrade to VIP:<br> <span>$100</span></h3>
+                    <!-- <p>*Each VIP Package includes event access for 2.</p> -->
                 </div>
             </div>
 
             <div class="right">
                 <h4 class="perk">Why upgrade?</h4>
                 <hr class="hlf less">
-                <p>Free drinks &amp; VIP seating <b>for 2</b> at the Captain’s Party</p>
+                <p>1 Entry into poker run with <b>2 hands to play</b></p>
                 <i class="fa fa-circle"></i>
-                <p>VIP reserved seating <b>for 2</b> at the bikini contest</p>
+                <p>Captain's Bag and <b>2 Event T-shirts</b></p>
                 <i class="fa fa-circle"></i>
-                <p>Reserved seating at the “Big One” Poker Run party,<br> &amp; free drinks <b>for 2</b> the entire night<br> <span>(open bar closes around 9, but not for VIP!)</span></p>
+                <p><b class="red">**</b> Weekend at the IP Casino</p>
+                <i class="fa fa-circle"></i>
+                <p>Complementary food and <b>full open bar (beer/wine/spirits)</b> at the famous Poker Run Party</p>
+                <i class="fa fa-circle"></i>
+                <p>VIP only gaming tables</p>
             </div>
         </div>
     </div>
@@ -88,23 +84,27 @@ We want everyone to have the opportunity to enjoy The Emerald Coast Poker Run, s
     <div id="tix" class="tix">
         <div class="inner">
             <div class="maj">
-                <h4>Registration fee includes access for 2 into all Boat Week events.</h4>
+                <!-- <h4>Registration fee includes access for 2 into all Boat Week events.</h4> -->
+                <!-- <hr class="hlf"> -->
+                <p>Looking for Additional tickets to <br>Saturday night's Poker Run Party?</p>
                 <hr class="hlf">
-                <p>Looking for Additional tickets to <br>Saturday night's Poker Run Party and/or 2019 Captains' Party?</p>
-                <hr class="hlf">
-                <p><b>Single</b> Poker Run Party ticket: <br><span>$65 per ticket</span></p>
-                <p><b>Single</b> Captains' Party ticket: <br><span>$40 per ticket</span></p>
+                <h4><b>Single</b> Poker Run Party ticket: </h4>
+                <p><span>Standard: $65 per ticket</span><br>Complementary food and open bar (beer and wine) at the famous Poker Run Party</p>
+                <p><span>VIP: $95 per ticket</span><br>
+                    Complementary food and full open bar (beer/wine/spirits) at the famous Poker Run Party.<br>
+                    Access to VIP gaming tables.
+                </p>
 
-                <p>tickets for <b>BOTH</b> events: <br><span>$100 total</span></p>
+                <!-- <p><b>Single</b> Captains' Party ticket: <br><span>$40 per ticket</span></p> -->
+                <!-- <p>tickets for <b>BOTH</b> events: <br><span>$100 total</span></p> -->
             </div>
 
             <div class="min">
                 <a class="tx-btn" href="/party-tickets">Purchase Tickets</a>
-                <!-- <a data-uk-modal="{center:true}" class="tx-btn" href="#addt-tix">Purchase Tickets</a> -->
             </div>
 
             <hr><div class="clearfix"></div>
-            <p>*VIP package is an additional $200, for 2 people, added to registration costs.</p>
+            <p>*VIP package is an additional $100 added to registration costs.</p>
         </div>
     </div>
 
@@ -132,41 +132,13 @@ We want everyone to have the opportunity to enjoy The Emerald Coast Poker Run, s
                         <%=image_tag( 'boat-week8.jpg', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive') %>
                     </div>
                 </div>
+
+                <div class="clearfix"></div>
+                <hr class="hlf">
+                <%= render 'shared/getaway' %>
             </div>
         </div>
     </section>
 
     <div class="clearfix"></div>
-
-</div>
-
-
-<div class="uk-modal" id="addt-tix">
-    <div class="uk-modal-dialog uk-modal-dialog-large">
-        <a class="uk-modal-close uk-close"></a>
-        <div class="content txt-style">
-            <h3>27th Annual Emerald Coast Boat Week and Poker Run</h3>
-            <p>Fill out the form below to reserve your additional tickets. Once completed, your tickets will be available at will call. You must provide your confirmation email as proof of purchase.</p>
-            <hr>
-            <div class="side">
-                <h4><b>Rockin' the Docks Captains' Party
-                <br><span>$40 per ticket</span></b><br>
-                Friday, August 9</h4>
-                <hr>
-
-                <h4><b>“The Big One” Poker Run Party
-                <br><span>$65 per ticket</span></b><br>
-                Saturday, August 10  <br>
-                <span>Must be 21 to enter</span></h4>
-                <hr>
-
-                <h4 class="last"><b>1 Ticket to each:
-                <br><span>$100 total</span></b></h4>
-            </div>
-
-            <!-- <div class="wide">              -->
-                <iframe id="JotFormIFrame-81655404741153" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera" src="https://form.jotform.com/81655404741153" frameborder="0" style="width: 1px; min-width: 100%; height:539px; border:none;" scrolling="no" > </iframe> <script type="text/javascript"> var ifr = document.getElementById("JotFormIFrame-81655404741153"); if(window.location.href && window.location.href.indexOf("?") > -1) { var get = window.location.href.substr(window.location.href.indexOf("?") + 1); if(ifr && get.length > 0) { var src = ifr.src; src = src.indexOf("?") > -1 ? src + "&" + get : src + "?" + get; ifr.src = src; } } window.handleIFrameMessage = function(e) { var args = e.data.split(":"); if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); } if (!iframe) { return; } switch (args[0]) { case "scrollIntoView": iframe.scrollIntoView(); break; case "setHeight": iframe.style.height = args[1] + "px"; break; case "collapseErrorPage": if (iframe.clientHeight > window.innerHeight) { iframe.style.height = window.innerHeight + "px"; } break; case "reloadPage": window.location.reload(); break; case "loadScript": var src = args[1]; if (args.length > 3) { src = args[1] + ':' + args[2]; } var script = document.createElement('script'); script.src = src; script.type = 'text/javascript'; document.body.appendChild(script); break; case "exitFullscreen": if (window.document.exitFullscreen) window.document.exitFullscreen(); else if (window.document.mozCancelFullScreen) window.document.mozCancelFullScreen(); else if (window.document.mozCancelFullscreen) window.document.mozCancelFullScreen(); else if (window.document.webkitExitFullscreen) window.document.webkitExitFullscreen(); else if (window.document.msExitFullscreen) window.document.msExitFullscreen(); break; } var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false; if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) { var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)}; iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*"); } }; if (window.addEventListener) { window.addEventListener("message", handleIFrameMessage, false); } else if (window.attachEvent) { window.attachEvent("onmessage", handleIFrameMessage); } </script>
-            <!-- </div> -->
-        </div>
-    </div>
 </div>

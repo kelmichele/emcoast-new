@@ -308,3 +308,9 @@ h3.module-title{color: $teal; font-weight: bold; }
         a.modal2 {display: none;}
     }
 }
+
+
+.black-friday{@include sec-default(); background-color: #e50000; padding: 10px 0; text-align:center;
+    p.bfdeal{color: $white; margin:0; font-weight:bold; text-shadow: 0px 1px 1px $dark; text-transform: uppercase; letter-spacing: .5px;}
+    a{color: $black; text-shadow: 0px 1px 1px rgba($dark,.6); margin-left: 15px;}
+}
