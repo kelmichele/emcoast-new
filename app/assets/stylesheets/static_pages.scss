@@ -535,6 +535,7 @@ br.xxs {display: none;}
 		position: relative; z-index: 0; overflow:hidden;
 		&::before{@include before(); z-index: -2; background-color: $teal; 
 			// left:-25%; width:60%; height:100%; @include rotate(45deg);
+			// width:45%; height:510px; top:-5%; left:-13.7%; transform: skew(18deg, -35deg);
 			width:45%; height:510px; top:-5%; left:-13.7%; transform: skew(18deg, -35deg);
 		}
 
