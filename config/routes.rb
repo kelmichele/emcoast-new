@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get '/safety-rules', to: 'static_pages#safety-rules'
   get '/slips-parking', to: 'static_pages#slips-parking'
   get '/be-a-sponsor', to: 'static_pages#be-a-sponsor'
-  get '/vip-upgrade', to: 'static_pages#vip-upgrade'
+  get '/vip-promo', to: 'static_pages#vip-promo'
   get '/extra-hand-promo', to: 'static_pages#extra-hand-promo'
 
 
