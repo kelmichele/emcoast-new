@@ -208,110 +208,70 @@ br.xxs {display: none;}
 	button {background-color: red; color: $white; font-weight: bold; padding: 10px; border: none; font-size: 14px}
 	.txt-style {span, p, h3, li, h4, h1, h2, a { font-family: $lato; line-height: 1.4em; text-transform: uppercase; letter-spacing: 2px;}}
 
-  .pb-parallax {
-      @include sec-default ();padding: 55px; text-align: center;
-      background-color: #f7f7f7;
-      // background-image: url(image_path('patt2.png')); position: relative; z-index: 0;&::before {@include before(); background-color: rgba(white, .3); height: 100%;}
-
-      .text-sec {
-          @include sec-default ();
-          background-color: $white;
-          border: 1px solid rgba($gray, .1);
-          position: relative;
-          z-index: 10;
-          padding: 25px;
-          margin-top: 25px;
-
-          p { margin-bottom: .5rem; color: $dark; letter-spacing: 1px; text-transform: none;}
-          hr { margin-top: .1rem;}
-          h4 {font-weight: bold;}
-      }
-
-      .getaway-dets {width:75%; @include center-block();
-				p{line-height: 1.6em; text-transform: none; letter-spacing: 0;}
-				p.sig {text-transform: uppercase; color:$red;}
-				p b {font-weight: bold;}
-				span.red{color:$red;}
-			}
-
-      .mobile-hide {margin-left: -5%; position: relative; z-index: 0;}
-
-			@include bp(xl) { 
-				.mobile-hide{display: none;} 
-	      .getaway-dets {width:90%;}
-			}
-      @include bp(md) {
-          padding: 30px 25px;
-		      .getaway-dets {width:95%;}
-          .mob-bg {
-              @include sec-default();
-              background-position: top left;
-              background-size: 30%;
-              background-repeat: no-repeat;
-              background-image: url(image_path('boat-week8.jpg'));
-          }
-          .no-padding-r {padding-right: 15px;}
-          .text-sec {
-              width: 82%;
-              padding: 25px;
-              margin-left: 22%;
-          }
-      }
-
-      @include bp(mb) {
-          .text-sec {
-              width: 90%;
-              padding: 20px 25px;
-          }
-      }
-
-      @include bp(sm) {
-          padding: 10px 0 30px;
-          .mob-bg { background-image: none;
-              .container {padding:0;}
-          }
-          .text-sec {
-              width: 100%;
-              padding: 20px 15px;
-              margin-left: 0;
-
-              span {width: 100%; float:left; }
-          }
-      }
-      @include bp(xs) {
-          .text-sec {
-              padding: 15px;
-              margin-left: 0;
-          }
-      }
-  }
-
-  .sign-up {
-    width: 150px;
-    height: 80px;
-    padding-top: 15px;
-    position: fixed;
-    top: 25%;
-    right: 2%;
-    // display: none;
-    background-color: darken(red, 5%);
-    color: white; font-weight: bold;
-		@include tshadowl($black);
-		border: 1px solid rgba($black, .3);
-    font-size: 18px;
-    z-index: 100;
-
-    &:hover {opacity: .7;}
-
-    @media (max-width: 1024px) {
-			top: 30%;
+  .pb-parallax {@include sec-default ();padding: 55px 0; text-align: center;background-color: #f7f7f7;
+  	.inner-pb {width:81%; @include center-block();}
+  	.text-half, .image-half {display: inline-block; float: left; width:50%;}
+  	.image-half{width:55%; margin-left: -5%; position: relative; z-index: 0; text-align: center;
+  		img{display: inline-block; float: none; width:30.5%; margin-left: 2%;} //194x339 pl15
+  	}
+    
+    .text-sec {@include sec-default ();background-color: $white;border: 1px solid rgba($gray, .1);
+      position: relative;z-index: 10;padding: 25px 35px;margin-top: 7%;
+      p { margin-bottom: .5rem; color: $dark; letter-spacing: 1px; text-transform: none;}
+      hr { margin-top: .1rem;}
+      h4 {font-weight: bold;}
     }
 
-    @include bp(ix) {width: 110px; font-size: 15px; height:75px; right:1%;}
+    .getaway-dets {width:75%; @include center-block();
+			p{line-height: 1.6em; text-transform: none; letter-spacing: 0;}
+			p.sig {text-transform: uppercase; color:$red;}
+			p b {font-weight: bold;}
+			span.red{color:$red;}
+		}
+
+		@include bp(xl) { 
+	  	.inner-pb {width:90%;}
+	  	.text-sec {margin-top: 5%; padding:25px;}
+		}
+
+		@media screen and (max-width: 1023px) {padding: 50px 0 20px;
+	  	.inner-pb {width:85%;}
+	  	.text-half {width:60%;}
+	  	.image-half {width:45%;
+	  		.pb-img1 {display: none;}
+	  		img{width:47%;}
+	  	}
+      .getaway-dets {width:85%;}
+		}
+
+    @include bp(ix) {padding:30px 0 20px;
+      .inner-pb {width:85%;}
+	  	.image-half {display: none;}
+      .text-half, .getaway-dets {@include sec-default();}
+      .text-sec{margin-top: 0;}
+    }
 
     @include bp(mb) {
-			right:0;width: 100px; margin-top: 10px;
+      // .text-sec {width: 90%;padding: 20px 25px;}
     }
+
+    @include bp(sm) {padding: 10px 0 30px;
+    	.container {padding:0;}
+      // .text-sec {width: 100%;padding: 20px 15px;margin-left: 0;
+      //   span {width: 100%; float:left; }
+      // }
+    }
+    @include bp(xs) {
+      // .text-sec {padding: 15px; margin-left: 0;}
+    }
+  }
+
+  .sign-up { width:180px; height:55px; @include rotate(270deg); text-align: center; z-index: 100;
+    right: -64px; padding-top: 15px; position: fixed; top: 29%;
+    background-color: darken(red, 5%); color: white; font-weight: bold; @include tshadowl($black); border: 1px solid rgba($black, .3); font-size: 17px;
+    &:hover {opacity: .8;}
+
+    height:45px; padding-top:10px; right:-68px;
   }
 
 	hr.hlf{width: 40%; @include center-block();
@@ -405,9 +365,6 @@ br.xxs {display: none;}
 		h4.perk span {color: $logo-blue;}
 	}
 
-
-
-
 	.tix {@include sec-default(); padding: 25px 0px; background-color: $blue; text-align:center;
 		.inner {width: 80%; @include center-block(); background-color: white; padding: 20px;}
 		h4 {font-weight: 900; color: $teal; margin-bottom:10px;}
@@ -448,6 +405,8 @@ br.xxs {display: none;}
 	}
 
 	@include bp(xl) {
+  	.sign-up{font-size: 15px; height:40px; padding-top:9px; right:-70px;}
+
 		.box-lay {
 			.inside {width: 90%; }
 		}
