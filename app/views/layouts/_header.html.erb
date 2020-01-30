@@ -26,11 +26,12 @@
         </div>
     </div>
 </section>
-    <%= link_to(image_tag('new-logo1.png', alt: 'Emerald Coast Foundation Logo', class: 'img-responsive logo-img'), root_path ) %>
+<!-- <%= link_to(image_tag('new-logo1.png', alt: 'Emerald Coast Foundation Logo', class: 'img-responsive logo-img'), root_path ) %> -->
 
 <header class="header">
     <div class="container-fluid main-header">
-
+        <%= link_to(image_tag('new-logo1.png', alt: 'Emerald Coast Foundation Logo', class: 'img-responsive logo-img'), root_path ) %>
+        
         <div class="header-right custom">
             <div class="nav-footer collapse" id="mainNavWrapper">
                 <%= render 'shared/nav' %>
@@ -46,22 +47,6 @@
         </div>
     </div>
 </header>
-<!-- <div class="infobar header">
-    <a data-uk-modal="{center:true}" class="modal-discount" href="#modal-discount">Are you a resident of Escambia, Santa Rosa, Okaloosa, Walton, or Bay County?<br> Click here to save $100 on Registration!</a>
-</div>
-
-<div class="uk-modal discount" id="modal-discount">
-    <div class="uk-modal-dialog uk-modal-dialog-large">
-        <a class="uk-modal-close uk-close"></a>
-        <div class="content">
-            <p>Escambia, Santa Rosa, Okaloosa, Walton, or Bay County residents qualify for the “Local’s Discount!”</p>
-            <h3> Use code <span>BIG18LOC</span> when registering, and get $100 off your entry!</h3>
-            <p><span>Offer expires 8/1/18.</span></p>
-
-        </div>
-    </div>
-</div> -->
-
 
 <div class="uk-modal donate" id="modald">
     <div class="uk-modal-dialog uk-modal-dialog-large">
