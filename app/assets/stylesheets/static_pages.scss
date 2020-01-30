@@ -1727,6 +1727,7 @@ b.emrld {color: #138776;}
 	  	&::before {@include before(); width:50%; left:25%; z-index: -1; height:1px; top:70%; border-bottom: 2px solid white; }
 		}
 	}
+	h1.alt span::before{top: 30%;}
 	h2, h3{color: $red; font-weight:bold; font-size:23px; letter-spacing: 1px; text-decoration: none; margin:0; line-height: 2em;}
 	h3{text-decoration: none; background-color: $red; color: $white; font-size:20px; padding:0px; margin-top:8px; width:75%; @include center-block();}
   i.fa-circle {color: $teal; font-size: 7px; margin-bottom: 15px; @include center-block();}
@@ -1840,8 +1841,8 @@ b.emrld {color: #138776;}
 			a {font-size: 16px;}
 		}
   }
-
 }
+
 
 
 
