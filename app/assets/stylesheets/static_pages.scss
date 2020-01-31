@@ -1347,13 +1347,10 @@ br.xxs {display: none;}
 }
 
 .home, .home-alt {
-	.home-top {
-		@include sec-default ();@include sec-bgimage (); background-position: bottom left;
-		background-color: $logo-blue;
-		background-image: url(image_path('boat-week7-mid.jpg'));
-		background-size: 65%;
-		padding: 70px 10px;
-		height:auto;
+	.home-top {@include sec-default ();@include sec-bgimage (); background-position: bottom left; background-color: $logo-blue;height:auto;
+		background-image: url(image_path('boat-week7-mid.jpg')); background-size: 65%;
+		// padding: 70px 10px;
+		padding: 50px 10px;
 	}
 
 	.open {
@@ -1364,6 +1361,12 @@ br.xxs {display: none;}
 		h3 {margin-bottom: 20px; font-weight: 600;}
 		.spacer {@include sec-default(); margin-bottom: 15px;}
 		h3.date {color: white; margin-bottom: 50px;}
+
+
+		ul{margin-bottom: 20px;}
+		.reg-now {background-color: $red; box-shadow:0px 5px 20px rgba($black,.3); padding: 7px 20px; font-size:18px; 
+			color: $white; text-shadow: 0px 1px 2px rgba($black,.7); font-weight: bold; text-transform: uppercase; font-family: $lato;
+		}
 	}
 	.title-box {display: inline-block; width: 35%; float: right;}
 
@@ -1397,6 +1400,7 @@ br.xxs {display: none;}
 
 	@include bp(xl) {
 		.home-top {padding: 35px 10px;}
+		.open .reg-now {font-size:16px;}
 	}
 
 	@include bp(ix) {
