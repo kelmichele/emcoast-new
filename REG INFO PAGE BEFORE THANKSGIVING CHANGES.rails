@@ -176,3 +176,182 @@ We want everyone to have the opportunity to enjoy The Emerald Coast Poker Run, s
         </div>
     </div>
 </div>
+
+
+
+<!-- AND AFTER -->
+
+
+<% content_for :title do %>Registration<% end %>
+<% content_for :description do %>
+We want everyone to have the opportunity to enjoy The Emerald Coast Poker Run, so we have split the event into levels. Check the requirements to see which level is right for you!
+<% end %>
+
+<div class="txt-style">
+    <div class="box-lay">
+            <%= link_to register_now_path, class: 'sign-up' do %>
+            Register<br> Now
+            <% end %>
+
+        <div class="inside">
+            <h1>2020 Poker Run<br> <span>Registration</span></h1>
+            <h3 class="price">$295 per entry</h3>
+
+            <div id="vip" class="eoy-special vip">
+                <!-- <div class="container"> -->
+                    <h3 class="red">End of Year Special: $100 off VIP Registration!!</h3>
+
+                    <!-- <div class="left">
+                        <div class="inner">
+                            <h4>Get the royal treatment </h4>
+                            <hr class="hlf less">
+                            <h3>upgrade to VIP</h3>
+                        </div>
+                    </div> -->
+
+                    <div class="inside">
+                        <h4 class="perk">Upgrade to get the <span>royal</span> treatment</span></h4>
+                        <hr class="hlf less">
+                        <p>1 Entry into poker run with <b>2 hands to play</b></p>
+                        <i class="fa fa-circle"></i>
+                        <p>Captain's Bag and <b>2 Event T-shirts</b></p>
+                        <i class="fa fa-circle"></i>
+                        <p><b class="red">**</b> Weekend at the IP Casino</p>
+                        <i class="fa fa-circle"></i>
+                        <p>Complementary food and <b>full open bar (beer/wine/spirits)</b> at the famous Poker Run Party</p>
+                        <i class="fa fa-circle"></i>
+                        <p>VIP only gaming tables</p>
+                    </div>
+                <!-- </div> -->
+            </div>
+
+            
+
+            <div class="meetings">
+                <h2>2020 Registration Times:</h2>
+                <div class="title-line left"></div>
+                <div class="clearfix"></div>
+                <p><span>Location:</span> The Island Beach Resort (formerly the Ramada Plaza beach Resort)</p>
+                <!-- <p><span>Thursday (8/9):</span> 10am - 6pm</p> -->
+                <!-- <p><span>Friday (8/10):</span> 10am - 6pm</p> -->
+
+                <p><span>Thursday (8/6/20)</span> 10am – 6pm</p> 
+                <p><span>Friday (8/7/20):</span> 10am – 6pm</p>
+            </div>
+
+            <h4 class="title">Every participant gets a chance to win, but that's not all...</h4>
+            <div class="two">
+                <h4 class="teal">Each Standard Level Registrant will also receive:</h4>
+                <hr class="hlf">
+
+                <ul>
+                    <li>1 Entry into poker run with 1 hand to play</li>
+                    <li>Captain's Bag and 2 Event T-shirts</li>
+                    <li><span class="red">**</span> Weekend at the IP Casino</li>
+                    <li>Complementary food and open bar (beer and wine)<br> at the famous Poker Run Party</li>
+                    <li>A chance to have the winning hand,<br> &amp; win the best prizes of any poker run around!</li>
+                </ul>
+
+                <div class="btns">
+                    <a class="vip-btn" href="#vip">Upgrade to VIP</a>
+                    <a class="add-info" href="#tix">Additional Tickets</a>
+                </div>
+
+                <div class="logos">
+                    <%=image_tag( 'ecfoundation1.png', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive run-logo ecf') %>
+                    <%=image_tag( 'ip.png', alt: 'Emerald Coast Foundation, IP Casino Sponsor', class: 'img-responsive run-logo ip') %>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <h3 class="price less">All Boats Are Welcome!</h3>
+            <p class="fuel">*93 Octane Fuel will be available at Legendary Marina in Destin.*</p>
+        </div>
+    </div>
+
+    <!-- <div id="vip" class="vip">
+        <div class="container">
+            <div class="left">
+                <div class="inner">
+                    <h4>Get the royal treatment </h4>
+                    <hr class="hlf less">
+                    <h3>upgrade to VIP:<br> <span>$100</span></h3>
+                </div>
+            </div>
+
+            <div class="right">
+                <h4 class="perk">Why upgrade?</h4>
+                <hr class="hlf less">
+                <p>1 Entry into poker run with <b>2 hands to play</b></p>
+                <i class="fa fa-circle"></i>
+                <p>Captain's Bag and <b>2 Event T-shirts</b></p>
+                <i class="fa fa-circle"></i>
+                <p><b class="red">**</b> Weekend at the IP Casino</p>
+                <i class="fa fa-circle"></i>
+                <p>Complementary food and <b>full open bar (beer/wine/spirits)</b> at the famous Poker Run Party</p>
+                <i class="fa fa-circle"></i>
+                <p>VIP only gaming tables</p>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="tix" class="tix">
+        <div class="inner">
+            <div class="maj">
+                <!-- <h4>Registration fee includes access for 2 into all Boat Week events.</h4> -->
+                <!-- <hr class="hlf"> -->
+                <p>Looking for Additional tickets to <br>Saturday night's Poker Run Party?</p>
+                <hr class="hlf">
+                <h4><b>Single</b> Poker Run Party ticket: </h4>
+                <p><span>Standard: $65 per ticket</span><br>Complementary food and open bar (beer and wine) at the famous Poker Run Party</p>
+                <p><span>VIP: $95 per ticket</span><br>
+                    Complementary food and full open bar (beer/wine/spirits) at the famous Poker Run Party.<br>
+                    Access to VIP gaming tables.
+                </p>
+
+                <!-- <p><b>Single</b> Captains' Party ticket: <br><span>$40 per ticket</span></p> -->
+                <!-- <p>tickets for <b>BOTH</b> events: <br><span>$100 total</span></p> -->
+            </div>
+
+            <div class="min">
+                <a class="tx-btn" href="/party-tickets">Purchase Tickets</a>
+            </div>
+
+            <hr><div class="clearfix"></div>
+            <p>*VIP package is an additional $100 added to registration costs.</p>
+        </div>
+    </div>
+
+    <section class="pb-parallax">
+        <div class="mob-bg">
+            <div class="container">
+                <div class="col-lg-6 no-padding-r">
+                    <div class="text-sec">
+                        <p>This is a rain or shine event. Poker Run will only be canceled due to safety concerns posed by weather conditions. In the event the the Poker Run is canceled due to inclement weather, the Poker Run party will still go on uninterrupted barring any natural disasters. Registration is a non-refundable donation to the Emerald Coast Foundation.</p>
+                        <div class="col-lg-10 col-lg-offset-1 col-xs-12"><hr></div>
+                        <div class="clearfix"></div>
+                        <!-- <h4>Additional Questions? <span>Call 850-243-3800</span></h4> -->
+                    </div>
+                </div>
+
+                <div class="col-lg-6 no-padding mobile-hide">
+                    <div class="col-lg-4 no-padding-r col-xs-12">
+                        <%=image_tag( 'inline1.jpg', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive') %>
+                    </div>
+                    <div class="col-lg-4 no-padding-r col-xs-12">
+                        <%=image_tag( '2014.jpg', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive') %>
+                    </div>
+
+                      <div class="col-lg-4 no-padding-r col-xs-12">
+                        <%=image_tag( 'boat-week8.jpg', alt:'Emerald Coast Foundation, Poker Run', class: 'img-responsive') %>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+                <hr class="hlf">
+                <%= render 'shared/getaway' %>
+            </div>
+        </div>
+    </section>
+
+    <div class="clearfix"></div>
+</div>

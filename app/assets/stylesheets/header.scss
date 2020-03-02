@@ -8,13 +8,10 @@
 .infobar, #modal-discount {
     span, p, h3, li, h4, h1, h2, a { font-family: $lato; line-height: 1.4em; text-transform: uppercase; letter-spacing: 1px;}
 }
-.infobar{
-    @include sec-default();
-    background-color: $logold; padding: 10px 15px; text-align: center;
+.infobar{@include sec-default();background-color: $logold; padding: 10px 15px; text-align: center;
     a{color:$black; font-weight: bold;}
 }
-#modal-discount .uk-modal-dialog {
-    padding: 50px 0px; text-align: center;
+#modal-discount .uk-modal-dialog {padding: 50px 0px; text-align: center;
     .content {width: 50%; @include center-block();}
     p{color: $dark;}
     h3 span{color: $teal; margin-bottom:25px;}
@@ -28,169 +25,53 @@
     }
 }
 
-
-.top-area {
-    background: $teal none repeat scroll 0 0;
-    padding: 10px 0;
-    color: $white;
-
-    span {
-        content: '|';
-        width: 1px;
-        height: 25px;
-        position: absolute;
-        background-color: $white;
+.top-area {background: $teal none repeat scroll 0 0;padding: 10px 0;color: $white;
+    span {content: '|'; width: 1px; height: 25px; position: absolute; background-color: $white;}
+    .social-linls a {border-radius: 50%; color: $white; padding: 10px; margin-right:10px; transition: all 0.3s ease 0s;
+        &.modal2 {margin-left:10px;}
     }
+
+    .social-linls a:hover {background: $teal none repeat scroll 0 0;color: $dark;}
 }
 
-.top-area .social-linls a {
-    border-radius: 50%;
-    color: $white;
-    padding: 10px;
-    margin-right:10px;
-    transition: all 0.3s ease 0s;
-
-    &.modal2 {margin-left:10px;}
-}
-
-.top-area .social-linls a:hover {
-    background: $teal none repeat scroll 0 0;
-    color: $dark;
-}
-
-.logo-img {
-    width: 145px;
-    position: absolute;
-    top:2px;
-    left:5%;
-}
-
-header {
-    background-color: $white;
-    padding: 0 60px;
-}
+.logo-img { width: 145px; position: absolute; top:-1px; left:5%;}
+header {background-color: $white;padding: 0 60px;}
 
 /* End top area css */
-.nav-footer {
-    display: inline-block;
-    text-align: right;
-}
-
-.nav-footer.collapse {display: none;}
-
-.nav-footer > ul > li {
-    display: inline-block;
-    line-height: 100px;
-}
-
-.nav-footer > ul > li > .nav-link {
-    color: $dark;
-    font-family: $raleway;
-    font-size: 17px;
-    margin: 0 25px;
-    padding: 0;
-    font-weight: bold;
-    transition: all 0.3s ease 0s;
-
-    &:hover { color: $teal;}
-}
 
 /*****************************
 *= 4.  Menu Dropdown styles
 ******************************/
-
-.nav-footer > ul > li {
-    position: relative;
-
+.nav-footer.collapse {display: none;}
+.nav-footer {display: inline-block;text-align: right;}
+.nav-footer > ul > li {position: relative; display: inline-block; line-height: 100px;
     &.mobile-list {display: none;}
 }
 
-.nav-footer > ul > li > ul {
-    position: absolute;
-    top: 85%;
-    left: 0;
-    width: 100px;
-    z-index: 99999;
-    background: $offwhite;
-    text-align: left;
-    visibility: hidden;
-    opacity: 0;
-    padding-left: 0;
-    transition: all .5s ease;
-    -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, .11);
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, .11);
+.nav-footer > ul > li > .nav-link {color: $dark;font-family: $raleway;padding: 0;font-weight: bold;transition: all 0.3s ease 0s;
+    font-size: 17px; margin: 0 25px;
+    &:hover { color: $teal;}
 }
 
-.nav-footer .submenu.extra {width: 260px}
-
-.nav-footer > ul > li:hover > ul {
-    opacity: 1;
-    visibility: visible;
+.nav-footer > ul > li > ul {position: absolute; top: 85%; left: 0; width: 100px; 
+    z-index: 99999; background: $offwhite; text-align: left; visibility: hidden; opacity: 0; 
+    padding-left: 0; 
+    transition: all .5s ease; -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, .11); box-shadow: 2px 2px 10px rgba(0, 0, 0, .11);
 }
-
-.nav-footer > ul > li > ul > li {
-    line-height: 35px;
-}
-
-.nav-footer > ul > li > ul > li > a {
-    color: $dark;
-    border-bottom: 1px solid $gray;
-    display: block;
-    padding: 0 15px;
-    position: relative;
-    transition: all 0.3s ease 0s;
-}
-
-.nav-footer > ul > li > ul > li > a:hover {
-    background: $teal;
-    border-color: $teal;
-    color: $white;
-}
-
+.nav-footer .submenu.extra {width: 260px;}
+.nav-footer > ul > li:hover > ul {opacity: 1;visibility: visible;}
+.nav-footer > ul > li > ul > li {line-height: 35px;}
+.nav-footer > ul > li > ul > li > a {color: $dark; border-bottom: 1px solid $gray; display: block; padding: 0 15px; position: relative; transition: all 0.3s ease 0s;}
+.nav-footer > ul > li > ul > li > a:hover {background: $teal;border-color: $teal;color: $white;}
 .nav-footer > ul > li > ul > li.sig {background-color: red; color: white;
     &:hover {background-color: lighten(red, 20%);}
     a{color: $white;}
-    a:hover {
-        background: transparent;
-        border-color: none;
-    }
+    a:hover {background: transparent;border-color: none;}
 }
 
-
-@media (max-width: 1150px) {
-  .header .header-right {float: none !important;text-align: center;}
-  .header .header-right .header-searchbar {float: none !important;display: block;}
-  .header .header-right .nav-footer {float: none !important;text-align: left !important;}
-}
-
-@media (max-width: 600px) {
-  .tp-caption {display: none !important;}
-}
-
-// @media (min-width: 1149px) {
-@media (min-width: 1024px) {
-  .header-right .nav-footer {display: inline-block !important;}
-  .header-right .nav-toggler-box,
-  .nav-footer ul .dropdown-expander {display: none;}
-}
-
-.header .custom {
-    display: inline-block;
-    float: right;
-
+.header .custom {display: inline-block;float: right;
    ul li .nav-link { padding-top: 10px;}
 }
-
-@include bp(xl) {
-  .header.custom {display: none;}
-}
-
-
-@media (max-width: 768px) {
-  .header-right .nav-footer {display: none;}
-}
-
-
 
 .nav-toggler-box {
     float: right; margin-top: 20px;
@@ -203,30 +84,13 @@ header {
 }
 
 
-#offcanvas-toggler {
-    width: 40px;
-    float:right;
-    background-color:$white;
-    padding: 10px 0 5px;
-    text-align: center;
-    border-radius: 4px;
-    border: 1px solid $teal;
+#offcanvas-toggler {float:right;background-color:$white;text-align: center;border-radius: 4px;border: 1px solid $teal;
+    width: 40px;padding: 10px 0 5px;
     display:none;
 
     h4 {color:$white; line-height:2em; padding-top:10px; }
     h4:hover {color:$black; text-decoration:none; }
-
-    span {
-        content: '';
-        @include center-block ();
-        display: block;
-        margin-bottom: 4px;
-        width: 25px;
-        height: 3px;
-        border-radius: 4px;
-        background-color: $teal;
-    }
-
+    span {content: ''; @include center-block (); display: block; margin-bottom: 4px; width: 25px; height: 3px; border-radius: 4px; background-color: $teal;}
 }
 
 .offcanvas-menu .offcanvas-inner .module ul > li > a:hover{color:$white; background:$dark}
@@ -240,7 +104,7 @@ header {
 .offcanvas-menu .offcanvas-inner .module .module-content {padding: 20px; padding-bottom: 0}
 .offcanvas-menu .offcanvas-inner .module{margin-top:20px; height:100%;overflow-y:scroll;}
 .offcanvas-menu .offcanvas-inner .module ul > li{ margin-bottom:15px; padding-bottom: 5px; padding-left: 15px; border-bottom:1px solid rgba($white, .4);
-        &:last-child{margin-bottom: 0;}
+    &:last-child{margin-bottom: 0;}
 }
 .offcanvas-menu .offcanvas-inner .module ul > li.dropdown, .offcanvas-menu .offcanvas-inner .module ul > li.dropdown li{ border:none;}
 .offcanvas-menu .offcanvas-inner .module ul > li a{ -webkit-transition:300ms; -o-transition:300ms; transition:300ms; padding:4px 20px; padding-left:0px; color: $white; width:70%;}
@@ -264,41 +128,68 @@ h3.module-title{color: $teal; font-weight: bold; }
     li:last-child {border-bottom:none}
 }
 
-@media (max-width: 1151px) {
-    .logo-img {position: relative; display: inline-block; width: 11%; padding-bottom: 10px;}
-    header{ display: inline-block; float: right; width: 85%; padding-left:30px; padding-right: 10px;}
-    .nav-footer > ul { float: right;
-        li > .nav-link {margin-right: 15px;}
-    }
+
+@media (min-width: 1024px) {
+  .header-right .nav-footer {display: inline-block !important;}
+  .header-right .nav-toggler-box,
+  .nav-footer ul .dropdown-expander {display: none;}
 }
 
+@media (max-width: 1200px) {
+    .nav-footer > ul > li > .nav-link {font-size: 17px; margin: 0 0px 0 30px;}
+}
+
+// @media (max-width: 1151px) {
+    // .logo-img {position: relative; display: inline-block; width: 11%; padding-bottom: 10px;}
+    // header{ display: inline-block; float: right; width: 85%; padding-left:30px; padding-right: 10px;}
+    // .nav-footer > ul { float: right;
+        // li > .nav-link {margin-right: 15px;}
+    // }
+// }
+
+// @media (max-width: 1150px) {
+  // .header .header-right {float: none !important;text-align: center;}
+  // .header .header-right .header-searchbar {float: none !important;display: block;}
+  // .header .header-right .nav-footer {float: none !important;text-align: left !important;}
+// }
+
 @include bp(xl) {
-    #offcanvas-toggler { display:inline-block; margin-top: 2%;}
+    // #offcanvas-toggler { display:inline-block; margin-top: 2%;}
     .header-right.custom {display: none;}
+
+    header {padding-bottom: 10px;}
+    #offcanvas-toggler { display:inline-block; margin-top:3%;}
+    .logo-img {position: relative; display: inline-block; width: 125px; left:auto; float:left; margin-top:-30px;}
 }
 
 @include bp(md) {
-    header {padding-bottom: 15px;}
-    // #offcanvas-toggler { margin-top: 0px;}
+    // header {padding-bottom: 15px;}
+    .header-right .nav-footer {display: none;}
     .xs-r {margin-left: 45%; padding-right: 0;}
-    .logo-img {position: absolute; display: inline-block; width: 15%; padding-bottom: 10px; top:1px;}
+    // .logo-img {position: absolute; display: inline-block; width: 15%; padding-bottom: 10px; top:1px;}
     .nav-link {color: $white;}
     .top-area .social-linls a {padding: 5px; margin-right:5px;}
 }
 
 @include bp(mb) {
     .xs-r {@include sec-default ();margin: auto; padding:auto; .social-linls{text-align: right; @include sec-default();} }
+    header{padding:10px 60px;}
+    .logo-img {margin-top: 0;}
+    #offcanvas-toggler { margin-top:6%;}
+}
+
+@media (max-width: 600px) {
+  .tp-caption {display: none !important;}
 }
 
 @include bp(sm) {
     .main-header{padding:0;}
-    header {padding-left:25px;padding-right:25px; width:75%;}
+    // header {padding-left:25px;padding-right:25px; width:75%;}
     #offcanvas-toggler { margin-bottom: 10px; }
-    // .offcanvas-menu{height:auto;}
     .logo-box {width: 65%;}
 
     .xs-r .social-linls{text-align: center;}
-    .logo-img {position: relative; display: inline-block; width: 22%; padding-bottom: 5px;}
+    // .logo-img {position: relative; display: inline-block; width: 22%; padding-bottom: 5px;}
     .offcanvas-menu .offcanvas-inner .module ul > li a{ width:85%;}
 }
 
@@ -306,17 +197,5 @@ h3.module-title{color: $teal; font-weight: bold; }
     .xs-r .social-linls {
         span {display: none;}
         a.modal2 {display: none;}
-    }
-}
-
-
-.black-friday{@include sec-default(); background-color: #e50000; padding: 10px 0; text-align:center;
-    p.bfdeal{color: $white; margin:0; font-weight:bold; text-shadow: 0px 1px 1px $dark; text-transform: uppercase; letter-spacing: .5px;}
-    a{color: $black; text-shadow: 0px 1px 1px rgba($dark,.6); margin-left: 15px;}
-    br{display: none;}
-}
-@include bp(md) {
-    .black-friday{padding:10px 20px;
-        br{display: block;}
     }
 }
