@@ -208,70 +208,110 @@ br.xxs {display: none;}
 	button {background-color: red; color: $white; font-weight: bold; padding: 10px; border: none; font-size: 14px}
 	.txt-style {span, p, h3, li, h4, h1, h2, a { font-family: $lato; line-height: 1.4em; text-transform: uppercase; letter-spacing: 2px;}}
 
-  .pb-parallax {@include sec-default ();padding: 55px 0; text-align: center;background-color: #f7f7f7;
-  	.inner-pb {width:81%; @include center-block();}
-  	.text-half, .image-half {display: inline-block; float: left; width:50%;}
-  	.image-half{width:55%; margin-left: -5%; position: relative; z-index: 0; text-align: center;
-  		img{display: inline-block; float: none; width:30.5%; margin-left: 2%;} //194x339 pl15
-  	}
-    
-    .text-sec {@include sec-default ();background-color: $white;border: 1px solid rgba($gray, .1);
-      position: relative;z-index: 10;padding: 25px 35px;margin-top: 7%;
-      p { margin-bottom: .5rem; color: $dark; letter-spacing: 1px; text-transform: none;}
-      hr { margin-top: .1rem;}
-      h4 {font-weight: bold;}
-    }
+  .pb-parallax {
+      @include sec-default ();padding: 55px; text-align: center;
+      background-color: #f7f7f7;
+      // background-image: url(image_path('patt2.png')); position: relative; z-index: 0;&::before {@include before(); background-color: rgba(white, .3); height: 100%;}
 
-    .getaway-dets {width:75%; @include center-block();
-			p{line-height: 1.6em; text-transform: none; letter-spacing: 0;}
-			p.sig {text-transform: uppercase; color:$red;}
-			p b {font-weight: bold;}
-			span.red{color:$red;}
-		}
+      .text-sec {
+          @include sec-default ();
+          background-color: $white;
+          border: 1px solid rgba($gray, .1);
+          position: relative;
+          z-index: 10;
+          padding: 25px;
+          margin-top: 25px;
 
-		@include bp(xl) { 
-	  	.inner-pb {width:90%;}
-	  	.text-sec {margin-top: 5%; padding:25px;}
-		}
+          p { margin-bottom: .5rem; color: $dark; letter-spacing: 1px; text-transform: none;}
+          hr { margin-top: .1rem;}
+          h4 {font-weight: bold;}
+      }
 
-		@media screen and (max-width: 1023px) {padding: 50px 0 20px;
-	  	.inner-pb {width:85%;}
-	  	.text-half {width:60%;}
-	  	.image-half {width:45%;
-	  		.pb-img1 {display: none;}
-	  		img{width:47%;}
-	  	}
-      .getaway-dets {width:85%;}
-		}
+      .getaway-dets {width:75%; @include center-block();
+				p{line-height: 1.6em; text-transform: none; letter-spacing: 0;}
+				p.sig {text-transform: uppercase; color:$red;}
+				p b {font-weight: bold;}
+				span.red{color:$red;}
+			}
 
-    @include bp(ix) {padding:30px 0 20px;
-      .inner-pb {width:85%;}
-	  	.image-half {display: none;}
-      .text-half, .getaway-dets {@include sec-default();}
-      .text-sec{margin-top: 0;}
-    }
+      .mobile-hide {margin-left: -5%; position: relative; z-index: 0;}
 
-    @include bp(mb) {
-      // .text-sec {width: 90%;padding: 20px 25px;}
-    }
+			@include bp(xl) { 
+				.mobile-hide{display: none;} 
+	      .getaway-dets {width:90%;}
+			}
+      @include bp(md) {
+          padding: 30px 25px;
+		      .getaway-dets {width:95%;}
+          .mob-bg {
+              @include sec-default();
+              background-position: top left;
+              background-size: 30%;
+              background-repeat: no-repeat;
+              background-image: url(image_path('boat-week8.jpg'));
+          }
+          .no-padding-r {padding-right: 15px;}
+          .text-sec {
+              width: 82%;
+              padding: 25px;
+              margin-left: 22%;
+          }
+      }
 
-    @include bp(sm) {padding: 10px 0 30px;
-    	.container {padding:0;}
-      // .text-sec {width: 100%;padding: 20px 15px;margin-left: 0;
-      //   span {width: 100%; float:left; }
-      // }
-    }
-    @include bp(xs) {
-      // .text-sec {padding: 15px; margin-left: 0;}
-    }
+      @include bp(mb) {
+          .text-sec {
+              width: 90%;
+              padding: 20px 25px;
+          }
+      }
+
+      @include bp(sm) {
+          padding: 10px 0 30px;
+          .mob-bg { background-image: none;
+              .container {padding:0;}
+          }
+          .text-sec {
+              width: 100%;
+              padding: 20px 15px;
+              margin-left: 0;
+
+              span {width: 100%; float:left; }
+          }
+      }
+      @include bp(xs) {
+          .text-sec {
+              padding: 15px;
+              margin-left: 0;
+          }
+      }
   }
 
-  .sign-up { width:180px; height:55px; @include rotate(270deg); text-align: center; z-index: 100;
-    right: -64px; padding-top: 15px; position: fixed; top: 29%;
-    background-color: darken(red, 5%); color: white; font-weight: bold; @include tshadowl($black); border: 1px solid rgba($black, .3); font-size: 17px;
-    &:hover {opacity: .8;}
+  .sign-up {
+    width: 150px;
+    height: 80px;
+    padding-top: 15px;
+    position: fixed;
+    top: 25%;
+    right: 2%;
+    // display: none;
+    background-color: darken(red, 5%);
+    color: white; font-weight: bold;
+		@include tshadowl($black);
+		border: 1px solid rgba($black, .3);
+    font-size: 18px;
+    z-index: 100;
 
-    height:45px; padding-top:10px; right:-68px;
+    &:hover {opacity: .7;}
+
+    @media (max-width: 1024px) {
+			top: 30%;
+    }
+
+    @include bp(ix) {width: 110px; font-size: 15px; height:75px; right:1%;}
+
+    @include bp(mb) {
+			right:0;width: 100px; margin-top: 10px;
+    }
   }
 
 	hr.hlf{width: 40%; @include center-block();
@@ -365,6 +405,9 @@ br.xxs {display: none;}
 		h4.perk span {color: $logo-blue;}
 	}
 
+
+
+
 	.tix {@include sec-default(); padding: 25px 0px; background-color: $blue; text-align:center;
 		.inner {width: 80%; @include center-block(); background-color: white; padding: 20px;}
 		h4 {font-weight: 900; color: $teal; margin-bottom:10px;}
@@ -405,8 +448,6 @@ br.xxs {display: none;}
 	}
 
 	@include bp(xl) {
-  	.sign-up{font-size: 15px; height:40px; padding-top:9px; right:-70px;}
-
 		.box-lay {
 			.inside {width: 90%; }
 		}
@@ -478,6 +519,7 @@ br.xxs {display: none;}
 		}
 	}
 }
+
 
 
 .slips-parking {
@@ -1347,10 +1389,13 @@ br.xxs {display: none;}
 }
 
 .home, .home-alt {
-	.home-top {@include sec-default ();@include sec-bgimage (); background-position: bottom left; background-color: $logo-blue;height:auto;
-		background-image: url(image_path('boat-week7-mid.jpg')); background-size: 65%;
-		// padding: 70px 10px;
-		padding: 50px 10px;
+	.home-top {
+		@include sec-default ();@include sec-bgimage (); background-position: bottom left;
+		background-color: $logo-blue;
+		background-image: url(image_path('boat-week7-mid.jpg'));
+		background-size: 65%;
+		padding: 70px 10px;
+		height:auto;
 	}
 
 	.open {
@@ -1361,12 +1406,6 @@ br.xxs {display: none;}
 		h3 {margin-bottom: 20px; font-weight: 600;}
 		.spacer {@include sec-default(); margin-bottom: 15px;}
 		h3.date {color: white; margin-bottom: 50px;}
-
-
-		ul{margin-bottom: 20px;}
-		.reg-now {background-color: $red; box-shadow:0px 5px 20px rgba($black,.3); padding: 7px 20px; font-size:18px; 
-			color: $white; text-shadow: 0px 1px 2px rgba($black,.7); font-weight: bold; text-transform: uppercase; font-family: $lato;
-		}
 	}
 	.title-box {display: inline-block; width: 35%; float: right;}
 
@@ -1400,7 +1439,6 @@ br.xxs {display: none;}
 
 	@include bp(xl) {
 		.home-top {padding: 35px 10px;}
-		.open .reg-now {font-size:16px;}
 	}
 
 	@include bp(ix) {
@@ -1614,234 +1652,3 @@ b.emrld {color: #138776;}
 		}
 	}
 }
-
-
-.vip-promo, .extra-hand-promo { background-color: #f7f7f7; 
-	.black-friday, .top-area, .header, .logo-img, footer{display: none;}
-	span, p, h3, li, h4, h1, h2, a { font-family: $lato; line-height: 1.4em; text-transform: uppercase; letter-spacing: 1px;}
-
-	.sign-up { width:180px; height:55px; @include rotate(270deg); text-align: center; z-index: 100;
-    right: -64px; padding-top: 15px; position: fixed; top: 25%;
-    background-color: darken(red, 5%); color: white; font-weight: bold; @include tshadowl($black); border: 1px solid rgba($black, .3); font-size: 17px;
-    &:hover {opacity: .8;}
-
-    height:45px; padding-top:10px; right:-68px;
-  }
-
-	.vp1, .vp2, .vp3, .vp4, .vpNav {@include sec-default();text-align: center;}
-	.inside, .insideAlt{width:80%; @include center-block();}
-	.insideAlt{width:85%;}
-
-	.vp1{background-color: $teal; padding: 70px 0 110px;}
-
-	.vp2{padding-bottom:60px;
-		.top-pull{width:50%; float:right; margin-top: -60px;}
-		.textbox{width:45%; float:left; margin-top:70px;}
-	}
-
-	.vp3{position: relative; z-index: 0; 
-		&::before{@include before(); z-index: -2; background-color: $logold; 
-			width:36%; height:105%; left:-9%; top:-15%; @include rotate(22deg);
-		}
-
-		.extras, .img-dec {display: inline-block;}
-		.img-dec{width:45%; float: left;}
-		.extras{ width:48%; margin-left:5%; margin-top:3%;}
-		.img-mob{display: none;}
-
-		&.ehp::before{top:-5%;}
-	}
-
-	.vp4{padding: 60px 0; margin-top:0px;
-		.lr-logo{height:170px; display: inline-block; float: none; margin: 5px 3%;}
-		.lrl2{height:140px; margin-top:10px;}
-	}
-
-	.vp5{
-		.lr-logo{height:135px; display: inline-block; float: none; margin: 5px 3%;}
-		.lrl2{height:100px; margin-top:10px;}
-	}
-
-	.vpNav{background-color: $blue; padding: 20px 0;
-		a {color: $white; font-family: $raleway; font-size: 20px; font-weight: bold;}
-		a:hover{opacity: .8;}
-
-		&.ehp{margin-top: 80px; position: relative; z-index: 1;}
-	}
-
-
-	h1 {line-height: 1.1em; font-weight: bold; font-size: 2rem; letter-spacing: 2px; color: $white;
-		position: relative; z-index: 0;
-		span {font-size: 2.5rem; letter-spacing: 2px; padding: 0 8px; background-color:$teal;
-	  	&::before {@include before(); width:50%; left:25%; z-index: -1; height:1px; top:70%; border-bottom: 2px solid white; }
-		}
-	}
-	h2, h3{color: $red; font-weight:bold; font-size:23px; letter-spacing: 1px; text-decoration: underline; margin:0; line-height: 2em;}
-	h3{text-decoration: none; background-color: $red; color: $white; font-size:20px; padding:0px; margin-top:8px; width:75%; @include center-block();}
-  i.fa-circle {color: $teal; font-size: 7px; margin-bottom: 15px; @include center-block();}
-	h4 {font-weight: 900; color: #1788ae; margin-bottom:20px; font-size:22px; text-decoration: underline; font-family: $raleway;}
-	p {color: $logo-blue; font-weight: 700; font-size:18px; font-family: $raleway;}
-	p b {color: $blue;}
-	p b.red{color:$red;}
-	p span{font-family: inherit; font-size: 1.2em;}
-	p.color{color: #1788ae;}
-
-	@include bp(xl) {
-  	.sign-up{font-size: 15px; height:40px; padding-top:9px; right:-70px;}
-		// .sign-up {top: 30%;font-size:16px;}
-
-		h1{font-size:1.8rem;
-			span{font-size:2.3rem;}
-		}
-		h2{font-size: 20px;}
-		h4{font-size: 19px;}
-		p{font-size:17px;}
-
-		.vp1{padding: 40px 0 80px;}
-
-		.vp2{
-			.top-pull{margin-top:-45px;}
-			.textbox{margin-top:25px;}
-		}
-
-		.vp3{margin-top:20px;
-			.insideAlt{width:90%;}
-			&::before{height:440px; left:-9%; top:-10%;}
-			&.ehp::before{height:420px;}
-
-			.extras{ margin-top:0px; margin-left: 4%;}
-			.img-fw{display: none;}
-			.img-mob{display: block;}
-		}
-
-		.vp4{padding: 20px 0 40px;
-			.lr-logo{height:150px;}
-			.lrl2{height:120px;}
-		}
-
-		.vpNav{ padding: 15px 0;
-			a {font-size: 18px;}
-		}
-	}
-
-  @media (max-width: 1023px) {
-  	h1{font-size:1.5rem;
-			span{font-size:1.9rem;}
-		}
-		h2{font-size: 18px;}
-		h3, h4{font-size: 17px;}
-		p{font-size:16px;}
-
-		.vp2{padding-bottom:45px;}
-
-		.vp3{margin-top:0px;
-			.insideAlt{width:90%;}
-			&::before{height:50%; left:-13%; top:55%; width:55%; @include rotate(-45deg); }
-
-			.img-dec{ margin-left: 0; @include sec-default(); margin-top:30px;}
-			.extras{width:80%; @include center-block();}
-			br.rules{display: none;}
-			.img-fw{width: 70%;@include center-block();}
-			.img-mob{display: none;}
-			.solo-img{width: 70%;@include center-block();position: relative;z-index: 1;}
-
-
-			&.ehp {
-				&::before{display: none;}
-				.img-dec{position: relative; z-index: 0; padding:40px 0;
-					&::after{@include after(); bottom:0; right:50%; background-color: $logold; width: 50%;}
-				}
-			}
-		}
-
-		.vp4{padding: 20px 0;
-			.lr-logo{height:130px;}
-			.lrl2{height:100px;}
-		}
-
-		.vpNav{
-			a {font-size: 17px;}
-			&.ehp {margin-top:30px;}
-		}
-  }
-
-  @include bp(ix) {
-  	// .sign-up{font-size: 15px; height:45px; padding-top:12px; right:-68px;}
-
-  	h1{font-size:1.35rem;
-			span{font-size:1.7rem;}
-		}
-		h2{font-size: 17px;}
-		h3, h4{font-size: 16px;}
-		h2,h3{line-height: 1.5em;}
-		p{font-size:15px;}
-
-		.vp1{padding: 25px 0;}
-
-		.vp2{padding:0px 0 25px;
-			.textbox, .top-pull{@include sec-default(); margin-top:0px;}
-			.textbox{margin:15px 0 25px;}
-			img{width:80%; @include center-block();}
-		}
-
-		.vp3{
-			&::before{display:none;}
-			.img-fw, .solo-img{width:80%;}
-		}
-
-		.vp5{
-			.lr-logo{height:115px;}
-			.lrl2{height:90px;}
-		}
-
-		.vpNav{ padding: 15px 0;
-			a {font-size: 16px;}
-		}
-  }
-
-  @include bp(md) {
-  	h1{font-size:1.2rem;
-			span{font-size:1.5rem;}
-		}
-		.vp1{padding: 20px 0 15px;}
-  }
-
-  @include bp(mb) {
-  	.vp3{
-  		.extras,.img-fw, .solo-img{width:90%;}
-		}
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
