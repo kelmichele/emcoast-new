@@ -1347,11 +1347,18 @@ br.xxs {display: none;}
 }
 
 .home, .home-alt {
-	.home-top {@include sec-default ();@include sec-bgimage (); background-position: bottom left; background-color: $logo-blue;height:auto;
-		background-image: url(image_path('boat-week7-mid.jpg')); background-size: 65%;
-		// padding: 70px 10px;
-		padding: 50px 10px;
+	// .home-top {@include sec-default ();@include sec-bgimage (); background-position: bottom left; background-color: $logo-blue;height:auto;
+	// 	background-image: url(image_path('boat-week7-mid.jpg')); background-size: 65%; padding: 50px 10px;
+	// }
+
+	.home-top {@include sec-default (); background-color: $logo-blue;
+		padding: 50px 0px;
+		position: relative; z-index: 0; 
+		&::after{@include before(); height:100%; width:65%; z-index:-2; @include sec-bgimage();
+			background-image: url(image_path('collage.jpg')); background-size: cover; 
+		}
 	}
+	// .collage{display: inline-block; float: left; width:65%;}
 
 	.open {
 		text-align: center;
@@ -1407,6 +1414,7 @@ br.xxs {display: none;}
 		// .home-top {padding: 35px 10px;}
 		.home-top {position: relative; z-index: 0; background-size: 100%;
 			&::before {@include before();background-color: rgba($black, .65);z-index: -1; height:100%;}
+			&::after{width:100%;}
 		}
 		.title-box{width: 95%; @include center-block();}
 		.open {
