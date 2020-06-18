@@ -1,28 +1,14 @@
 <ul>
     <li><%= link_to "Home", root_path, class: 'nav-link' %></li>
     <li><%= link_to "The Foundation", ec_foundation_path, class: 'nav-link' %></li>
-    <!-- <li><%= link_to "Registration", registration_path, class: 'nav-link' %></li> -->
 
-    <li class="dropdown"><a class="nav-link">Registration</a>
+    <li class="dropdown"><a class="nav-link pr20">Poker Run <span>2020</span></a>
         <ul class="submenu extra">
-            <li><%= link_to "Registration Information", registration_path, class: 'nav-link' %></li>
             <li class="sig"><%= link_to "Register Now", register_now_path, class: 'nav-link' %></li>
-        </ul>
-    </li>
-
-    <li class="dropdown"><a class="nav-link">Poker Run</a>
-        <ul class="submenu extra">
+            <li class="covid"><%= link_to "Updates & Information", poker_run2020_path, class: 'nav-link' %></li>            
             <li><%= link_to "Safety Rules", safety_rules_path, class: 'nav-link' %></li>
-            <li><%= link_to "Stops", stops_path, class: 'nav-link' %></li>
-            <li><%= link_to "Events", events_path, class: 'nav-link' %></li>
             <li><%= link_to "Lodging", lodging_path, class: 'nav-link' %></li>
             <li><%= link_to "Wet Slips + Boat/Trailer Parking", slips_parking_path, class: 'nav-link' %></li>
-            <li>
-                <%= link_to "MissBoatWeekForm.pdf", target: '_blank' do %>
-                   Miss Boat Week Registration
-                <% end %>
-            </li>
-            <li><%= link_to "Party Tickets", party_tickets_path, class: 'nav-link' %></li>
         </ul>
     </li>
 

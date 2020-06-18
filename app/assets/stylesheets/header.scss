@@ -61,7 +61,7 @@ header {background-color: $white;padding: 0 60px;}
 .nav-footer .submenu.extra {width: 260px;}
 .nav-footer > ul > li:hover > ul {opacity: 1;visibility: visible;}
 .nav-footer > ul > li > ul > li {line-height: 35px;}
-.nav-footer > ul > li > ul > li > a {color: $dark; border-bottom: 1px solid $gray; display: block; padding: 0 15px; position: relative; transition: all 0.3s ease 0s;}
+.nav-footer > ul > li > ul > li > a {color: $dark; border-bottom: 1px solid $gray; display: block; font-weight:bold; padding: 0 15px; position: relative; transition: all 0.3s ease 0s;}
 .nav-footer > ul > li > ul > li > a:hover {background: $teal;border-color: $teal;color: $white;}
 .nav-footer > ul > li > ul > li.sig {background-color: red; color: white;
     &:hover {background-color: lighten(red, 20%);}
@@ -127,6 +127,25 @@ h3.module-title{color: $teal; font-weight: bold; }
     li:hover, li a:hover {background-color: transparent;}
     li:last-child {border-bottom:none}
 }
+
+
+// KPKP COVID
+.nav-footer > ul > li > .nav-link.pr20{color:$red;}
+.nav-footer > ul > li > ul > li.covid {background-color: $teal; color: $white;
+    &:hover {background-color: lighten($teal, 20%);}
+    a{color: $white;}
+    a:hover {background: transparent;border-color: none;}
+}
+
+.offcanvas-menu .offcanvas-inner .module ul > li{
+    &.regNow{background-color: $red;}
+    &.covUp{background-color: $teal;}
+    &.det {
+        padding: 10px 0 10px 15px; font-weight: bold; text-shadow: 0px 1px 2px rgba($black,.3);
+    }
+}
+// KPKP COVID
+
 
 
 @media (min-width: 1024px) {

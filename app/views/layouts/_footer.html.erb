@@ -68,37 +68,20 @@
             <div class="module-content">
                 <h3 class="module-title">Main Menu</h3>
                 <ul>
+                    <li class="det regNow"><%= link_to "Register Now", register_now_path, class: 'nav-link' %></li>
+                    <li class="det covUp"><%= link_to "2020 Updates & Information", poker_run2020_path, class: 'nav-link' %></li>
                     <li><%= link_to "Home", root_path, class: 'nav-link' %></li>
                     <li><%= link_to "The Foundation", ec_foundation_path, class: 'nav-link' %></li>
-                    <li><%= link_to "Registration Information", registration_path, class: 'nav-link' %></li>
-                    <li><%= link_to "Registration Form", register_now_path, class: 'nav-link' %></li>
-                    <li><%= link_to "Stops", stops_path, class: 'nav-link' %></li>
-                    <li><%= link_to "Events", events_path, class: 'nav-link' %></li>
-                    <li><%= link_to "Party Tickets", party_tickets_path, class: 'nav-link' %></li>
                     <li><%= link_to "Our Sponsors", sponsors_path, class: 'nav-link' %></li>
                     <li><%= link_to "Become a Sponsor", be_a_sponsor_path, class: 'nav-link' %></li>
                     <li><%= link_to "Lodging", lodging_path, class: 'nav-link' %></li>
                     <li><%= link_to "Safety Rules", safety_rules_path, class: 'nav-link' %></li>
                     <li><%= link_to "Wet Slips + Boat/Trailer Parking", slips_parking_path, class: 'nav-link' %></li>
                     <li><%= link_to "Gallery", gallery_path, class: 'nav-link' %></li>
-                    <li>
-                        <%= link_to "MissBoatWeekForm.pdf", target: '_blank' do %>
-                           Miss Boat Week Registration
-                        <% end %>
-                    </li>
                     <li><%= link_to "Contact Us", volunteer_path, class: 'nav-link' %></li>
 
                 </ul>
             </div>
-
-            <!-- <ul class="signup">
-                <li><%= link_to "Emerald Registration", flbc_path, target: '_blank' %></li>
-                <li>
-                    <%= link_to "MissBoatWeek2017.pdf", target: '_blank' do %>
-                       Miss Boat Week Registration
-                    <% end %>
-                </li>
-            </ul> -->
         </div>
     </div>
 </div>
