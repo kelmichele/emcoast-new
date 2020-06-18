@@ -64,7 +64,11 @@
 // Breakpoints
 @mixin bp($point) {
 
-    @if $point == xl {
+    @if $point == tw {
+        @media (max-width: 1200px)  { @content ; }
+    }
+
+    @else if $point == xl {
         @media (max-width: 1024px)  { @content ; }
     }
 

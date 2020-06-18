@@ -5,8 +5,8 @@
 // COVID UPDATES
 .COVIDevent{@include sec-default(); padding: 60px 0; background-color: $blue; text-align:center;
 	.inside, .innerBox {@include center-block(); max-width:1600px;}
-	.inside {width: 65%}
-	.innerBox {width: 85%}
+	.inside {width: 65%;}
+	.innerBox {width: 85%;}
 
 	.sign-up {width:180px; height:55px; @include rotate(270deg); text-align: center; z-index: 100;
     right: -64px; padding-top: 15px; position: fixed; top: 29%;
@@ -24,7 +24,8 @@
 
 	p, h3, li, h4, h1, h2, a {font-family: $lato; line-height: 1.4em; text-transform: uppercase; letter-spacing: 1px; color: $dark;}
 	span{font-family: inherit;}
-	h1 {color: $white; font-weight: bold; font-size: 1.8rem; margin-bottom: 20px;}
+	h1 {color: $white; font-weight: 900; font-size: 1.8rem; margin-bottom: 20px;}
+	h2,h3{font-weight: 700;}
 	h3{font-size:28px;}
 	h4{font-weight: bold;}
 	p{font-size:17px;}
@@ -42,27 +43,50 @@
 		p{text-transform: none; letter-spacing: 0; font-size:20px; font-weight: bold;}
 		h4{font-size: 30px;}
 	}
-	.boxSec.extra{background-color: $logold;
+
+	@include bp(tw) {
+		.inside {width: 90%;}
+		h1{font-size: 1.6rem;}
+		h2{font-size:28px;}
 	}
 
+	@include bp(xl) {
+  	.sign-up{font-size: 15px; height:40px; padding-top:9px; right:-70px;}
+		.innerBox {width: 90%;}
 
-  .pb-parallax {@include sec-default ();padding: 55px 0; text-align: center;background-color: #f7f7f7; margin-top:50px;
-		.inner-pb {width:81%; @include center-block();}
-  	.text-half, .image-half {display: inline-block; float: left; width:50%;}
-  	.image-half{width:55%; margin-left: -5%; position: relative; z-index: 0; text-align: center;
-  		img{display: inline-block; float: none; width:30.5%; margin-left: 2%;} //194x339 pl15
-  	}
-    
-    .text-sec {@include sec-default ();background-color: $white;border: 1px solid rgba($gray, .1);
-      position: relative;z-index: 10;padding: 25px 35px;margin-top: 7%;
-      p { margin-bottom: .5rem; color: $dark; letter-spacing: 1px; text-transform: none;}
-      hr { margin-top: .1rem;}
-      h4 {font-weight: bold;}
-    }
-  }
+		hr.hlf{margin: 15px auto;}
+		h1{font-size: 1.45rem;}
+		h2{font-size:26px;}
+		h3{font-size:23px;}
 
+		.boxSec{
+			li {font-size: 18px; margin-bottom: 15px;
+				span{font-size:16px;}
+			}
+		}
+		.boxSec.vip {
+			h4{font-size: 23px;}
+			p{font-size:17px;}
+		}
+	}
 
+	@include bp(ix) {padding: 30px 0; 
+		.inside{width:95%;}
+		.innerBox {width: 95%;}
 
+		p, h3, li, h4, h1, h2, a {letter-spacing: .5px}
+		h1{font-size: 1.3rem;}
+		h2{font-size:21px;}
+		h3{font-size:19px;}
+
+		.boxSec{
+			li {font-size: 17px;margin-bottom: 10px;}
+		}
+		.boxSec.vip {
+			h4{font-size: 19px;}
+			p{font-size:16px;}
+		}
+	}
 }
 
 
