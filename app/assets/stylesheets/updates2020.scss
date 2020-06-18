@@ -1,0 +1,74 @@
+@import "variables";
+@import "mixins";
+
+
+// COVID UPDATES
+.COVIDevent{@include sec-default(); padding: 60px 0; background-color: $blue; text-align:center;
+	.inside, .innerBox {@include center-block(); max-width:1600px;}
+	.inside {width: 65%}
+	.innerBox {width: 85%}
+
+	.sign-up {width:180px; height:55px; @include rotate(270deg); text-align: center; z-index: 100;
+    right: -64px; padding-top: 15px; position: fixed; top: 29%;
+    background-color: darken(red, 5%); color: $white; font-weight: bold; @include tshadowl($black); border: 1px solid rgba($black, .3); font-size: 17px;
+    &:hover {opacity: .8;}
+
+    height:45px; padding-top:10px; right:-68px;
+	}
+
+	hr.hlf{width: 40%; @include center-block();
+		&.xtra {margin-bottom: 25px; }
+		&.less {width: 15%; margin-bottom:25px;}
+	}
+
+
+	p, h3, li, h4, h1, h2, a {font-family: $lato; line-height: 1.4em; text-transform: uppercase; letter-spacing: 1px; color: $dark;}
+	span{font-family: inherit;}
+	h1 {color: $white; font-weight: bold; font-size: 1.8rem; margin-bottom: 20px;}
+	h3{font-size:28px;}
+	h4{font-weight: bold;}
+	p{font-size:17px;}
+
+	.boxSec{@include sec-default(); background-color: $white; padding:30px 0px 30px; 
+		li {font-size: 20px; margin-bottom: 20px; 
+			font-weight: bold;color: $blue; 
+			&:nth-child(2n+2) {color: $logo-blue}
+
+			span{font-size:18px; line-height: 1.1em; text-transform: none; letter-spacing: 0}
+		}
+	}
+
+	.boxSec.vip{background-color: $teal;
+		p{text-transform: none; letter-spacing: 0; font-size:20px; font-weight: bold;}
+		h4{font-size: 30px;}
+	}
+	.boxSec.extra{background-color: $logold;
+	}
+
+
+  .pb-parallax {@include sec-default ();padding: 55px 0; text-align: center;background-color: #f7f7f7; margin-top:50px;
+		.inner-pb {width:81%; @include center-block();}
+  	.text-half, .image-half {display: inline-block; float: left; width:50%;}
+  	.image-half{width:55%; margin-left: -5%; position: relative; z-index: 0; text-align: center;
+  		img{display: inline-block; float: none; width:30.5%; margin-left: 2%;} //194x339 pl15
+  	}
+    
+    .text-sec {@include sec-default ();background-color: $white;border: 1px solid rgba($gray, .1);
+      position: relative;z-index: 10;padding: 25px 35px;margin-top: 7%;
+      p { margin-bottom: .5rem; color: $dark; letter-spacing: 1px; text-transform: none;}
+      hr { margin-top: .1rem;}
+      h4 {font-weight: bold;}
+    }
+  }
+
+
+
+}
+
+
+
+
+
+
+
+

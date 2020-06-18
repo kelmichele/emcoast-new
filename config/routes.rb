@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get '/be-a-sponsor', to: 'static_pages#be-a-sponsor'
   get '/vip-promo', to: 'static_pages#vip-promo'
   get '/extra-hand-promo', to: 'static_pages#extra-hand-promo'
+  get '/poker-run2020', to: 'static_pages#poker-run2020'
 
 
   get '/volunteer', to: 'volunteers#new', as: 'volunteer'
