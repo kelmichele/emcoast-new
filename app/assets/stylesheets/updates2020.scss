@@ -24,11 +24,13 @@
 
 	p, h3, li, h4, h1, h2, a {font-family: $lato; line-height: 1.4em; text-transform: uppercase; letter-spacing: 1px; color: $dark;}
 	span{font-family: inherit;}
-	h1 {color: $white; font-weight: 900; font-size: 1.8rem; margin-bottom: 20px;}
+	h1 {color: $white; font-weight: 900; font-size: 1.6rem; margin-bottom: 20px;}
 	h2,h3{font-weight: 700;}
+	h2{margin-bottom: 15px;}
 	h3{font-size:28px;}
-	h4{font-weight: bold;}
+	h4{font-weight: bold; font-size: 18px;}
 	p{font-size:17px;}
+	p.info{font-size: 21px; font-weight: 700; text-transform: none; letter-spacing: 0; width:90%; @include center-block();}
 
 	.boxSec{@include sec-default(); background-color: $white; padding:30px 0px 30px; 
 		li {font-size: 20px; margin-bottom: 20px; 
@@ -44,10 +46,16 @@
 		h4{font-size: 30px;}
 	}
 
+	@media (min-width:1445px){
+		p.info{width:85%;}
+		h1{font-size: 1.8rem;}
+	}
+	
+
 	@include bp(tw) {
 		.inside {width: 90%;}
-		h1{font-size: 1.6rem;}
 		h2{font-size:28px;}
+		p.info{width:95%;}
 	}
 
 	@include bp(xl) {
@@ -58,6 +66,7 @@
 		h1{font-size: 1.45rem;}
 		h2{font-size:26px;}
 		h3{font-size:23px;}
+		p.info{font-size: 19px;}
 
 		.boxSec{
 			li {font-size: 18px; margin-bottom: 15px;
@@ -78,6 +87,7 @@
 		h1{font-size: 1.3rem;}
 		h2{font-size:21px;}
 		h3{font-size:19px;}
+		p.info{font-size: 17px;}
 
 		.boxSec{
 			li {font-size: 17px;margin-bottom: 10px;}
@@ -86,6 +96,11 @@
 			h4{font-size: 19px;}
 			p{font-size:16px;}
 		}
+	}
+
+	@include bp(pl) {
+		h4 br{display: none;}
+		
 	}
 }
 
