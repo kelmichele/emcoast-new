@@ -491,13 +491,13 @@ br.xxs {display: none;}
   	p.name{font-weight: 900; color: $logo-blue; letter-spacing: 2px; font-size: 1.2em; margin-top:15px;}
 		a.phoneBook{font-weight:bold;}
   	.location {@include sec-default(); margin-bottom:30px;
-			p.fuel {color: $teal;margin-bottom:10px; font-weight:bold;}
+		p.fuel {color: $teal;margin-bottom:10px; font-weight:bold;}
   	}
 
   	hr.hlf.less{margin-top:0; margin-bottom: 15px;}
-		p.number{margin-bottom: 20px;}
+	p.number{margin-bottom: 20px;}
   	.slip-link {width: auto; background-color: $blue; color: white; padding: 5px 15px;
-			&:hover {opacity: .7;}
+		&:hover {opacity: .7;}
   	}
   }
 }
@@ -505,9 +505,10 @@ br.xxs {display: none;}
 
 
 .safety-rules {
-	.box-lay { padding: 40px 0px;
+	.box-lay {
+		padding: 40px 0px;
 		.meetings{ @include sec-default(); background-color: $logold; padding:20px 20px 20px 40px;
-			h2,h3,h4,p, span{letter-spacing: 1px; text-align: left; color: $dark;}
+			h2,h3,h4,p, span{letter-spacing: 1px; text-align: left; color: $dark; text-align: center;}
 			.title-line{float: left; opacity: .5;}
 			h2{font-weight:bold; margin-bottom: 7px; font-size: 1.7rem;}
 			span{font-weight: bold;}
@@ -516,13 +517,20 @@ br.xxs {display: none;}
 
 		.inside {@include sec-default(); background-color: white; }
 		.two { width: 90%; @include center-block();text-align: left; padding:20px 0;}
-  	li { font-size: 16px; font-weight: normal; text-transform: none; letter-spacing: 1px}
-  	h4 {color: $dark}
+	  	li {font-size: 16px; font-weight: normal; text-transform: none; letter-spacing: 1px}
+	  	h4 {color: $dark}
 	}
 
 	.numbers {@include sec-default(); background-color: $teal; padding:15px;
 		h4 {margin: 5px 0 7px; text-transform: none; letter-spacing: 1px}
 	}
+
+	// KPKP DELETE AFTER ADDING 2020 INFO
+	@media (min-width:640px){
+		.box-lay {min-height:70vh;}
+	}
+	
+	@include bp(oc) {}
 }
 
 .register-ruby {
