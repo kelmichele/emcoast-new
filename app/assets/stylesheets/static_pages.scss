@@ -1199,6 +1199,7 @@ br.xxs {display: none;}
 		@include bp(ph) {width:95%;
 			h3{font-size: 20px;}
 			h4{font-size: 16px;}
+			.top br{display:none;}
 		}
 
 		@include bp(pt) {
