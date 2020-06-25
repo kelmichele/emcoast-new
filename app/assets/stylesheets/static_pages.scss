@@ -1123,53 +1123,67 @@ br.xxs {display: none;}
 		h3 {margin-bottom:5px; text-align: center; line-height: 1.2em; color: $dark; font-size: 32px; font-family: $lato; font-weight: bold;}
 		h4 {font-size: 18px; margin-bottom: 5px;}
 		h5 {font-size: 25px; font-weight: bold; text-align: center; color: $teal;}
-		p{color: $dark;  margin: 15px 0 20px; font-size: 16px;}
+		p{color: $dark; margin: 0px 0 20px; font-size: 17px; line-height: 1.6em;}
+		.ebox {width: 1040px; @include center-block();}
 
-
-		.ebox {width:80%; @include center-block();}
-		.text {@include center-block(); width:75%;}
-		
-		.top {@include sec-default(); margin-bottom: 20px; text-align: center;
+		.top {@include sec-default(); margin-bottom: 40px; text-align: center;
 			p{font-size: 20px; font-weight: bold; margin-top:0;
-				span{font-family: $courg;}
-				a{color: $teal;}
+				span{color:$blue;}
+				a{color: $teal; text-decoration: underline;}
 			}
+			hr.hlf{width:40%; border-color: rgba($black,.2);}
 		}
 		
-		.rls {margin-top: 20px;width: 40%; @include center-block(); margin-bottom: 30px;}
-		.run-logo{ height: 120px; display: inline-block;padding: 5px 10px;height: 110px;
+		.mtext{@include sec-default(); margin-bottom: 30px;
+			.ltext, .rtext {display: inline-block; float: left;
+				p{margin-bottom: 15px;}
+			}
+			.ltext{width: 33%; margin-left: -5%;}
+			.rtext {float: right; width: 71%; margin-right:-3%;}
+		}
+
+		.rls {@include sec-default(); margin: 10px 0 0px; text-align: center;}
+		.run-logo{display: inline-block; padding: 5px 10px;height: 110px;
 			&:first-child{height: 100px;}
 		}
-		.mtext{@include sec-default();margin-bottom: 30px;}
-
-		.ltext, .rtext {display: inline-block; float: left; width: 36%;
-			p{margin-bottom: 15px;}
-		}
-		.rtext {float: right; width: 60%;}
 	
+		@include bp(tw) {
+			.ebox {width: 85%;}
+			.mtext{
+				.ltext{width: 29%; margin-left: 0;}
+				.rtext {width: 67%; margin-right:0;}
+			}
+		}
+
 		@include bp(xl) {padding: 35px 0;
-			.ebox {width:92%;}
-			.ltext {width: 38%; padding-right:5px;}
-			.rtext{padding-left: 5px;}
-			.rls{margin-top: 0; width:80%; @include center-block();}
+			h3{font-size: 29px;}
+
+			.ebox {width:80%;}
+			.top{margin-bottom:15px;
+				p{font-size: 19px;}
+			}
+			.mtext{
+				.rtext{@include sec-default();}
+				.ltext{display:none;}
+			}
+			.rls{margin-top: 0;}
 		}
 
 		@media (max-width: 992px){padding: 20px 0;
-			.ebox {width:95%;}
 			.top {margin-bottom: 10px;}
-
 			h3 {font-size: 26px;}
 			h4 {font-size: 16px;}
-			.top p{font-size: 18px; margin-bottom: 10px;}
-			.ltext, .rtext {@include sec-default(); padding:0;}
-			.mtext {width: 97%; @include center-block(); max-height: 250px; overflow-y: scroll; margin-bottom: 15px; }
 		}
 
+		@include bp(ix) {
+			.ebox{width:90%;}
+			.top, .mtext{margin-bottom: 0;}
+		}	
+
 		@include bp(md) {padding: 25px 0 10px;
-			.run-logo{ height: 100px; margin: 5px;
+			.run-logo{height: 100px; margin: 5px;
 				&:first-child{height: 80px;}
 			}
-			.rls{width: 99%;}
 		}
 
 		@include bp(pl) {
@@ -1183,8 +1197,8 @@ br.xxs {display: none;}
 		}
 
 		@include bp(ph) {width:95%;
-			h3{ font-size: 20px;}
-			h4{ font-size: 16px;}
+			h3{font-size: 20px;}
+			h4{font-size: 16px;}
 		}
 
 		@include bp(pt) {
