@@ -479,13 +479,13 @@ br.xxs {display: none;}
 	}
 }
 
-
 .slips-parking {
 	.box-lay {
-  	h1 { font-size: 2rem;
-  		span {font-size: 2rem; }
+		.two{padding: 0 0px;}
+  	h1 {font-size: 2rem;
+  		span {font-size: 2rem;}
   	}
-  	h4 {margin-top:20px; color: white;background-color:$teal;font-weight: 900;font-size: 1.3rem; margin-bottom: 15px; letter-spacing: 1.5px; padding:10px}
+  	h4 {margin-top:0px; color: white;background-color:$teal;font-weight: 900;font-size: 1.3rem; margin-bottom: 15px; letter-spacing: 1.5px; padding:10px;}
   	p{color:$dark;margin-bottom:7px;}
 
   	p.name{font-weight: 900; color: $logo-blue; letter-spacing: 2px; font-size: 1.2em; margin-top:15px;}
@@ -495,23 +495,21 @@ br.xxs {display: none;}
   	}
 
   	hr.hlf.less{margin-top:0; margin-bottom: 15px;}
-	p.number{margin-bottom: 20px;}
+		p.number{margin-bottom: 20px;}
   	.slip-link {width: auto; background-color: $blue; color: white; padding: 5px 15px;
 		&:hover {opacity: .7;}
   	}
   }
 }
 
-
-
 .safety-rules {
-	.box-lay {
-		padding: 40px 0px;
+	.box-lay {padding: 40px 0px;
 		.meetings{ @include sec-default(); background-color: $logold; padding:20px 20px 20px 40px;
 			h2,h3,h4,p, span{letter-spacing: 1px; text-align: left; color: $dark; text-align: center;}
 			.title-line{float: left; opacity: .5;}
 			h2{font-weight:bold; margin-bottom: 7px; font-size: 1.7rem;}
 			span{font-weight: bold;}
+			h2 span{text-decoration: underline;}
 		}
 
 
@@ -531,65 +529,6 @@ br.xxs {display: none;}
 	}
 	
 	@include bp(oc) {}
-}
-
-.register-ruby {
-		.big-header {
-			@include sec-default();
-			@include sec-bgimage();
-			background-image: url(image_path('header-scene.jpg'));
-			background-position: bottom center;
-
-			h1 { text-transform: uppercase; float: left;display: inline-block; color: $white;font-family: $franc; text-shadow: 1px 1px $black; }
-			.overlay {
-				padding:45px 0 35px;
-				background: rgba($dark, .4);
-			}
-			.clearfix.custom {display: none;}
-
-			.pay-link {width:40%; float: right; background-color: red; display: inline-block; padding:15px; text-align: center;
-				h3 {color: $white; font-size: 18px; line-height: 1.4em;}
-			}
-
-			@include bp(md) {
-				background-position: top center;background-image: url(image_path('header-scenexs.jpg'));
-				.overlay {padding: 25px 0;}
-				h1 {@include sec-default(); text-align: center; margin-bottom: 20px; position: relative;}
-				.clearfix.custom {display: block;}
-				.pay-link {width:90%; @include center-block(); padding: 10px;
-					h3{font-size: 15px;}
-				}
-			}
-			@include bp(sm) {
-				h1 {font-size: 28px;}
-				h1 span {font-size: .6em; @include center-block(); }
-				h4 { font-size: 1em;}
-				.overlay {padding: 20px 0;}
-			}
-
-
-			@include bp(pt) {
-				background-color: $dark; background-image: none;
-				h1 {font-size: 25px;}
-				h1 span {display: none; }
-				.overlay {padding: 10px 0 15px; background-color: transparent;}
-			}
-		}
-
-		.ruby-level {@include sec-default(); padding:40px 0; background-color: $offwhite;}
-
-		.form {
-			background-color: lighten($logo-blue, 50%);
-			@include center-block();
-			border:1px solid $logo-blue;
-			padding: 20px 30px;
-
-			h3 {font-weight: bold; color: $white; @include tshadow($logo-blue); margin-bottom:5px;}
-			p.disclaimer {font-weight: bold; text-align: center; color: $black;margin-bottom:20px; text-transform: uppercase;
-				&.b {text-align: left; font-size:14px;}
-			}
-			h4 {text-align: center; font-weight: bold; line-height: 1.4em; color: red;}
-		}
 }
 
 .events {
@@ -1106,7 +1045,73 @@ br.xxs {display: none;}
   }
 }
 
-.home, .home-alt, .page {
+.home, .home-alt {
+	.home-top {@include sec-default (); background-color: $logo-blue; padding: 50px 0px; position: relative; z-index: 0; 
+		&::after{@include before(); height:100%; width:65%; z-index:-2; @include sec-bgimage();background-image: url(image_path('collage.jpg')); background-size: cover;}
+		
+
+		.open {text-align: center;
+			h2, h1 span {color: lighten($blue, 35%);font-family: $courg; font-weight: bold; text-transform: none;}
+			h2{font-size: 2.3rem;}
+			h1 {line-height: 1.2em; margin-top: 0px; font-size:2.6rem;font-family: $lato; font-weight: 800; color:$teal; margin-bottom:5px; text-transform: uppercase; text-shadow:0px 1px 1px rgba(black, .5) }
+
+			h3 {margin-bottom: 20px; font-weight: 600;}
+			.spacer {@include sec-default(); margin-bottom: 15px;}
+			h3.date {color: white; margin-bottom: 50px;}
+
+
+			ul{margin-bottom: 20px;}
+			.reg-now {background-color: $red; box-shadow:0px 5px 20px rgba($black,.3); padding: 7px 20px; font-size:18px; 
+				color: $white; text-shadow: 0px 1px 2px rgba($black,.7); font-weight: bold; text-transform: uppercase; font-family: $lato;
+			}
+		}
+		.title-box {display: inline-block; width: 35%; float: right;}
+
+		#countdown{
+			background: none;
+			@include center-block();
+			text-align: center;
+			padding-top: 0px;
+
+	    li { display: inline-block;
+	    	span{ color: $white; @include tshadow ($black); padding: 15px 0; font-size: 50px; font-weight: 700;}
+	    	span:after { content: ':'; display: inline-block; color: $white; @include tshadow ($black); vertical-align: middle; position: relative; bottom: 5px; margin-left: 3px;}
+	    	p {text-indent: -15px; color: $white; text-transform: uppercase; font-weight: 800; margin-top: 5px; font-size: 14px; @include tshadow ($black);}
+		    &:last-child span:after {display: none;}
+		    &:last-child p {text-indent: 0;}
+	    }
+		}
+
+		@media screen and (max-width: 1120px) {
+			.open {
+				h1 {font-size: 2rem;}
+				h2 {font-size: 1.8rem;}
+				h3 {font-size: 1.35rem;}
+			}
+
+			#countdown li {
+				span{font-size: 40px;}
+				p {font-weight: 600; font-size: 13px;}
+			}
+		}
+
+		@include bp(xl) {padding: 35px 10px;
+			.open .reg-now {font-size:16px;}
+		}
+
+		@include bp(ix) {position: relative; z-index: 0; background-size: 100%;
+			&::before {@include before();background-color: rgba($black, .65);z-index: -1; height:100%;}
+			&::after{width:100%;}
+			
+			.title-box{width: 95%; @include center-block();}
+			.open {
+				h3.date{margin-bottom: 25px;}
+			}
+		}
+
+		@include bp(sm) {background-size: cover;}
+	}
+
 	.covBox {@include sec-default(); padding:12px 0 10px; background-color: $red; text-align: center;
 		a{font-size: 22px; color:$white; text-shadow: 0px 1px 2px rgba($black, .2); font-weight: bold; text-transform: uppercase; font-family: $lato; letter-spacing: .5px;}
 		@include bp(xl) {padding:10px 0 8px; a{font-size: 19px;}}
@@ -1114,204 +1119,77 @@ br.xxs {display: none;}
 		@include bp(pt) {a{width:80%; @include center-block();}}
 	}
 
-
 	.cst-ebox {@include sec-default(); padding:50px 0; background-color: $white; background-image: url(image_path('noisy.jpg'));
-		.ebox {width:80%; @include center-block();}
-		.text {@include center-block(); width:75%;}
-		p{color: $dark;  margin: 15px 0 20px; font-size: 16px; }
-		.top {@include sec-default(); margin-bottom: 20px; text-align: center;}
-		.rls {margin-top: 20px;}
-		.run-logo{ height: 120px; display: inline-block;
-			// margin: 5px 10px;
-			padding: 5px 10px;
-			height: 110px;
-			&:first-child{height: 100px;}
-		}
-		.mtext{@include sec-default();margin-bottom: 30px;}
-
 		h3 {margin-bottom:5px; text-align: center; line-height: 1.2em; color: $dark; font-size: 32px; font-family: $lato; font-weight: bold;}
 		h4 {font-size: 18px; margin-bottom: 5px;}
 		h5 {font-size: 25px; font-weight: bold; text-align: center; color: $teal;}
+		p{color: $dark;  margin: 15px 0 20px; font-size: 16px;}
+
+
+		.ebox {width:80%; @include center-block();}
+		.text {@include center-block(); width:75%;}
+		
+		.top {@include sec-default(); margin-bottom: 20px; text-align: center;
+			p{font-size: 20px; font-weight: bold; margin-top:0;
+				span{font-family: $courg;}
+				a{color: $teal;}
+			}
+		}
+		
+		.rls {margin-top: 20px;width: 40%; @include center-block(); margin-bottom: 30px;}
+		.run-logo{ height: 120px; display: inline-block;padding: 5px 10px;height: 110px;
+			&:first-child{height: 100px;}
+		}
+		.mtext{@include sec-default();margin-bottom: 30px;}
 
 		.ltext, .rtext {display: inline-block; float: left; width: 36%;
 			p{margin-bottom: 15px;}
 		}
 		.rtext {float: right; width: 60%;}
-
-		.rls { width: 40%; @include center-block(); margin-bottom: 30px;}
-		// .mid {display: inline-block; float: right; width: 40%;}
-		.mid {display: inline-block;float: left; width: 45%; text-align:center; float: left;
-			h3, h4{color: $teal; font-weight: bold; font-family: $lato; text-transform: uppercase; font-size: 28px;}
-			h4{color: $black; font-size: 21px;font-style: italic;}
-
-			&.two {float: right;}
-		}
-
-	}
-
-	.inform-faq { @include sec-default();padding: 40px;
-		background-color: $lt-blue;
-		background-color: $logo-blue;
-		.facebook-feed, .links {float: left; display: inline-block; width: 25%;}
-		.links {width: 74%; float: right;}
-		.faq {display: inline-block; width: 30%; margin:10px 0 10px 2.2%; padding: 15px; text-align: center; background-color: $white; @include ease(); border: 1px solid transparent;
-			&:hover {border: 1px solid $teal;}
-		}
-		h4{font-weight: bold; margin-bottom: 5px; color: $blue; font-family: $lato;}
-		p {color: $dark;}
-
-		.fb-blk, .video-blk {float: left; display: inline-block; width: 55%;}
-		.fb-blk { width: 40%;float: right;}
-		iframe {height: 350px; width:100%;}
-	}
-
-	.full-media {@include sec-default(); padding: 30px;
-		.video {float: left; display: inline-block; width: 40%; }
-
-    .prizes{display: inline-block; width: 59%; float: right; text-align: center; padding:25px;
-    	position: relative; z-index: 0;background-image: url(image_path('sprinkles.jpg')); background-size: 30%;
-    	&::before {@include before(); background-color: rgba($logold, .5); z-index: -1; height:100%;}
-			.grand {@include sec-default(); border:2px solid $white; padding:25px 5px;}
-
-			hr {margin-bottom: 10px; margin-top:10px;}
-    	h3 {font-weight: 800; line-height: 1.2em; font-size: 26px; text-shadow: 0px 1px 1px rgba($black, .5);}
-    	h4 { font-weight: 800; font-size: 24px; color: $navy; line-height: 1.6em;  text-shadow: 0px 1px 1px rgba($black, .5);
-    		span{font-size: 18px; color: $white; line-height: 1em; text-shadow: 0px 1px 1px rgba($black, .8);}
-    	}
-    	p{color:$black; font-weight: bold;}
-    	.win {display: inline-block; float: left; padding: 20px; width: 50%;}
-    }
-	}
-
-	@include bp(xl) {
-		.cst-ebox {padding: 35px 0;
+	
+		@include bp(xl) {padding: 35px 0;
 			.ebox {width:92%;}
 			.ltext {width: 38%; padding-right:5px;}
 			.rtext{padding-left: 5px;}
-
-			.rls{margin-top: 0; }
-
-			.mid, .rls {width:80%; @include center-block();}
-			.mid {width: 70%; padding-top:20px;
-				&.two {float: none;}
-				h3, h4{ font-size: 28px;}
-				h4{color: $black; font-size: 21px;font-style: italic;}
-			}
+			.rls{margin-top: 0; width:80%; @include center-block();}
 		}
 
-		.inform-faq {padding: 20px 10px;
-			.facebook-feed {width: 35%;}
-			.links{width:64%;}
-			.faq {width: 48%; padding: 10px; margin: 10px 0 5px 5px;
-				&:last-child{display: none;}
-			}
-		}
-	}
-
-	@media (max-width: 992px){
-		.cst-ebox {padding: 20px 0;
+		@media (max-width: 992px){padding: 20px 0;
 			.ebox {width:95%;}
 			.top {margin-bottom: 10px;}
 
 			h3 {font-size: 26px;}
 			h4 {font-size: 16px;}
+			.top p{font-size: 18px; margin-bottom: 10px;}
 			.ltext, .rtext {@include sec-default(); padding:0;}
 			.mtext {width: 97%; @include center-block(); max-height: 250px; overflow-y: scroll; margin-bottom: 15px; }
 		}
-	}
 
-	@include bp(md) {
-		.cst-ebox {padding: 25px 0 10px;
+		@include bp(md) {padding: 25px 0 10px;
 			.run-logo{ height: 100px; margin: 5px;
 				&:first-child{height: 80px;}
 			}
 			.rls{width: 99%;}
-			.mid {
-				h3{ font-size: 23px;}
-				h4{ font-size: 18px;}
-			}
 		}
 
-		.inform-faq {
-			.facebook-feed {display: none;}
-			hr{width:85%; @include center-block();}
-			.links{@include sec-default();}
-			.faq {width: 48%; padding: 10px; margin: 10px 0;
-				&:nth-child(2n+2) {float: right;}
-			}
-
-			.fb-blk {max-height:300px; overflow: hidden;}
-			iframe {height: 250px; }
-		}
-	}
-
-	@include bp(pl) {
-		.cst-ebox {
+		@include bp(pl) {
 			h3{font-size: 19px;
 				span{font-size: 25px;}
 			}
 			h4 {font-size: 17px;}
 			p {font-size: 15px; margin-bottom: 5px;}
+			.top p{font-size: 16px;}
 			.run-logos {width: 85px;}
 		}
 
-		.inform-faq {
-			.container{padding:0;}
-			.fb-blk {max-height:230px; width:44%;}
-			iframe {height: 230px; width:auto;}
-		}
-
-		.full-media .prizes {
-			.win {padding: 10px 0 0;}
-		}
-	}
-
-	@include bp(ph) {
-		.cst-ebox .mid {width:95%;
+		@include bp(ph) {width:95%;
 			h3{ font-size: 20px;}
 			h4{ font-size: 16px;}
-			img{width: 90%; @include center-block();}
 		}
 
-		.inform-faq {
-			.faq {width: 95%; @include center-block();
-				&:nth-child(2n+2) {float: none;}
-			}
-
-			.video-blk, .fb-blk {width:90%; margin-bottom: 20px; @include center-block(); text-align: center;}
-			iframe {height:190px;}
-		}
-
-		.full-media .prizes {
-			.win {@include sec-default();}
-		}
-	}
-
-	@include bp(pt) {
-		.cst-ebox {
-			h4{font-size: 15px; }
+		@include bp(pt) {
+			h4{font-size: 15px;}
 			h5 {font-size: 20px;}
-		}
-	}
-
-	.custom-box-2 {
-		padding-left: 50px;
-		padding-bottom: 70px;
-
-		.header-box {
-			margin-top: 14%;
-			padding-top:35px;
-			padding-bottom:25px;
-
-			h3 {margin-bottom:10px;}
-
-			&:after { width: 99%; height:2px; }
-		}
-
-		.rules {
-			h4 {margin-top: 20px;}
-			p{ text-align:center; font-weight: bold;}
-			span { font-weight: normal;}
 		}
 	}
 
@@ -1358,131 +1236,6 @@ br.xxs {display: none;}
 			.motto {width: 100%;}
 			.donation { overflow: hidden;}
 			// .text-box {padding: 10px; h3{margin-left:10px;}}
-		}
-	}
-}
-
-.home, .home-alt {
-	// .home-top {@include sec-default ();@include sec-bgimage (); background-position: bottom left; background-color: $logo-blue;height:auto;
-	// 	background-image: url(image_path('boat-week7-mid.jpg')); background-size: 65%; padding: 50px 10px;
-	// }
-
-	.home-top {@include sec-default (); background-color: $logo-blue;
-		padding: 50px 0px;
-		position: relative; z-index: 0; 
-		&::after{@include before(); height:100%; width:65%; z-index:-2; @include sec-bgimage();
-			background-image: url(image_path('collage.jpg')); background-size: cover; 
-		}
-	}
-	// .collage{display: inline-block; float: left; width:65%;}
-
-	.open {
-		text-align: center;
-		h2 { color: lighten($blue, 35%);font-family: $courg; font-weight: bold; font-size: 2.3rem;}
-		h1 {line-height: 1.2em; margin-top: 0px; font-size:2.6rem;font-family: $lato; font-weight: 800; color:$teal; margin-bottom:5px; text-transform: uppercase; text-shadow:0px 1px 1px rgba(black, .5) }
-
-		h3 {margin-bottom: 20px; font-weight: 600;}
-		.spacer {@include sec-default(); margin-bottom: 15px;}
-		h3.date {color: white; margin-bottom: 50px;}
-
-
-		ul{margin-bottom: 20px;}
-		.reg-now {background-color: $red; box-shadow:0px 5px 20px rgba($black,.3); padding: 7px 20px; font-size:18px; 
-			color: $white; text-shadow: 0px 1px 2px rgba($black,.7); font-weight: bold; text-transform: uppercase; font-family: $lato;
-		}
-	}
-	.title-box {display: inline-block; width: 35%; float: right;}
-
-	#countdown{
-		background: none;
-		@include center-block();
-		text-align: center;
-		padding-top: 0px;
-
-    li { display: inline-block;
-    	span{ color: $white; @include tshadow ($black); padding: 15px 0; font-size: 50px; font-weight: 700;}
-    	span:after { content: ':'; display: inline-block; color: $white; @include tshadow ($black); vertical-align: middle; position: relative; bottom: 5px; margin-left: 3px;}
-    	p {text-indent: -15px; color: $white; text-transform: uppercase; font-weight: 800; margin-top: 5px; font-size: 14px; @include tshadow ($black);}
-	    &:last-child span:after {display: none;}
-	    &:last-child p {text-indent: 0;}
-    }
-	}
-
-	@media screen and (max-width: 1120px) {
-		.open {
-			h1 {font-size: 2rem;}
-			h2 {font-size: 1.8rem;}
-			h3 {font-size: 1.35rem;}
-		}
-
-		#countdown li {
-			span{font-size: 40px;}
-			p {font-weight: 600; font-size: 13px;}
-		}
-	}
-
-	@include bp(xl) {
-		.home-top {padding: 35px 10px;}
-		.open .reg-now {font-size:16px;}
-	}
-
-	@include bp(ix) {
-		// .home-top {padding: 35px 10px;}
-		.home-top {position: relative; z-index: 0; background-size: 100%;
-			&::before {@include before();background-color: rgba($black, .65);z-index: -1; height:100%;}
-			&::after{width:100%;}
-		}
-		.title-box{width: 95%; @include center-block();}
-		.open {
-			h3.date{margin-bottom: 25px;}
-		}
-	}
-
-	@include bp(sm) {
-		.home-top{background-size: cover;}
-	}
-
-
-	.contest-img{@include sec-default();}
-	.home-layout {
-		@include sec-default(); background-color: rgba($logo-blue, .3); padding:0 0 50px;
-  	span, p, h3, li, h4, h1, h2, a { font-family: $lato; line-height: 1.4em; text-transform: uppercase; letter-spacing: 2px;}
-  	h3 {color: white; font-weight: 900; margin-bottom: 10px;}
-  	h3, .hl-btn {display: inline-block;}
-  	.hl-btn {float: right; padding: 5px 10px; background-color: $teal; color: white; font-weight: bold; font-size: 15px;}
-
-		.inner {@include center-block(); width: 85%;}
-		.full {@include sec-default(); }
-		.lhlf, .rhlf {display: inline-block; float: left; width: 45%; }
-		.rhlf {float: right;}
-		iframe {height: 350px; width:100%;}
-		.rhlf.alt {width: 40%; }
-		.lhlf.alt {width: 40%;}
-		.lhlf{margin-left: 3%;
-			img{max-width: 100%;}
-		}
-
-		.comingsoon {box-shadow: 0px 5px 8px rgba($dark, .4);background-color:$logo-blue;text-align: center;
-			margin-bottom: 50px; padding:30px 10px;
-			h4{color: $white; font-weight: 900; font-size:30px; line-height: 1.6rem;
-				span{letter-spacing: 4px;}
-			}
-
-			.inside{width:80%; @include center-block();}
-			.text, .prizeimg {display: inline-block; float: none; width:50%;}
-			.prizeimg{width:45%;}
-
-			@include bp(xl) {
-				h4{font-size:24px;}
-				.text{width:54%;}
-				.prizeimg {width:40%;}
-			}
-
-			@include bp(ix) {
-				h4{font-size:24px;}
-				.text {@include sec-default(); margin-bottom: 25px;}
-				.prizeimg{width:60%; @include center-block();}
-			}
 		}
 	}
 
@@ -1542,32 +1295,12 @@ br.xxs {display: none;}
 				.home-lodge {display: inline-block; width: 40%; }
 			}
 		}
-	}
 
-	@include bp(xl) {
-		.home-layout {
-			.lhlf {width: 50%;}
-		}
-
-		.lodge-list {
+		@include bp(xl) {
 			.lodge-inner{width: 90%;}
 		}
-	}
 
-	@media (max-width: 992px) {
-		.home-layout {padding:30px 0;
-			.lhlf, .rhlf.alt {@include sec-default();}
-			h3 {font-size: 20px;}
-			iframe {height:275px; margin-bottom:20px;}
-			.rhlf {max-height: 200px; overflow: hidden;}
-			.lhlf img{margin-bottom: 30px;}
-
-			.comingsoon {margin:0 0 35px;padding:30px 10px; 
-				h4{font-size:25px; }
-			}
-		}
-
-		.lodge-list { padding: 15px 0;
+		@media (max-width: 992px) {padding: 15px 0;
 			.lodge-inner{width: 100%;}
 			h3 {font-size: 1.35rem;}
 			.plat, .gold, .bronze { padding: 10px 15px;}
@@ -1584,25 +1317,11 @@ br.xxs {display: none;}
 				&.inline{@include center-block();}
 			}
 		}
-	}
 
-	@include bp(mb) {
-		.lodge-list {padding-bottom: 0;
-			// .bronze .home-lodge {@include center-block(); margin-bottom: 25px;}
-		}
-	}
-
-	@include bp(pt) {
-		.home-layout {
-			.hl-btn{display: block; float: left; margin-bottom: 10px;}
-			h3 {width:100%;}
-		}
-
-		.comingsoon {margin:0 0 35px;padding:20px 10px; 
-			h4{font-size:20px; }
-		}
+		@include bp(mb) {padding-bottom: 0;}
 	}
 }
+
 
 .now {background-color: red; color: white; font-weight: bold; text-align: center; font-size: 18px; padding: 10px 20px;
 	text-shadow: 0px 1px 1px rgba(black, .3); margin-top: 20px; border-radius: 15px; box-shadow: 0 8px 10px rgba(black, .5);

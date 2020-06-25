@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/tickets', to: 'static_pages#tickets'
   get '/contact', to: 'static_pages#contact'
   get '/ec-foundation', to: 'static_pages#ec-foundation'
-  get '/register-ruby', to: 'static_pages#register-ruby'
+  # get '/register-ruby', to: 'static_pages#register-ruby'
   get '/lodging', to: 'static_pages#lodging'
   get '/payment', to: 'static_pages#payment'
   get '/party-tickets', to: 'static_pages#party-tickets'

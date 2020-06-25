@@ -16,7 +16,7 @@
     height:45px; padding-top:10px; right:-68px;
 	}
 
-	hr.hlf{width: 40%; @include center-block();
+	hr.hlf{width: 40%; @include center-block(); border-color: rgba($black,.2);
 		&.xtra {margin-bottom: 25px; }
 		&.less {width: 15%; margin-bottom:25px;}
 	}
@@ -27,12 +27,17 @@
 	h1 {color: $white; font-weight: 900; font-size: 1.6rem; margin-bottom: 20px;}
 	h2,h3{font-weight: 700;}
 	h2{margin-bottom: 15px;}
+	h2 span{color: $blue;}
 	h3{font-size:28px;}
 	h4{font-weight: bold; font-size: 18px;}
-	p{font-size:17px;}
-	p.info{font-size: 21px; font-weight: 700; text-transform: none; letter-spacing: 0; width:90%; @include center-block();}
+	p{font-size:17px; text-transform: none; letter-spacing: 0px;}
+	p.info{font-size: 21px; font-weight: 700; text-transform: none; letter-spacing: 0;
+		span{color: $blue;}
+	}
+	p.donate{font-size: 18px;}
 
 	.boxSec{@include sec-default(); background-color: $white; padding:30px 0px 30px; 
+		.paddedBox{width:75%; @include center-block();}
 		li {font-size: 20px; margin-bottom: 20px; 
 			font-weight: bold;color: $blue; 
 			&:nth-child(2n+2) {color: $logo-blue}
@@ -42,12 +47,11 @@
 	}
 
 	.boxSec.vip{background-color: $teal;
-		p{text-transform: none; letter-spacing: 0; font-size:20px; font-weight: bold;}
+		p{font-size:20px; font-weight: bold;}
 		h4{font-size: 30px;}
 	}
 
 	@media (min-width:1445px){
-		p.info{width:85%;}
 		h1{font-size: 1.8rem;}
 	}
 	
@@ -55,7 +59,6 @@
 	@include bp(tw) {
 		.inside {width: 90%;}
 		h2{font-size:28px;}
-		p.info{width:95%;}
 	}
 
 	@include bp(xl) {
@@ -67,8 +70,10 @@
 		h2{font-size:26px;}
 		h3{font-size:23px;}
 		p.info{font-size: 19px;}
+		p.donate{font-size: 17px;}
 
 		.boxSec{
+			.paddedBox{width:90%;}
 			li {font-size: 18px; margin-bottom: 15px;
 				span{font-size:16px;}
 			}
@@ -88,8 +93,10 @@
 		h2{font-size:21px;}
 		h3{font-size:19px;}
 		p.info{font-size: 17px;}
+		p.donate{font-size: 16px;}
 
 		.boxSec{
+			.paddedBox{width:96%;}
 			li {font-size: 17px;margin-bottom: 10px;}
 		}
 		.boxSec.vip {
@@ -100,7 +107,6 @@
 
 	@include bp(pl) {
 		h4 br{display: none;}
-		
 	}
 }
 
