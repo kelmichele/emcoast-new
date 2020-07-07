@@ -1,7 +1,7 @@
 @import "variables";
 @import "mixins";
 
-
+h1.und{text-decoration: underline;}
 // COVID UPDATES
 .COVIDevent{@include sec-default(); padding: 60px 0; background-color: $blue; text-align:center;
 	.inside, .innerBox {@include center-block(); max-width:1600px;}
@@ -110,6 +110,32 @@
 	}
 }
 
+
+// Cancellation
+.cancel-message{@include sec-default(); padding: 50px 0 ; border-bottom: 10px solid $teal; text-align: left;
+	.inside{width:800px; @include center-block();}
+	p{color:$black; font-size:22px; line-height: 1.3em;}
+	p.open{font-weight: bold; font-size:27px;}
+	.body {width:90%;margin:20px 0;
+		p span{color:$logo-blue; font-weight: 600;}
+	}
+	p.closing {font-weight: 600;
+		span{font-style: italic;}
+	}
+
+	@include bp(ix) {padding:25px 0; margin-bottom: 10px;
+		.inside{width:90%;}
+		p{font-size: 19px;}
+		p.open{font-size:23px;}
+		.body {width:100%; margin:15px 0;}
+	}
+
+	@include bp(oc) {padding:20px 0 15px; margin-bottom: 5px;
+		.inside{width:95%;}
+		p{font-size: 16px;}
+		p.open{font-size:20px;}
+	}
+}
 
 
 
