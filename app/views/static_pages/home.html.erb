@@ -7,21 +7,18 @@ Boat Week is a week-long boating celebration along the Emerald Coast, that round
 <section class="home-top">
   <div class="open">
     <div class="title-box">
-      <h2 class="top">The Original</h2>
-      <h1>Emerald Coast<br> Poker Run <span>Lite</span></h1>
+      <!-- bp TB for text -->
+      <h2 class="top">The Great</h2>
+      <h1>Emerald Coast<br/>Poker Run <br class="cst-br"/><span>Draw Down</span></h1>
       <br/>
-      <h3 class="date">Saturday, August 8, 2020</h3>
-      <ul id="countdown" class="slider-countdown-two" data-countdown-time="2020/08/8"></ul>
-      <%= link_to register_now_path, class: 'reg-now' do %>
-      Register Now
-      <% end %>
+      <h3 class="date">Saturday, October 24, 2020<br/><span>Grand Prize: $10,000 CASH</span></h3>
+      <ul id="countdown" class="slider-countdown-two" data-countdown-time="2020/10/24"></ul>
+      <%= link_to poker_run_draw_down_path, class: 'reg-now' do %>More Information<% end %>
+      <div class="clearfix"></div>
     </div>
   </div>
 </section>
 
-<!-- <div class="covBox">
-  <= link_to "Click here for updates to this year's Poker Run", poker_run2020_path %>
-</div> -->
 <%= render 'shared/cancel-message' %>
 
 <section class="cst-ebox">
@@ -29,7 +26,6 @@ Boat Week is a week-long boating celebration along the Emerald Coast, that round
     <div class="top">
       <h4>The Emerald Coast Foundation is proud to announce</h4>
       <h3>Boat Week on the Emerald Coast will be back in 2021!</h3>
-      <!-- <p>This year, join us for the Emerald Coast Poker Run <span>Lite</span>. <br/>Get more information <%= link_to "here.", poker_run2020_path %></p> -->
       <hr class="hlf"/>
     </div>
 

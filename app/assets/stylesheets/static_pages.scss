@@ -5,6 +5,297 @@
 @import "variables";
 @import "mixins";
 
+.home, .home-alt {
+	.home-top {@include sec-default(); background-color: $logo-blue; padding: 40px 0px 60px; position: relative; z-index: 0; 
+		&::after{@include before(); height:100%; width:65%; z-index:-2; @include sec-bgimage();background-image: url(image_path('collage.jpg')); background-size: cover;}
+
+		.open {text-align: center;
+			h1, h2, h3, .reg-now{text-shadow:0px 1px 1px rgba(black, .5);}
+			h2, h1 span {color: lighten($blue, 35%);font-family: $courg; font-weight: bold; text-transform: none;}
+			h2{font-size: 2.3rem;}
+			h1 {line-height: 1.2em; margin-top: 0px; font-size:2.6rem;font-family: $lato; font-weight: 800; color:$teal; margin-bottom:5px; text-transform: uppercase; }
+			h3 {font-weight: 600;color: white; margin-bottom: 50px; line-height:1.5em;}
+			h3 span{color: lighten($teal, 5%);}
+			br.cst-br{display:none;}
+			.spacer {@include sec-default(); margin-bottom: 15px;}
+
+			ul{margin-bottom: 20px;}
+			.reg-now {background-color: $red; box-shadow:0px 5px 20px rgba($black,.3); padding: 7px 20px; font-size:18px; color: $white; font-weight: bold; font-family: $lato;}
+		}
+		.title-box {display: inline-block; width: 35%; float: right;}
+
+		#countdown{ background: none; @include center-block(); text-align: center; padding-top: 0px;
+	    li {display: inline-block;
+	    	span{color: $white; @include tshadow ($black); padding: 15px 0; font-size: 50px; font-weight: 700;}
+	    	span:after {content: ':'; display: inline-block; color: $white; @include tshadow ($black); vertical-align: middle; position: relative; bottom: 5px; margin-left: 3px;}
+	    	p {text-indent: -15px; color: $white; text-transform: uppercase; font-weight: 800; margin-top: 5px; font-size: 14px; @include tshadow ($black);}
+		    &:last-child span:after {display: none;}
+		    &:last-child p {text-indent: 0;}
+	    }
+		}
+
+
+		@include bp(tw) {
+			.open br.cst-br{display:block;}
+		}
+
+		@media screen and (max-width: 1120px) {
+			.open {
+				h1 {font-size: 2rem;}
+				h2 {font-size: 1.8rem;}
+				h3 {font-size: 1.35rem;}
+			}
+
+			#countdown li {
+				span{font-size: 40px;}
+				p {font-weight: 600; font-size: 13px;}
+			}
+		}
+
+		@include bp(xl) {padding: 35px 10px;
+			.open .reg-now {font-size:16px;}
+		}
+
+		@include bp(ix) {position: relative; z-index: 0; background-size: 100%;
+			&::before {@include before();background-color: rgba($black, .65);z-index: -1; height:100%;}
+			&::after{width:100%;}
+			
+			.title-box{width: 95%; @include center-block();}
+			.open {
+				h3.date{margin-bottom: 25px;}
+			}
+		}
+
+		@include bp(sm) {background-size: cover;}
+	}
+
+	.covBox {@include sec-default(); padding:12px 0 10px; background-color: $red; text-align: center;
+		a{font-size: 22px; color:$white; text-shadow: 0px 1px 2px rgba($black, .2); font-weight: bold; text-transform: uppercase; font-family: $lato; letter-spacing: .5px;}
+		@include bp(xl) {padding:10px 0 8px; a{font-size: 19px;}}
+		@include bp(oc) {a{font-size: 16px;}}
+		@include bp(pt) {a{width:80%; @include center-block();}}
+	}
+
+	.cst-ebox {@include sec-default(); padding:50px 0; background-color: $white; background-image: url(image_path('noisy.jpg'));
+		h3 {margin-bottom:5px; text-align: center; line-height: 1.2em; color: $dark; font-size: 32px; font-family: $lato; font-weight: bold;}
+		h4 {font-size: 18px; margin-bottom: 5px;}
+		h5 {font-size: 25px; font-weight: bold; text-align: center; color: $teal;}
+		p{color: $dark; margin: 0px 0 20px; font-size: 17px; line-height: 1.6em;}
+		.ebox {width: 1040px; @include center-block();}
+
+		.top {@include sec-default(); margin-bottom: 40px; text-align: center;
+			p{font-size: 20px; font-weight: bold; margin-top:0;
+				span{color:$blue;}
+				a{color: $teal; text-decoration: underline;}
+			}
+			hr.hlf{width:40%; border-color: rgba($black,.2);}
+		}
+		
+		.mtext{@include sec-default(); margin-bottom: 30px;
+			.ltext, .rtext {display: inline-block; float: left;
+				p{margin-bottom: 15px;}
+			}
+			.ltext{width: 33%; margin-left: -5%;}
+			.rtext {float: right; width: 71%; margin-right:-3%;}
+		}
+
+		.rls {@include sec-default(); margin: 10px 0 0px; text-align: center;}
+		.run-logo{display: inline-block; padding: 5px 10px;height: 110px;
+			&:first-child{height: 100px;}
+		}
+	
+		@include bp(tw) {
+			.ebox {width: 85%;}
+			.mtext{
+				.ltext{width: 29%; margin-left: 0;}
+				.rtext {width: 67%; margin-right:0;}
+			}
+		}
+
+		@include bp(xl) {padding: 35px 0;
+			h3{font-size: 29px;}
+
+			.ebox {width:80%;}
+			.top{margin-bottom:15px;
+				p{font-size: 19px;}
+			}
+			.mtext{
+				.rtext{@include sec-default();}
+				.ltext{display:none;}
+			}
+			.rls{margin-top: 0;}
+		}
+
+		@media (max-width: 992px){padding: 20px 0;
+			.top {margin-bottom: 10px;}
+			h3 {font-size: 26px;}
+			h4 {font-size: 16px;}
+		}
+
+		@include bp(ix) {
+			.ebox{width:90%;}
+			.top, .mtext{margin-bottom: 0;}
+		}	
+
+		@include bp(md) {padding: 25px 0 10px;
+			.run-logo{height: 100px; margin: 5px;
+				&:first-child{height: 80px;}
+			}
+		}
+
+		@include bp(pl) {
+			h3{font-size: 19px;
+				span{font-size: 25px;}
+			}
+			h4 {font-size: 17px;}
+			p {font-size: 15px; margin-bottom: 5px;}
+			.top p{font-size: 16px;}
+			.run-logos {width: 85px;}
+		}
+
+		@include bp(ph) {width:95%;
+			h3{font-size: 20px;}
+			h4{font-size: 16px;}
+			.top br{display:none;}
+		}
+
+		@include bp(pt) {
+			h4{font-size: 15px;}
+			h5 {font-size: 20px;}
+		}
+	}
+
+	.foundation {
+		@include sec-default ();padding: 50px 0 60px;
+
+		.motto {width: 60%; @include center-block(); text-align: center; padding-bottom: 30px;
+			h4 {font-size: 15px; font-style: italic; line-height: 1.3em; padding:10px 20px; font-weight: bold;}
+			img {width: 50%; @include center-block();}
+		}
+
+		.tb-half, .slider-mob{display: inline-block; float: left; width:58%;}
+		.slider-mob{width:39%; float: right;}
+
+		.text-box {
+			@include sec-default();
+			padding: 40px 40px 20px;
+			background-color: $cream;
+			h3 { font-family: $franc; margin-bottom:20px;}
+			p { color: $dark;}
+		}
+
+
+		@media (max-width: 992px){
+			.motto {width: 80%;}
+			.tb-half{ @include sec-default(); margin-bottom: 30px;}
+			.text-box {padding: 30px 30px 20px; }
+			.slider-mob {@include sec-default();}
+
+		}
+
+		@include bp(md) {
+			padding: 25px 0;
+		}
+
+		@include bp(mb) {
+			.motto {width: 85%; padding-bottom:0;
+				h4 { padding:10px 0;}
+			}
+		}
+
+		@include bp(sm) {
+			padding-left:15px;padding-right:15px;
+			.motto {width: 100%;}
+			.donation { overflow: hidden;}
+			// .text-box {padding: 10px; h3{margin-left:10px;}}
+		}
+	}
+
+	.lodge-list {@include sec-default(); text-align: center; background-color: #f7f7f7; padding:30px 0;
+		.lodge-inner{width: 75%; @include center-block();}
+		h4, h3, p { font-family: $lato; text-transform: uppercase; letter-spacing: 2px; font-weight: bold;}
+		p {color: $dark; font-weight: normal; letter-spacing: 1px;}
+		h3 {color: $teal; font-weight: 900;}
+		h4{font-size: 19px; margin-bottom: 10px; margin-top: 15px;}
+
+		.plat, .gold, .bronze { padding: 15px 20px; @include sec-default(); }
+
+		.home-lodge { padding:12px 10px; width:310px; @include center-block();
+			@include sec-bgimage(); background-size: cover; text-align: center;background-image: url(image_path('sea-under.jpg')); box-shadow: 10px 10px 10px rgba($dark, .2);
+			img{height:80px; @include center-block(); background-color: $white; padding:5px 0; box-shadow: 10px 12px 15px rgba($dark, .4); border:1px solid rgba($gray, .1);}
+			img.dk {background-color: $black;}
+			&.one {background-image: url(image_path('sea-over.jpg'));}
+			&.alt{
+				img{background-color: $black;}
+			}
+
+			&.sq {background-image: url(image_path('sea-over-sq.jpg')); width:35%;
+				img{height:auto; width:90%;}
+			}
+
+			&.sq.withp {width:304px; padding:12px 0 0;
+				img{width:88%;}
+				p{background-color: $logo-blue; color:$white; padding:10px 15px; margin:15px 0 0;
+					font-size:19px; line-height: 1.6em; font-weight:bold; @include tshadowl($black);}
+				a{color: $white;}
+			}
+
+			&.sq.mid {width:290px; padding:15px 0;
+				img{width:88%;}
+				p{background-color: $logo-blue; color:$white; padding:10px 15px; margin:15px 0 0;
+					font-size:19px; line-height: 1.6em; font-weight:bold; @include tshadowl($black);}
+				a{color: $white;}
+			}
+
+			&.inline {display: inline-block; margin: 40px 2% 15px;}
+			// &.inline.il2 {float: right;}
+
+		}
+
+		&.alt {width: 57%; float: right; padding:0;
+			background-color: transparent;
+			.lodge-inner{width: 100%;}
+			h3 {color: white;}
+			p {color: white; font-size: 14px;}
+			h4 {color: white; margin: 5px 0; font-size: 17px;}
+			.home-lodge {padding: 10px; width:100%; img{height: auto;}}
+			.plat, .gold {display: inline-block; float: left; }
+			.plat {width: 55%;}
+			.gold {width: 45%;}
+
+			.bronze {margin-top: 20px;
+				.home-lodge {display: inline-block; width: 40%; }
+			}
+		}
+
+		@include bp(xl) {
+			.lodge-inner{width: 90%;}
+		}
+
+		@media (max-width: 992px) {padding: 15px 0;
+			.lodge-inner{width: 100%;}
+			h3 {font-size: 1.35rem;}
+			.plat, .gold, .bronze { padding: 10px 15px;}
+
+			.home-lodge {width: 285px;
+				img {height: 70px;}
+
+				&.sq.withp, &.sq {width:275px;
+					img{width:88%;}
+				}
+				&.sq.withp {
+					p{padding:10px 15px; margin:15px 0 0; font-size:17px; }
+				}
+				&.inline{@include center-block();}
+			}
+		}
+
+		@include bp(mb) {padding-bottom: 0;}
+	}
+}
+
+
+
 #offcanvas-captn {
 	.uk-offcanvas-bar { text-align: center; background-color: darken(red, 8%); width:300px;}
 	.captn { padding: 0px 10px; text-align: center;
@@ -1044,299 +1335,6 @@ br.xxs {display: none;}
     }
   }
 }
-
-.home, .home-alt {
-	.home-top {@include sec-default (); background-color: $logo-blue; padding: 50px 0px; position: relative; z-index: 0; 
-		&::after{@include before(); height:100%; width:65%; z-index:-2; @include sec-bgimage();background-image: url(image_path('collage.jpg')); background-size: cover;}
-		
-
-		.open {text-align: center;
-			h2, h1 span {color: lighten($blue, 35%);font-family: $courg; font-weight: bold; text-transform: none;}
-			h2{font-size: 2.3rem;}
-			h1 {line-height: 1.2em; margin-top: 0px; font-size:2.6rem;font-family: $lato; font-weight: 800; color:$teal; margin-bottom:5px; text-transform: uppercase; text-shadow:0px 1px 1px rgba(black, .5) }
-
-			h3 {margin-bottom: 20px; font-weight: 600;}
-			.spacer {@include sec-default(); margin-bottom: 15px;}
-			h3.date {color: white; margin-bottom: 50px;}
-
-
-			ul{margin-bottom: 20px;}
-			.reg-now {background-color: $red; box-shadow:0px 5px 20px rgba($black,.3); padding: 7px 20px; font-size:18px; 
-				color: $white; text-shadow: 0px 1px 2px rgba($black,.7); font-weight: bold; text-transform: uppercase; font-family: $lato;
-			}
-		}
-		.title-box {display: inline-block; width: 35%; float: right;}
-
-		#countdown{
-			background: none;
-			@include center-block();
-			text-align: center;
-			padding-top: 0px;
-
-	    li { display: inline-block;
-	    	span{ color: $white; @include tshadow ($black); padding: 15px 0; font-size: 50px; font-weight: 700;}
-	    	span:after { content: ':'; display: inline-block; color: $white; @include tshadow ($black); vertical-align: middle; position: relative; bottom: 5px; margin-left: 3px;}
-	    	p {text-indent: -15px; color: $white; text-transform: uppercase; font-weight: 800; margin-top: 5px; font-size: 14px; @include tshadow ($black);}
-		    &:last-child span:after {display: none;}
-		    &:last-child p {text-indent: 0;}
-	    }
-		}
-
-		@media screen and (max-width: 1120px) {
-			.open {
-				h1 {font-size: 2rem;}
-				h2 {font-size: 1.8rem;}
-				h3 {font-size: 1.35rem;}
-			}
-
-			#countdown li {
-				span{font-size: 40px;}
-				p {font-weight: 600; font-size: 13px;}
-			}
-		}
-
-		@include bp(xl) {padding: 35px 10px;
-			.open .reg-now {font-size:16px;}
-		}
-
-		@include bp(ix) {position: relative; z-index: 0; background-size: 100%;
-			&::before {@include before();background-color: rgba($black, .65);z-index: -1; height:100%;}
-			&::after{width:100%;}
-			
-			.title-box{width: 95%; @include center-block();}
-			.open {
-				h3.date{margin-bottom: 25px;}
-			}
-		}
-
-		@include bp(sm) {background-size: cover;}
-	}
-
-	.covBox {@include sec-default(); padding:12px 0 10px; background-color: $red; text-align: center;
-		a{font-size: 22px; color:$white; text-shadow: 0px 1px 2px rgba($black, .2); font-weight: bold; text-transform: uppercase; font-family: $lato; letter-spacing: .5px;}
-		@include bp(xl) {padding:10px 0 8px; a{font-size: 19px;}}
-		@include bp(oc) {a{font-size: 16px;}}
-		@include bp(pt) {a{width:80%; @include center-block();}}
-	}
-
-	.cst-ebox {@include sec-default(); padding:50px 0; background-color: $white; background-image: url(image_path('noisy.jpg'));
-		h3 {margin-bottom:5px; text-align: center; line-height: 1.2em; color: $dark; font-size: 32px; font-family: $lato; font-weight: bold;}
-		h4 {font-size: 18px; margin-bottom: 5px;}
-		h5 {font-size: 25px; font-weight: bold; text-align: center; color: $teal;}
-		p{color: $dark; margin: 0px 0 20px; font-size: 17px; line-height: 1.6em;}
-		.ebox {width: 1040px; @include center-block();}
-
-		.top {@include sec-default(); margin-bottom: 40px; text-align: center;
-			p{font-size: 20px; font-weight: bold; margin-top:0;
-				span{color:$blue;}
-				a{color: $teal; text-decoration: underline;}
-			}
-			hr.hlf{width:40%; border-color: rgba($black,.2);}
-		}
-		
-		.mtext{@include sec-default(); margin-bottom: 30px;
-			.ltext, .rtext {display: inline-block; float: left;
-				p{margin-bottom: 15px;}
-			}
-			.ltext{width: 33%; margin-left: -5%;}
-			.rtext {float: right; width: 71%; margin-right:-3%;}
-		}
-
-		.rls {@include sec-default(); margin: 10px 0 0px; text-align: center;}
-		.run-logo{display: inline-block; padding: 5px 10px;height: 110px;
-			&:first-child{height: 100px;}
-		}
-	
-		@include bp(tw) {
-			.ebox {width: 85%;}
-			.mtext{
-				.ltext{width: 29%; margin-left: 0;}
-				.rtext {width: 67%; margin-right:0;}
-			}
-		}
-
-		@include bp(xl) {padding: 35px 0;
-			h3{font-size: 29px;}
-
-			.ebox {width:80%;}
-			.top{margin-bottom:15px;
-				p{font-size: 19px;}
-			}
-			.mtext{
-				.rtext{@include sec-default();}
-				.ltext{display:none;}
-			}
-			.rls{margin-top: 0;}
-		}
-
-		@media (max-width: 992px){padding: 20px 0;
-			.top {margin-bottom: 10px;}
-			h3 {font-size: 26px;}
-			h4 {font-size: 16px;}
-		}
-
-		@include bp(ix) {
-			.ebox{width:90%;}
-			.top, .mtext{margin-bottom: 0;}
-		}	
-
-		@include bp(md) {padding: 25px 0 10px;
-			.run-logo{height: 100px; margin: 5px;
-				&:first-child{height: 80px;}
-			}
-		}
-
-		@include bp(pl) {
-			h3{font-size: 19px;
-				span{font-size: 25px;}
-			}
-			h4 {font-size: 17px;}
-			p {font-size: 15px; margin-bottom: 5px;}
-			.top p{font-size: 16px;}
-			.run-logos {width: 85px;}
-		}
-
-		@include bp(ph) {width:95%;
-			h3{font-size: 20px;}
-			h4{font-size: 16px;}
-			.top br{display:none;}
-		}
-
-		@include bp(pt) {
-			h4{font-size: 15px;}
-			h5 {font-size: 20px;}
-		}
-	}
-
-	.foundation {
-		@include sec-default ();padding: 50px 0 60px;
-
-		.motto {width: 60%; @include center-block(); text-align: center; padding-bottom: 30px;
-			h4 {font-size: 15px; font-style: italic; line-height: 1.3em; padding:10px 20px; font-weight: bold;}
-			img {width: 50%; @include center-block();}
-		}
-
-		.tb-half, .slider-mob{display: inline-block; float: left; width:58%;}
-		.slider-mob{width:39%; float: right;}
-
-		.text-box {
-			@include sec-default();
-			padding: 40px 40px 20px;
-			background-color: $cream;
-			h3 { font-family: $franc; margin-bottom:20px;}
-			p { color: $dark;}
-		}
-
-
-		@media (max-width: 992px){
-			.motto {width: 80%;}
-			.tb-half{ @include sec-default(); margin-bottom: 30px;}
-			.text-box {padding: 30px 30px 20px; }
-			.slider-mob {@include sec-default();}
-
-		}
-
-		@include bp(md) {
-			padding: 25px 0;
-		}
-
-		@include bp(mb) {
-			.motto {width: 85%; padding-bottom:0;
-				h4 { padding:10px 0;}
-			}
-		}
-
-		@include bp(sm) {
-			padding-left:15px;padding-right:15px;
-			.motto {width: 100%;}
-			.donation { overflow: hidden;}
-			// .text-box {padding: 10px; h3{margin-left:10px;}}
-		}
-	}
-
-	.lodge-list {@include sec-default(); text-align: center; background-color: #f7f7f7; padding:30px 0;
-		.lodge-inner{width: 75%; @include center-block();}
-		h4, h3, p { font-family: $lato; text-transform: uppercase; letter-spacing: 2px; font-weight: bold;}
-		p {color: $dark; font-weight: normal; letter-spacing: 1px;}
-		h3 {color: $teal; font-weight: 900;}
-		h4{font-size: 19px; margin-bottom: 10px; margin-top: 15px;}
-
-		.plat, .gold, .bronze { padding: 15px 20px; @include sec-default(); }
-
-		.home-lodge { padding:12px 10px; width:310px; @include center-block();
-			@include sec-bgimage(); background-size: cover; text-align: center;background-image: url(image_path('sea-under.jpg')); box-shadow: 10px 10px 10px rgba($dark, .2);
-			img{height:80px; @include center-block(); background-color: $white; padding:5px 0; box-shadow: 10px 12px 15px rgba($dark, .4); border:1px solid rgba($gray, .1);}
-			img.dk {background-color: $black;}
-			&.one {background-image: url(image_path('sea-over.jpg'));}
-			&.alt{
-				img{background-color: $black;}
-			}
-
-			&.sq {background-image: url(image_path('sea-over-sq.jpg')); width:35%;
-				img{height:auto; width:90%;}
-			}
-
-			&.sq.withp {width:304px; padding:12px 0 0;
-				img{width:88%;}
-				p{background-color: $logo-blue; color:$white; padding:10px 15px; margin:15px 0 0;
-					font-size:19px; line-height: 1.6em; font-weight:bold; @include tshadowl($black);}
-				a{color: $white;}
-			}
-
-			&.sq.mid {width:290px; padding:15px 0;
-				img{width:88%;}
-				p{background-color: $logo-blue; color:$white; padding:10px 15px; margin:15px 0 0;
-					font-size:19px; line-height: 1.6em; font-weight:bold; @include tshadowl($black);}
-				a{color: $white;}
-			}
-
-			&.inline {display: inline-block; margin: 40px 2% 15px;}
-			// &.inline.il2 {float: right;}
-
-		}
-
-		&.alt {width: 57%; float: right; padding:0;
-			background-color: transparent;
-			.lodge-inner{width: 100%;}
-			h3 {color: white;}
-			p {color: white; font-size: 14px;}
-			h4 {color: white; margin: 5px 0; font-size: 17px;}
-			.home-lodge {padding: 10px; width:100%; img{height: auto;}}
-			.plat, .gold {display: inline-block; float: left; }
-			.plat {width: 55%;}
-			.gold {width: 45%;}
-
-			.bronze {margin-top: 20px;
-				.home-lodge {display: inline-block; width: 40%; }
-			}
-		}
-
-		@include bp(xl) {
-			.lodge-inner{width: 90%;}
-		}
-
-		@media (max-width: 992px) {padding: 15px 0;
-			.lodge-inner{width: 100%;}
-			h3 {font-size: 1.35rem;}
-			.plat, .gold, .bronze { padding: 10px 15px;}
-
-			.home-lodge {width: 285px;
-				img {height: 70px;}
-
-				&.sq.withp, &.sq {width:275px;
-					img{width:88%;}
-				}
-				&.sq.withp {
-					p{padding:10px 15px; margin:15px 0 0; font-size:17px; }
-				}
-				&.inline{@include center-block();}
-			}
-		}
-
-		@include bp(mb) {padding-bottom: 0;}
-	}
-}
-
 
 .now {background-color: red; color: white; font-weight: bold; text-align: center; font-size: 18px; padding: 10px 20px;
 	text-shadow: 0px 1px 1px rgba(black, .3); margin-top: 20px; border-radius: 15px; box-shadow: 0 8px 10px rgba(black, .5);

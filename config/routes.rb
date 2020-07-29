@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   get '/page', to: 'static_pages#page'
   get '/home-alt', to: 'static_pages#home-alt'
   get '/sponsors', to: 'static_pages#sponsors'
-  get '/registration', to: 'static_pages#poker-run2020'
-  # get '/registration', to: 'static_pages#registration'
+  # get '/registration', to: 'static_pages#poker-run2020'
+  get '/registration', to: 'static_pages#registration'
   get '/register-now', to: 'static_pages#register-now'
   get '/stops', to: 'static_pages#stops'
   get '/events', to: 'static_pages#events'
@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   get '/tickets', to: 'static_pages#tickets'
   get '/contact', to: 'static_pages#contact'
   get '/ec-foundation', to: 'static_pages#ec-foundation'
-  # get '/register-ruby', to: 'static_pages#register-ruby'
   get '/lodging', to: 'static_pages#lodging'
   get '/payment', to: 'static_pages#payment'
   get '/party-tickets', to: 'static_pages#party-tickets'
@@ -23,6 +22,7 @@ Rails.application.routes.draw do
   get '/vip-promo', to: 'static_pages#vip-promo'
   get '/extra-hand-promo', to: 'static_pages#extra-hand-promo'
   get '/poker-run2020', to: 'static_pages#poker-run2020'
+  get '/poker-run-draw-down', to: 'static_pages#poker-run-draw-down'
 
 
   get '/volunteer', to: 'volunteers#new', as: 'volunteer'
