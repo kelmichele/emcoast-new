@@ -225,9 +225,11 @@ h1.und{text-decoration: underline;}
 		}
 
 		@include bp(oc) {
-			h3{font-size:18px;}
-			p{font-size: 16px;}
-			.det-link{font-size: 14px;}
+			// h3{font-size:19px;}
+			p{font-size: 15px;}
+			.det-link{font-size: 14px;
+				i {vertical-align: middle;}
+			}
 			br.small{display:block;}
 			.btn-row{@include sec-default(); margin-bottom:15px;}
 		}
@@ -272,7 +274,7 @@ h1.und{text-decoration: underline;}
 	@include bp(oc) {padding:20px 0 15px; margin-bottom: 5px;
 		.inside{width:95%;}
 		p,li{font-size: 17px;}
-		p.open{font-size:19px;}
+		p.open{font-size:18px;}
 	}
 }
 
