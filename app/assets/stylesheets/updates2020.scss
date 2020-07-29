@@ -128,11 +128,8 @@ h1.und{text-decoration: underline;}
 			&.xt {margin-top: 35px;}
 			&.less {width: 15%; margin-bottom:25px;}
 		}
+		br.small{display:none;}
 
-		// .opener, p, h3, li, h4, h1, h2, a {font-family: $lato; line-height: 1.4em; color: $dark;
-		// 	&.bmargin0{margin-bottom: 0;}
-		// 	&.bmargin5{margin-bottom: 5px;}
-		// }
 		.opener{color: $white; font-size: 23px; font-weight: 600; margin-bottom: 10px;letter-spacing: .2px;
 			span{font-weight: bold; text-decoration: underline; font-style: italic;}
 		}
@@ -204,6 +201,8 @@ h1.und{text-decoration: underline;}
 
 			hr.hlf.xb {margin-top: 10px;}
 			hr.hlf.xt {margin-top: 25px;}
+			br.small{display:block;}
+			br.no-small{display:none;}
 		}
 	}
 
@@ -215,7 +214,10 @@ h1.und{text-decoration: underline;}
 		.det-link{font-weight:bold; color:$blue; font-size: 16px; text-decoration: underline;
 			i {font-weight: normal; vertical-align: top;}
 		}
+		br.small{display:none;}
 
+		@include bp(xl) {padding: 20px 0 20px;}
+		
 		@include bp(ix) {
 			h3{font-size:20px;}
 			p{font-size: 17px;}
@@ -226,6 +228,8 @@ h1.und{text-decoration: underline;}
 			h3{font-size:18px;}
 			p{font-size: 16px;}
 			.det-link{font-size: 14px;}
+			br.small{display:block;}
+			.btn-row{@include sec-default(); margin-bottom:15px;}
 		}
 	}
 }
@@ -257,7 +261,7 @@ h1.und{text-decoration: underline;}
 	@include bp(xl) {.inside{width:90%;}}
 	@include bp(ix) {padding:25px 0; margin-bottom: 10px;
 		p,li{font-size: 20px;}
-		p.open{font-size:23px;}
+		p.open{font-size:21px;}
 		.body {margin:15px 0;}
 		hr{width:100px;
 			&.one{margin-top: 20px;}
@@ -268,7 +272,7 @@ h1.und{text-decoration: underline;}
 	@include bp(oc) {padding:20px 0 15px; margin-bottom: 5px;
 		.inside{width:95%;}
 		p,li{font-size: 17px;}
-		p.open{font-size:20px;}
+		p.open{font-size:19px;}
 	}
 }
 
