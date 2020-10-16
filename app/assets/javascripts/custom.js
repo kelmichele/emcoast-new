@@ -194,7 +194,7 @@ function countDownTimer () {
 			var countDate = Self.data('countdown-time'); // getting date
 
 			Self.countdown(countDate, function(event) {
-	     		$(this).html('<li> <div class="box"> <span class="days">'+ event.strftime('%D') +'</span> <p class="timeRef">days</p> </div> </li> <li> <div class="box"> <span class="hours">'+ event.strftime('%H') +'</span> <p class="timeRef">hours</p> </div> </li> <li> <div class="box"> <span class="minutes">'+ event.strftime('%M') +'</span> <p class="timeRef">minutes</p> </div> </li> <li> <div class="box"> <span class="seconds">'+ event.strftime('%S') +'</span> <p class="timeRef">seconds</p> </div> </li>');
+	     		$(this).html('<li> <div class="box"> <span class="days">'+ event.strftime('%D') +'</span> <p class="timeRef">days</p> </div> </li> <li> <div class="box"> <span class="hours">'+ event.strftime('%H') +'</span> <p class="timeRef">hours</p> </div> </li> <li> <div class="box"> <span class="minutes">'+ event.strftime('%M') +'</span> <p class="timeRef">min</p> </div> </li> <li> <div class="box"> <span class="seconds">'+ event.strftime('%S') +'</span> <p class="timeRef">sec</p> </div> </li>');
 	   		});
 		});
 

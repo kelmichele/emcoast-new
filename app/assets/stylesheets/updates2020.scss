@@ -416,7 +416,10 @@ h1.und{text-decoration: underline;}
 				&.two{margin-bottom: 14px;}
 			}
 		}
+	}
 
+	@include bp(ph) {
+		.open br.spec{display:block;}
 	}
 }
 

@@ -4,22 +4,50 @@ Boat Week is a week-long boating celebration along the Emerald Coast, that round
 <% end %>
 
 
-<section class="home-top">
+<div class="dd-image">
+  <%=image_tag('dd-sold-out.jpg', alt:'Poker Run Draw Down tickets are sold out', class: 'img-responsive fw-img') %>
+  <%=image_tag('dd-sold-out-mob.jpg', alt:'Poker Run Draw Down tickets are sold out - mobile version', class: 'img-responsive mob-img') %>  
+</div>
+
+<section class="home-topTemp">
   <div class="open">
-    <div class="title-box">
-      <!-- bp TB for text -->
+    <div class="text-box">
       <h2 class="top">The Great</h2>
-      <h1>Emerald Coast<br/>Poker Run <br class="cst-br"/><span>Draw Down</span></h1>
-      <br/>
+      <h1>Emerald Coast <br class="spec"/>Poker Run <br class="cst-br"/><span>Draw Down</span></h1>
+      <br class="spec2"/>
       <h3 class="date">Saturday, October 24, 2020<br/><span>Grand Prize: $10,000 CASH</span></h3>
       <ul id="countdown" class="slider-countdown-two" data-countdown-time="2020/10/24"></ul>
       <%= link_to poker_run_draw_down_path, class: 'reg-now' do %>More Information<% end %>
       <div class="clearfix"></div>
     </div>
   </div>
-</section>
 
-<%= render 'shared/cancel-message' %>
+  <div class="il-cancel">
+    <div class="ilc-inner">
+      <p class="opener">To our wonderful and loyal supporters:</p>
+      <div class="body">
+        <p>After further consideration, and out of an abundance of caution, <span>we have decided to cancel this year’s run.</span></p>
+        
+        <p>We are heartbroken at its cancellation but are steadfast in raising money for our area kids! For 2020 only, we’re introducing <span>The Great Poker Run Draw Down</span> with your chance to <span>win $10,000!</span></p>
+
+        <hr class="one"/>
+        <p class="draw-dets"><span>Your $100 donation gets you:</span></p>
+        <ul>
+          <li>1 ticket and the chance to win the <span>grand prize of $10,000,</span> or one of many “loser” prizes including cash, 2021 Emerald Coast Poker Run entries, and swag.</li>
+          <li>A one night stay at the IP Casino Resort & Spa</li>
+          <li>The satisfaction of knowing you helped children in our area!</li>
+        </ul>
+        <hr class="two"/>
+
+        <p>Thank you again for supporting the kids. Please stay tuned!</p>
+      </div>
+
+      <p class="closing">Peggy King<br>
+      <span>President</span><br>
+      <span>Emerald Coast Foundation</span></p>
+    </div>
+  </div>
+</section>
 
 <section class="cst-ebox">
   <div class="ebox">
