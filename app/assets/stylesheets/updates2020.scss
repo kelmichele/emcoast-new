@@ -118,6 +118,9 @@ h1.und{text-decoration: underline;}
 		&.bmargin5{margin-bottom: 5px;}
 	}
 
+	.img-spacing{margin:20px 0;}
+	.mob-img{display: none;}
+
 	.draw-dets{@include sec-default(); padding: 60px 0; background-color: $blue; text-align:center;
 		.inside, .innerBox {@include center-block(); max-width:1600px;}
 		.inside {width: 65%;}
@@ -177,6 +180,10 @@ h1.und{text-decoration: underline;}
 			.inside{width:95%;}
 			.innerBox {width: 95%;}
 			
+			// .mob-img{display: block;}
+			// .fw-img{display: none;}
+
+
 			.boxSec{padding:20px 0px 20px;}
 			.btn-row{margin:30px 0 25px;}
 
@@ -207,7 +214,7 @@ h1.und{text-decoration: underline;}
 	}
 
 
-	.ticket-section{@include sec-default(); padding: 40px 0 20px; text-align:center; background-color: #f5f5f5;
+	.ticket-section{@include sec-default(); display:none; padding: 40px 0 20px; text-align:center; background-color: #f5f5f5;
 		h3{font-weight:bold;margin-bottom: 10px; line-height: 1.25em;}
 		h3 span{font-family: $courg; color:$teal;}
 		p{font-size:18px;}
@@ -279,6 +286,116 @@ h1.und{text-decoration: underline;}
 }
 
 
+
+// TEMP home top replacement.
+.dd-image{@include sec-default(); 
+	.mob-img{display: none;}
+	@include bp(ix) {
+		.mob-img{display: block;}
+		.fw-img{display: none;}
+	}
+}
+.home-topTemp {@include sec-default(); background-color: $logo-blue; margin-bottom:40px;
+	.open,.il-cancel{display:inline-block;width:62%;}
+
+	.open {width:38%; float:right; text-align: center;
+		.text-box{@include sec-default(); display: block; padding: 30px 10px;}
+		h1, h2, h3, .reg-now{text-shadow:0px 1px 1px rgba(black, .5);}
+		h2, h1 span {color: lighten($blue, 35%);font-family: $courg; font-weight: bold; text-transform: none;}
+		h2{font-size: 2.3rem;}
+		h1 {line-height: 1.2em; margin-top: 0px; font-size:2.6rem;font-family: $lato; font-weight: 800; color:$teal; margin-bottom:5px; text-transform: uppercase; }
+		h3 {font-weight: 600;color: white; margin-bottom: 50px; line-height:1.5em;}
+		h3 span{color: lighten($teal, 5%);}
+		br.cst-br{display:none;}
+		.spacer {@include sec-default(); margin-bottom: 15px;}
+
+		ul{margin-bottom: 20px;}
+		.reg-now {background-color: $red; box-shadow:0px 5px 20px rgba($black,.3); padding: 7px 20px; font-size:17px; color: $white; font-weight: bold; font-family: $lato;}
+	}
+
+	.il-cancel{text-align:center; color:$black; background-color:$white; padding:15px 0 10px;
+		p,li{font-size: 18px; font-family: $open; font-weight: 300;}
+		.ilc-inner{width:88%; @include center-block(); margin: 30px auto;}
+
+		p.opener{font-weight: bold; font-size: 20px; font-family: $raleway;}
+		hr{width:150px; @include center-block(); border-color: rgba($black,.2);
+			&.one{margin-top: 30px;}
+			&.two{margin-bottom: 30px;}
+		}
+		
+		.body p span, li span{color:$logo-blue; font-weight: 400;}
+		
+		p.draw-dets{margin-bottom:5px;
+			span{color:$blue; font-weight: bold;}
+		}
+
+		p.closing {font-weight: 600;
+			span{font-style: italic;}
+		}
+	}
+
+
+	#countdown{background: none; @include center-block(); text-align: center; padding-top: 0px;
+    li {display: inline-block;
+    	span{color: $white; @include tshadow ($black); padding: 15px 0; font-size: 45px; font-weight: 700;}
+    	span:after {content: ':'; display: inline-block; color: $white; @include tshadow ($black); vertical-align: middle; position: relative; bottom: 5px; margin-left: 3px;}
+    	p {text-indent: -15px; color: $white; text-transform: uppercase; font-weight: 700; margin-top: 5px; font-size: 14px; @include tshadow ($black);}
+	    &:last-child span:after {display: none;}
+	    &:last-child p {text-indent: 0;}
+    }
+	}
+
+
+	@include bp(tw) {
+		.open br.cst-br{display:block;}
+	}
+
+	@media screen and (max-width: 1120px) {
+		.il-cancel{padding: 0;
+			.ilc-inner{width:90%; margin: 20px auto;}
+
+			p,li{font-size: 17px;}
+			p.opener{font-size:19px;}
+
+			hr{
+				&.one{margin-top: 20px;}
+				&.two{margin-bottom: 20px;}
+			}
+		}
+
+		.open {
+			h1 {font-size: 2rem;}
+			h2 {font-size: 1.8rem;}
+			h3 {font-size: 1.35rem;}
+		}
+
+		#countdown li {
+			span{font-size: 40px;}
+			p {font-weight: 600; font-size: 13px;}
+		}
+	}
+
+	@include bp(xl) {
+		.open .reg-now {font-size:16px;}
+	}
+
+	@include bp(br) {background-color: $white; margin-bottom: 20px; border-bottom: 10px solid $logo-blue;
+		.open {width:70%; @include center-block(); margin-top:20px;
+			.text-box{background-color: $logo-blue;}
+			h3.date{margin-bottom: 25px;}
+		}
+		
+		.il-cancel{@include sec-default(); display:block; margin:30px auto 25px;
+			.ilc-inner{margin: 0px auto;}
+			p,li{font-size: 16px;}
+			p.opener{font-size:18px;}
+		}
+	}
+
+	@include bp(br) {
+		.open {width:85%;}
+	}
+}
 
 
 
