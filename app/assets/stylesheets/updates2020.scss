@@ -380,10 +380,14 @@ h1.und{text-decoration: underline;}
 	}
 
 	@include bp(br) {background-color: $white; margin-bottom: 20px; border-bottom: 10px solid $logo-blue;
-		.open {width:70%; @include center-block(); margin-top:20px;
+		.open {width:85%; @include center-block(); margin-top:20px;
 			.text-box{background-color: $logo-blue;}
 			h3.date{margin-bottom: 25px;}
+			br.spec, br.spec2{display:none;}
+			h1{margin-bottom:15px;}
 		}
+
+		#countdown li span{font-size: 35px;}
 		
 		.il-cancel{@include sec-default(); display:block; margin:30px auto 25px;
 			.ilc-inner{margin: 0px auto;}
@@ -392,8 +396,27 @@ h1.und{text-decoration: underline;}
 		}
 	}
 
-	@include bp(br) {
-		.open {width:85%;}
+	@include bp(oc) {
+		.open {width:95%;
+			h3.date{margin-bottom: 25px;}
+			br.spec, br.spec2{display:none;}
+			h1{margin-bottom:15px; font-size: 1.8rem;}
+			h2 {font-size: 1.6rem;}
+			h3 {font-size: 1.15rem;}
+		}
+
+		#countdown li span{font-size: 32px;}
+		
+		.il-cancel{margin:25px auto 20px;
+			.ilc-inner{width:95%;}
+			p.opener{font-size:17px;}
+
+			hr{
+				&.one{margin-top: 14px;}
+				&.two{margin-bottom: 14px;}
+			}
+		}
+
 	}
 }
 
