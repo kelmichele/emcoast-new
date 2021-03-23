@@ -137,19 +137,27 @@ h1.und{text-decoration: underline;}
 			span{font-weight: bold; text-decoration: underline; font-style: italic;}
 		}
 		span{font-family: inherit;}
-		h1 {font-weight: 900; font-size: 2.2rem; margin-bottom: 5px; line-height: 1.2em;
+		h1 {font-weight: 900; font-size: 2.2rem; margin-bottom: 5px; line-height: 1.2em; color:$teal;
 			span{font-family: $courg; color: $teal;}
 		}
 		h2{margin-bottom: 20px; font-size:27px;}
 		h3 span{color: $blue;}
 		h3{font-size:21px;}
-		h4{font-weight: bold; font-size: 20px;}
-		ul{margin:10px 0;}
-		p{font-size:18px;}
 		p.fine-print{font-size:13px;}
-		.btn-link{padding: 15px 35px; background-color: $teal; color: $white; text-shadow:0px 1px 2px rgba($black,.1); font-weight: bold; font-size:20px; letter-spacing: .3px;
-			&:hover{background-color: lighten($teal, 10%); @include ease(); cursor: pointer;}
+
+
+		.date.one{margin-bottom:20px;}
+		h4{font-weight: bold; font-size: 20px; color:$blue; text-decoration: underline;}
+		p{font-size:18px;}
+		p span{color:$blue; font-style: italic;}
+		.btn-link{padding: 10px 30px; background-color: $teal; color: $white; text-shadow:0px 1px 2px rgba($black,.2); 
+			font-weight: 700; font-size:16px; letter-spacing: .5px;
+			&.two{background-color: $logo-blue;}
+			&:hover{opacity:.8; @include ease(); cursor: pointer; text-decoration: none;}
 		}
+		.btn-clear{display: none;}
+
+
 
 		.boxSec{@include sec-default(); background-color: $white; padding:30px 0px 30px;}
 		.btn-row{@include sec-default(); margin:40px 0;}
@@ -173,26 +181,21 @@ h1.und{text-decoration: underline;}
 			h2{font-size:24px;}
 			h3{font-size:20px;}
 			li{font-size: 19px;}
-			.btn-link{font-size:18px;}
 		}
 
 		@include bp(ix) {padding: 20px 0;
 			.inside{width:95%;}
 			.innerBox {width: 95%;}
-			
-			// .mob-img{display: block;}
-			// .fw-img{display: none;}
-
 
 			.boxSec{padding:20px 0px 20px;}
 			.btn-row{margin:30px 0 25px;}
 
 			.opener{font-size:18px;}
-			h1{font-size: 1.7rem;}
-			h2{font-size:21px;}
+			h1{font-size: 1.5rem;}
+			h2{font-size:19px;}
 			h3, h4, li{font-size:18px;}
 			p, li.last{font-size: 17px;}
-			.btn-link{font-size:17px;}
+			.btn-link{font-size: 15px;}
 
 			hr.hlf.xb {margin-top: 10px;}
 			hr.hlf.xt {margin-top: 25px;}
@@ -200,48 +203,23 @@ h1.und{text-decoration: underline;}
 
 		@include bp(oc) {padding: 15px 0 20px;
 			.opener{font-size:17px;}
-			h1{font-size: 1.5rem;}
-			h2{font-size:20px;}
-			h3, h4, li{font-size:17px;}
+			h1{font-size: 1.3rem;}
+			h2,h3, h4, li{font-size:17px;}
 			p, li.last{font-size: 16px;}
-			.btn-link{font-size:17px;}
+			.btn-link{padding:10px 20px; margin-bottom:10px;}
 
-			hr.hlf.xb {margin-top: 10px;}
-			hr.hlf.xt {margin-top: 25px;}
 			br.small{display:block;}
 			br.no-small{display:none;}
 		}
-	}
 
-
-	.ticket-section{@include sec-default(); display:none; padding: 40px 0 20px; text-align:center; background-color: #f5f5f5;
-		h3{font-weight:bold;margin-bottom: 10px; line-height: 1.25em;}
-		h3 span{font-family: $courg; color:$teal;}
-		p{font-size:18px;}
-		.det-link{font-weight:bold; color:$blue; font-size: 16px; text-decoration: underline;
-			i {font-weight: normal; vertical-align: top;}
-		}
-		br.small{display:none;}
-
-		@include bp(xl) {padding: 20px 0 20px;}
-		
-		@include bp(ix) {
-			h3{font-size:20px;}
-			p{font-size: 17px;}
-			.det-link{font-size: 15px;}
-		}
-
-		@include bp(oc) {
-			// h3{font-size:19px;}
-			p{font-size: 15px;}
-			.det-link{font-size: 14px;
-				i {vertical-align: middle;}
-			}
-			br.small{display:block;}
-			.btn-row{@include sec-default(); margin-bottom:15px;}
+		@media (max-width:374px){
+			.btn-clear{display:block; height:25px;}
+			.btn-link{font-size:14px;}
 		}
 	}
 }
+@media (min-width: 960px) {.registration .box-lay, .drawPage{min-height:75vh;}}
+@media (min-width: 1025px) {.registration .box-lay, .drawPage{min-height:70vh;}}
 
 
 

@@ -12,9 +12,7 @@ Boat Week is a week-long boating celebration along the Emerald Coast, that round
       <br/>
       <h3 class="date">Saturday, August 14, 2021</h3>
       <ul id="countdown" class="slider-countdown-two" data-countdown-time="2021/8/14"></ul>
-      <%= link_to register_now_path, class: 'reg-now' do %>
-      Register Now
-      <% end %>
+      <%= link_to "Register Now", register_now_path, class: 'reg-now' %>
     </div>
   </div>
 </section>
@@ -23,30 +21,20 @@ Boat Week is a week-long boating celebration along the Emerald Coast, that round
   <div class="ebox">
     <div class="top">
       <h4>The Emerald Coast Foundation is proud to announce</h4>
-      <h3>2021 Boat Week  <br/> August 12-14</h3>
+      <h3><%= event_year %> Emerald Coast Poker Run<br/> August 12-14</h3>
+      <div class="clearfix regClear"></div>
+      <%= link_to "Register Now", register_now_path, class: 'regBtn' %>
       <hr class="hlf"/>
+      <p class="prize">Win a 2021 Emerald Coast Harley-Davidson Motorcycle, and other big prizes!</p>
     </div>
 
     <div class="mtext">
       <div class="rtext">
-        <p><b>Powerboats, fishing boats, pleasure boats,</b> and all in between, will fill the waterways for one of the largest and most popular charity poker runs in the USA!
-          Affectionately called <b>“The Big One,”</b> the Emerald Coast Poker Run has been held along the beautiful waters in and around Destin, Florida for over 25 years.
-        </p>
+        <p><b>Powerboats, fishing boats, pleasure boats,</b> and all in between, will fill the waterways for one of the largest and most popular charity poker runs in the USA! </p>
 
-        <p>Boat Week events start with a bang Wednesday night, and continue to “The Big One” Poker Run party Saturday night.
-        <b>It is truly a week of excitement, boating, fun, and helping kids.</b></p>
+        <p><b>All proceeds from Emerald Coast Boat Week and Poker Run go to the recipient children’s charities of the Emerald Coast Foundation.</b> This event was started over 25 years ago to help the youth of our local area have a chance at a brighter future. </p>
 
-        <p><b>All proceeds from Emerald Coast Boat Week and Poker Run go to the recipient children’s charities of the Emerald Coast Foundation.</b>
-          This event was started 25 years ago to help the youth of our local area have a chance at a brighter future.
-          Without the ECF, these kids would go without, and that is not acceptable to us.
-        </p>
-
-        <p><b>As of Boat Week last year, the Emerald Coast Foundation has raised over $2.5 million dollars for our local kids in need.</b>
-          What an impact! This is a volunteer run event.
-          There are no paid employees. Every penny goes to the kids.
-          We do it out of love and dedication to our community and our kids.
-          <b>Please join us for the one and only ORIGINAL Emerald Coast Poker Run!</b> Help us help the kids who need it most.
-        </p>
+        <p><b>As of last year, the Emerald Coast Foundation has raised over $2.5 million dollars for our local kids in need.</b> What an impact! This is a volunteer run event. There are no paid employees. Every penny goes to the kids. We do it out of love and dedication to our community and our kids. <b>Please join us for the one and only ORIGINAL Emerald Coast Poker Run!</b> Help us help the kids who need it most.</p>
       </div>
 
       <div class="ltext">
