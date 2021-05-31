@@ -448,10 +448,11 @@ br.xxs {display: none;}
 
 
 .register-now {
-	.reg-info {@include sec-default();background-color: #f5f5f5; padding: 40px 0 0px;
-		span, p, h3, li, h4, h1, h2, a { font-family: $lato; line-height: 1.6em; text-transform: uppercase; letter-spacing: 2px;}
-		text-align: center;
-		h1{margin-bottom: 15px; color: $logo-blue;}
+	.reg-info {@include sec-default();background-color: #f5f5f5; padding: 40px 0 0px;text-align: center;
+		span, p, h3, li, h4, h1, h2, a { font-family: $lato; line-height: 1.6em; text-transform: uppercase; letter-spacing: 1px;}
+		
+		h1{margin-bottom:0px; color: $logo-blue;}
+		h2{color:$teal; line-height:1.3em; font-size:25px; font-weight:bold; margin-bottom:15px;}
 		p{color: $dark; letter-spacing: 1px; font-weight: bold; margin-bottom: 0;}
 		p span {color: red; font-weight: 800;}
 	}
@@ -459,14 +460,27 @@ br.xxs {display: none;}
 
 
 	@media (max-width:1024px) {
-		.reg-info {padding:20px 0 0;}
+		.reg-info {padding:20px 0 0;
+			h1{margin-bottom:10px;}
+		}
 	}
 	@include bp(ix) {
-		h1{font-size: 25px;}
+		.reg-info {
+			h1{font-size: 25px;}
+			h2{font-size:22px; margin-bottom:10px;}
+		}
 	}
 
-	@media (max-width:767px) {
-		h1{font-size: 25px;}
+	@media (max-width:670px) {
+		.reg-info {
+			h2{font-size:18px;letter-spacing: 0}
+			h1{font-size:22px;}
+		}
+		.inner {width:95%;}
+	}
+
+	@include bp(pt) {
+		.reg-info h1{font-size:20px;letter-spacing: 0;margin-bottom: 8px;}
 	}
 }
 
@@ -553,7 +567,11 @@ br.xxs {display: none;}
 		  	&::before {@include before(); width:200%; left:-45%; z-index: -1; height:1px; top:55%; border-bottom: 2px solid white; }
   		}
   	}
-  	h2 {margin-top: 0; letter-spacing: 4px;}
+  	h1.regh1 {line-height: 1.3em;}
+  	p.h2{font-size:22px; color:$white;font-weight:bold;margin:0 0 20px;color:$logold;
+  		br{display: none;}
+  	}
+  	// h2 {margin-top: 0; letter-spacing: 4px;}
   	h3.price {font-size: 2.3rem; line-height: 1.5em; font-weight: 900; color: $white; letter-spacing: 2px; text-shadow: 0px 1px 1px rgba($dark, .6); background-color: $teal;
 			&.less {text-shadow: none; font-weight: bold;}
   	}
@@ -701,8 +719,8 @@ br.xxs {display: none;}
 	@media (max-width: 992px) {
 		.box-lay {
 			.inside {width: 95%; }
-			h1 { font-size: 1.5rem;
-	  		span {font-size: 2.2rem;
+			h1 {font-size: 1.5rem;
+	  		span {font-size: 2rem;
 			  	&::before {width:200%; left:-50%;}
 	  		}
 	  	}
@@ -732,7 +750,10 @@ br.xxs {display: none;}
 	}
 
 	@include bp(md) {
-		.box-lay {
+		.box-lay {padding:25px 0;
+			h1 {font-size: 1.5rem;
+	  		span {font-size: 1.7rem;}
+  		}
 			li {font-size: 1em;}
 			ul {padding:10px 0 5px;}
 	  	h4.title, h4.teal {font-size: 1rem;}
@@ -743,7 +764,7 @@ br.xxs {display: none;}
 
 
 		.box-lay h1.regh1{font-size: 1.35rem;
-  		span {font-size: 1.8rem;}
+  		span {font-size: 1.6rem;}
   		span::before{top:47%;}
   	}
   	.sign-up{font-size:15px;}
@@ -757,6 +778,10 @@ br.xxs {display: none;}
 
 
 	@media (max-width: 767px) {
+		.box-lay p.h2{font-size:19px; margin-bottom:13px;
+			br{display: block;}
+		}
+
 		.lev-table{padding:0;
 			.level{@include sec-default(); margin-top:20px;}
 			// .level.top{margin-top:0;}
@@ -768,6 +793,9 @@ br.xxs {display: none;}
 
 	@include bp(mb) {
 		.box-lay {
+			h1 {font-size: 18px;
+	  		span {font-size: 20px;}
+  		}
 			h1 span::before { width:180%; left:-40%;}
 			.two .getaway-dets{width:90%;}
 		}
@@ -776,20 +804,18 @@ br.xxs {display: none;}
 
 	@include bp(pt) {
 		.box-lay {
-			h1 span::before { width:118%; left:-10%;}
+			h1, h1 span{letter-spacing: 1.2px;}
+			h1 span::before {width:118%; left:-10%;display:none;}
 			h3.price {font-size: 1.7rem;
 				&.less {font-size: 1.4rem;}
 			}
+			p.h2{font-size:18px;}
 		}
 	}
 }
 
-.slips-parking {
-	.box-lay {
+.slips-parking .box-lay {
 		.two{padding: 0 0px;}
-  	h1 {font-size: 2rem;
-  		span {font-size: 2rem;}
-  	}
   	h4 {margin-top:0px; color: white;background-color:$teal;font-weight: 900;font-size: 1.3rem; margin-bottom: 15px; letter-spacing: 1.5px; padding:10px;}
   	p{color:$dark;margin-bottom:7px;font-size:16px;}
 
@@ -804,6 +830,11 @@ br.xxs {display: none;}
 		p.number a{color:darken($teal,10%);}
   	.slip-link {width: auto; background-color: $blue; color: white; padding: 5px 15px;
 		&:hover {opacity: .7;}
+  	}
+
+  @media (min-width:993px){
+  	h1 {font-size: 2rem;
+  		span {font-size: 2rem;}
   	}
   }
 }
