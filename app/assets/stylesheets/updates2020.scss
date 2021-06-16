@@ -226,6 +226,20 @@ h1.und{text-decoration: underline;}
 @media (min-width: 960px) {.registration .box-lay, .drawPage{min-height:75vh;}}
 @media (min-width: 1025px) {.registration .box-lay, .drawPage{min-height:70vh;}}
 
+.drawPage.stops{
+	.paddedBox{text-align:center;
+		li,a{color:$blue;}
+	}
+	.newMap{@include sec-default();margin:30px 0;height:300px;}
+	@include bp(md) {
+		.newMap{margin:30px 0 15px;height:250px}
+	}
+
+	@media (max-width:639px) {
+		.newMap{height:200px}
+	}
+}
+
 
 
 // Cancellation
