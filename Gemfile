@@ -7,7 +7,7 @@ ruby '2.5.3'
 gem 'rails', '~> 5.2.2'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma'
-gem 'sprockets-rails', '2.3.3'
+# gem 'sprockets-rails', '2.3.3'
 
 gem 'sassc'
 gem 'sassc-rails'
