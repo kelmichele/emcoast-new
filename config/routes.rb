@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/gallery', to: 'static_pages#gallery'
   get '/tickets', to: 'static_pages#tickets'
   get '/contact', to: 'static_pages#contact'
+  get '/faqs', to: 'static_pages#faqs'
   get '/ec-foundation', to: 'static_pages#ec-foundation'
   get '/lodging', to: 'static_pages#lodging'
   get '/payment', to: 'static_pages#payment'
