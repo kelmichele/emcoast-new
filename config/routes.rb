@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
 
+  get '/events', to: 'static_pages#home'
+  get '/lodging', to: 'static_pages#home'
+  get '/safety-rules', to: 'static_pages#home'
+  get '/poker-run2020', to: 'static_pages#home'
+
+
   get '/page', to: 'static_pages#page'
   get '/home-alt', to: 'static_pages#home-alt'
   get '/sponsors', to: 'static_pages#sponsors'
@@ -8,26 +14,25 @@ Rails.application.routes.draw do
   get '/registration', to: 'static_pages#registration'
   get '/register-now', to: 'static_pages#register-now'
   get '/stops', to: 'static_pages#stops'
-  get '/events', to: 'static_pages#events'
+  # get '/events', to: 'static_pages#events'
   get '/gallery', to: 'static_pages#gallery'
   get '/tickets', to: 'static_pages#tickets'
   get '/contact', to: 'static_pages#contact'
   get '/faqs', to: 'static_pages#faqs'
   get '/ec-foundation', to: 'static_pages#ec-foundation'
-  get '/lodging', to: 'static_pages#lodging'
-  get '/payment', to: 'static_pages#payment'
+  # get '/lodging', to: 'static_pages#lodging'
+  # get '/payment', to: 'static_pages#payment'
   get '/party-tickets', to: 'static_pages#party-tickets'
-  get '/safety-rules', to: 'static_pages#safety-rules'
+  # get '/safety-rules', to: 'static_pages#safety-rules'
   get '/trailer-parking', to: 'static_pages#trailer-parking'
-  # get '/be-a-sponsor', to: 'static_pages#be-a-sponsor'
   get '/vip-promo', to: 'static_pages#vip-promo'
   get '/extra-hand-promo', to: 'static_pages#extra-hand-promo'
-  get '/poker-run2020', to: 'static_pages#poker-run2020'
+  # get '/poker-run2020', to: 'static_pages#poker-run2020'
   get '/poker-run2021', to: 'static_pages#poker-run2021'
 
 
-  get '/volunteer', to: 'volunteers#new', as: 'volunteer'
-  post '/volunteer', to: 'volunteers#create'
+  # get '/volunteer', to: 'volunteers#new', as: 'volunteer'
+  # post '/volunteer', to: 'volunteers#create'
 
   get '/fb', to: 'links#fb'
   get '/insta', to: 'links#insta'
