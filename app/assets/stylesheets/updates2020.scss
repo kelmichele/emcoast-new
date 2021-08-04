@@ -142,7 +142,8 @@ h1.und{text-decoration: underline;}
 		}
 		h2{margin-bottom: 20px; font-size:27px;}
 		h3 span{color: $blue;}
-		h3{font-size:21px;}
+		h3{font-size:21px;max-width:550px;@include center-block();}
+		p.color{color:$teal;font-weight:bold;margin-bottom:30px;}
 		p.fine-print{font-size:13px;}
 
 		p.tk-link{@include sec-default();margin-top:40px;background-color:$teal; }
@@ -188,7 +189,7 @@ h1.und{text-decoration: underline;}
 			p.tk-link{margin-top:20px;}
 		}
 
-		@include bp(ix) {padding: 20px 0;
+		@media (max-width: 852px){padding: 20px 0;
 			.inside{width:95%;}
 			.innerBox {width: 95%;}
 
@@ -200,6 +201,7 @@ h1.und{text-decoration: underline;}
 			h2{font-size:19px;}
 			h3, h4, li{font-size:18px;}
 			p, li.last{font-size: 17px;}
+			p.color{margin-bottom:0;}
 			.btn-link{font-size: 15px;}
 
 			hr.hlf.xb {margin-top: 10px;}
